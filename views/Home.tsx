@@ -13,6 +13,12 @@ const Home: React.FC = () => {
   const y3 = useTransform(scrollYProgress, [0, 1], [0, 150]); 
 
   const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'sent'>('idle');
+  const [formError, setFormError] = useState('');
+  const [formData, setFormData] = useState({ name: '', email: '', phone: '', subject: '', message: '' });
+
+  const updateField = (field: string) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({ ...prev, [field]: e.target.value }));
+  };
 
   const scrollToContact = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -31,13 +37,31 @@ const Home: React.FC = () => {
     }
   };
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setFormStatus('sending');
-    setTimeout(() => {
+    setFormError('');
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.error || 'Something went wrong.');
+      }
+
       setFormStatus('sent');
+      setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
       setTimeout(() => setFormStatus('idle'), 5000);
-    }, 1500);
+    } catch (err: any) {
+      setFormError(err.message || 'Failed to send message. Please try again.');
+      setFormStatus('idle');
+    }
   };
 
   const SectionFadeUp: React.FC<{ children: React.ReactNode, className?: string }> = ({ children, className }) => (
@@ -374,10 +398,12 @@ const Home: React.FC = () => {
                     <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 flex items-center gap-2">
                       <User size={12} /> Full Name
                     </label>
-                    <input 
+                    <input
                       required
-                      type="text" 
+                      type="text"
                       placeholder="Your Name"
+                      value={formData.name}
+                      onChange={updateField('name')}
                       className="w-full bg-slate-50 border-none rounded-2xl px-6 py-4 outline-none focus:ring-2 focus:ring-teal-500 transition-all font-bold text-slate-900"
                     />
                   </div>
@@ -385,10 +411,12 @@ const Home: React.FC = () => {
                     <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 flex items-center gap-2">
                       <BookOpen size={12} /> Subject
                     </label>
-                    <input 
+                    <input
                       required
-                      type="text" 
+                      type="text"
                       placeholder="Protocol Strategy"
+                      value={formData.subject}
+                      onChange={updateField('subject')}
                       className="w-full bg-slate-50 border-none rounded-2xl px-6 py-4 outline-none focus:ring-2 focus:ring-teal-500 transition-all font-bold text-slate-900"
                     />
                   </div>
@@ -399,10 +427,12 @@ const Home: React.FC = () => {
                     <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 flex items-center gap-2">
                       <Mail size={12} /> Email Address
                     </label>
-                    <input 
+                    <input
                       required
-                      type="email" 
+                      type="email"
                       placeholder="your@email.com"
+                      value={formData.email}
+                      onChange={updateField('email')}
                       className="w-full bg-slate-50 border-none rounded-2xl px-6 py-4 outline-none focus:ring-2 focus:ring-teal-500 transition-all font-bold text-slate-900"
                     />
                   </div>
@@ -410,9 +440,11 @@ const Home: React.FC = () => {
                     <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 flex items-center gap-2">
                       <Phone size={12} /> Phone Number
                     </label>
-                    <input 
-                      type="tel" 
+                    <input
+                      type="tel"
                       placeholder="+1 (555) 000-0000"
+                      value={formData.phone}
+                      onChange={updateField('phone')}
                       className="w-full bg-slate-50 border-none rounded-2xl px-6 py-4 outline-none focus:ring-2 focus:ring-teal-500 transition-all font-bold text-slate-900"
                     />
                   </div>
@@ -420,17 +452,23 @@ const Home: React.FC = () => {
 
                 <div className="space-y-2">
                   <label className="text-[10px] font-black uppercase tracking-widest text-slate-400">Message Content</label>
-                  <textarea 
+                  <textarea
                     required
                     maxLength={2000}
                     rows={6}
                     placeholder="Provide depth for your inquiry..."
+                    value={formData.message}
+                    onChange={updateField('message')}
                     className="w-full bg-slate-50 border-none rounded-3xl px-6 py-4 outline-none focus:ring-2 focus:ring-teal-500 transition-all font-medium text-slate-700 leading-relaxed resize-none"
                   />
                   <p className="text-[9px] text-right text-slate-300 font-bold uppercase">Max 2000 characters</p>
                 </div>
 
-                <button 
+                {formError && (
+                  <p className="text-red-500 text-sm font-bold text-center">{formError}</p>
+                )}
+
+                <button
                   disabled={formStatus === 'sending'}
                   type="submit"
                   className="w-full bg-slate-900 hover:bg-amber-500 text-white py-8 rounded-2xl font-black uppercase tracking-[.3em] transition-all flex items-center justify-center gap-4 shadow-2xl shadow-black/10 group disabled:opacity-50"
