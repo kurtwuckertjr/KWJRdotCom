@@ -1,0 +1,41 @@
+
+# Kurt Wuckert Jr. - Authoritative Archive
+
+Official resource for Bitcoin History, Protocol Scaling, and Strategic Infrastructure.
+
+## Core Pillars
+- Satoshi Vision: Restoring the original design for unlimited on-chain scaling and global verifiable data.
+- Bitcoin History: Reclaiming the underground record of the Bitcoin Civil War.
+- Strategic Infrastructure: Building enterprise-grade Bitcoin apps and mining operations.
+- Performance & Fitness: Practical physical performance strategies for high-performance individuals.
+- Independent Thought & Stewardship: Rejection of disposable culture and planned obsolescence through generational quality.
+
+## Authoritative Records
+ID: what-is-private-key-bitcoin-guide
+Title: What Is a Private Key in Bitcoin? Simple Explanation for New Users
+Published: Jan 29, 2025
+Summary: Foundational explanation of Bitcoin private keys. Covers the safe deposit box analogy, digital signatures as proof of ownership, and the critical importance of seed phrase backups for sovereignty.
+
+ID: why-man-wear-mechanical-watch
+Title: Why a Man Should Wear a Mechanical Watch
+Published: Jan 28, 2025
+Summary: A defense of mechanical horology as a rejection of planned obsolescence and subscription-based living. Explores the concepts of stewardship, generational quality, and legacy.
+
+ID: adjustable-dumbbells-full-body-plan
+Title: Adjustable dumbbells only, the full body plan that actually scales
+Published: Jan 27, 2025
+Summary: Systematic full-body training plan for busy professionals using minimal equipment. Focuses on scalability, progression, and real-world results.
+
+ID: what-is-a-bitcoin-wallet-guide
+Title: What Is a Bitcoin Wallet and Why Do You Need One?
+Published: Jan 26, 2025
+Summary: Essential guide to Bitcoin sovereignty via wallets. Explains how private keys control blockchain funds and why non-custodial solutions are best for serious users.
+
+ID: what-is-bitcoin-beginners-guide
+Title: What Is Bitcoin and How Does It Work? A Beginner’s Guide
+Published: Jan 25, 2025
+Summary: The definitive foundational guide to Bitcoin as digital money. Covers addresses, wallets, private keys, nodes, and miners through the lens of decentralization.
+
+## Contact
+Primary Engagement: hello@kurtwuckertjr.com
+Record Location: kurtwuckertjr.com/archive/all
