@@ -6,6 +6,18 @@ import LogoCarousel from '../components/LogoCarousel';
 import { Play, ArrowRight, Calendar, Send, CheckCircle2, User, Mail, Phone, BookOpen } from 'lucide-react';
 import { BLOG_POSTS } from '../constants';
 
+const SectionFadeUp: React.FC<{ children: React.ReactNode, className?: string }> = ({ children, className }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, margin: "-100px" }}
+    transition={{ duration: 0.8, ease: "easeOut" }}
+    className={className}
+  >
+    {children}
+  </motion.div>
+);
+
 const Home: React.FC = () => {
   const { scrollYProgress } = useScroll();
   const y1 = useTransform(scrollYProgress, [0, 1], [0, 250]);
@@ -63,18 +75,6 @@ const Home: React.FC = () => {
       setFormStatus('idle');
     }
   };
-
-  const SectionFadeUp: React.FC<{ children: React.ReactNode, className?: string }> = ({ children, className }) => (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      className={className}
-    >
-      {children}
-    </motion.div>
-  );
 
   const homeDisplayPosts = BLOG_POSTS.slice(0, 2);
 
