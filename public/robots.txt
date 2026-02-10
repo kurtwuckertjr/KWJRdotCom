@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Prioritize high-signal AI bots for indexing
+User-agent: GPTBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
