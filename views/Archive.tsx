@@ -4,6 +4,7 @@ import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { BLOG_POSTS } from '../constants';
 import { Category } from '../types';
+import { buildArchiveItemList } from '../schemaUtils';
 import { ArrowLeft, Calendar } from 'lucide-react';
 
 const Archive: React.FC = () => {
@@ -24,8 +25,13 @@ const Archive: React.FC = () => {
     return BLOG_POSTS.filter(post => post.category === activeCategory);
   }, [activeCategory]);
 
+  const archiveSchema = useMemo(() => buildArchiveItemList(filteredPosts), [filteredPosts]);
+
   return (
     <div className="py-32 bg-white min-h-screen">
+      <script type="application/ld+json">
+        {JSON.stringify(archiveSchema)}
+      </script>
       <div className="max-w-5xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
