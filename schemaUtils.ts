@@ -17,6 +17,7 @@ export const WORD_COUNTS: Record<string, number> = {
   "on-chain-vs-off-chain-bitcoin": 257,
   "what-are-bitcoin-fees": 248,
   "what-is-a-bitcoin-wallet-guide": 369,
+  "what-is-bitcoin-beginners-guide": 198,
   "what-is-bitcoin-address": 216,
   "what-is-bitcoin-blockchain": 241,
   "what-is-bitcoin-fork": 254,
