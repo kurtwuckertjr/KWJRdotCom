@@ -973,56 +973,101 @@ const Post: React.FC = () => {
     if (id === 'what-is-bitcoin-blockchain') {
       return (
         <div className="space-y-12">
-          <p>The Bitcoin blockchain is a special type of database that records every transaction ever made with Bitcoin. It is called a “block chain” because it is literally a chain of blocks, and each block contains a batch of transactions.</p>
-          <p>Here is how it works:</p>
-          <ol className="space-y-6">
-            <li className="flex gap-4">
-              <span className="bg-teal-600 text-white w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold shrink-0">1</span>
-              <span className="text-gray-600">Transactions are created</span>
+          <p>The Bitcoin blockchain is a special type of database that records every transaction ever made with Bitcoin. It is called a "block chain" because it is literally a chain of blocks, and each block contains a batch of transactions.</p>
+
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
+            How It Works
+          </h2>
+
+          <ol className="space-y-12">
+            <li className="flex gap-6 group">
+              <div className="flex flex-col items-center shrink-0">
+                <div className="w-10 h-10 rounded-full bg-slate-900 text-teal-400 flex items-center justify-center font-black text-lg group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">1</div>
+                <div className="w-px h-full bg-slate-100 group-hover:bg-teal-100 mt-2 transition-colors" />
+              </div>
+              <div>
+                <h4 className="text-xl font-black uppercase text-slate-900 mb-2">Transactions Are Created</h4>
+                <p className="text-gray-500 font-light leading-relaxed">People send Bitcoin to each other. These transactions are broadcast to the network.</p>
+              </div>
+            </li>
+            <li className="flex gap-6 group">
+              <div className="flex flex-col items-center shrink-0">
+                <div className="w-10 h-10 rounded-full bg-slate-900 text-teal-400 flex items-center justify-center font-black text-lg group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">2</div>
+                <div className="w-px h-full bg-slate-100 group-hover:bg-teal-100 mt-2 transition-colors" />
+              </div>
+              <div>
+                <h4 className="text-xl font-black uppercase text-slate-900 mb-2">Miners Gather Transactions into Blocks</h4>
+                <p className="text-gray-500 font-light leading-relaxed">Miners collect many transactions into a candidate block. They then compete to solve a proof-of-work puzzle.</p>
+              </div>
+            </li>
+            <li className="flex gap-6 group">
+              <div className="flex flex-col items-center shrink-0">
+                <div className="w-10 h-10 rounded-full bg-slate-900 text-teal-400 flex items-center justify-center font-black text-lg group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">3</div>
+                <div className="w-px h-full bg-slate-100 group-hover:bg-teal-100 mt-2 transition-colors" />
+              </div>
+              <div>
+                <h4 className="text-xl font-black uppercase text-slate-900 mb-2">A New Block Is Added</h4>
+                <p className="text-gray-500 font-light leading-relaxed">The first miner to solve the puzzle broadcasts its block. Other nodes verify the transactions and the proof of work. If everything is valid, they attach the new block to the end of the chain.</p>
+              </div>
+            </li>
+            <li className="flex gap-6 group">
+              <div className="flex flex-col items-center shrink-0">
+                <div className="w-10 h-10 rounded-full bg-slate-900 text-teal-400 flex items-center justify-center font-black text-lg group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">4</div>
+              </div>
+              <div>
+                <h4 className="text-xl font-black uppercase text-slate-900 mb-2">Each Block Links to the Previous One</h4>
+                <p className="text-gray-500 font-light leading-relaxed">Every block includes a reference (a hash) to the block before it. This creates a chain that goes all the way back to the first block, called the genesis block.</p>
+              </div>
             </li>
           </ol>
-          <p className="text-gray-600 leading-relaxed">People send Bitcoin to each other. These transactions are broadcast to the network.</p>
-          <ol className="space-y-6">
-            <li className="flex gap-4">
-              <span className="bg-teal-600 text-white w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold shrink-0">1</span>
-              <span className="text-gray-600">Miners gather transactions into blocks</span>
-            </li>
-          </ol>
-          <p className="text-gray-600 leading-relaxed">Miners collect many transactions into a candidate block. They then compete to solve a proof of work puzzle.</p>
-          <ol className="space-y-6">
-            <li className="flex gap-4">
-              <span className="bg-teal-600 text-white w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold shrink-0">1</span>
-              <span className="text-gray-600">A new block is added</span>
-            </li>
-          </ol>
-          <p className="text-gray-600 leading-relaxed">The first miner to solve the puzzle broadcasts its block. Other nodes verify the transactions and the proof of work. If everything is valid, they attach the new block to the end of the chain.</p>
-          <ol className="space-y-6">
-            <li className="flex gap-4">
-              <span className="bg-teal-600 text-white w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold shrink-0">1</span>
-              <span className="text-gray-600">Each block links to the previous one</span>
-            </li>
-          </ol>
-          <p className="text-gray-600 leading-relaxed">Every block includes a reference (a hash) to the block before it. This creates a chain that goes all the way back to the first block, called the genesis block.</p>
-          <p className="text-gray-600 leading-relaxed">Why it matters:</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Immutability: Once a block is deeply buried under many more blocks, changing it would require enormous computing power. This makes history very hard to rewrite.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Transparency: Anyone can download the blockchain and verify that the rules are being followed.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Coordination: All honest nodes converge on the same chain, with the most proof of work, as the valid history.</span>
-            </li>
-          </ul>
-          <p className="text-gray-600 leading-relaxed">You can think of the blockchain as a shared, append only log that the whole world can inspect and verify. Bitcoin is the system of incentives and rules built around that log.</p>
+
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
+            Why It Matters
+          </h2>
+
+          <div className="grid gap-12">
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6 flex items-center gap-3">
+                Immutability
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Once a block is deeply buried under many more blocks, changing it would require enormous computing power. This makes history very hard to rewrite.
+              </p>
+            </section>
+
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6 flex items-center gap-3">
+                Transparency
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Anyone can download the blockchain and verify that the rules are being followed. No permission is required.
+              </p>
+            </section>
+
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6 flex items-center gap-3">
+                Coordination
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                All honest nodes converge on the same chain, with the most proof of work, as the valid history.
+              </p>
+            </section>
+          </div>
+
+          <div className="bg-slate-900 text-white rounded-[3rem] p-12 mt-20 shadow-2xl relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/5 rounded-full blur-[100px] group-hover:bg-teal-500/10 transition-all duration-1000" />
+            <div className="flex flex-col md:flex-row gap-8 items-start relative z-10">
+              <div className="bg-teal-600 text-white p-4 rounded-2xl shadow-lg shrink-0">
+                <BookOpen size={32} />
+              </div>
+              <div>
+                <h4 className="text-2xl font-black uppercase tracking-tight mb-6 text-teal-400">The Big Picture</h4>
+                <p className="text-gray-300 leading-relaxed text-lg">
+                  You can think of the blockchain as a shared, append-only log that the whole world can inspect and verify. Bitcoin is the system of incentives and rules built around that log.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       );
     }
