@@ -714,6 +714,399 @@ const Post: React.FC = () => {
       );
     }
 
+    // NEW BITCOIN BASICS CURRICULUM ARTICLES (4-23)
+
+    if (id === 'what-is-utxo-bitcoin') {
+      return (
+        <div className="space-y-12">
+          <p>A UTXO (Unspent Transaction Output) is a chunk of Bitcoin that has not yet been spent. Understanding UTXOs is crucial to understanding how Bitcoin really works.</p>
+          <div className="bg-slate-50 border-l-4 border-teal-600 p-8 md:p-12 rounded-r-3xl shadow-sm my-16">
+            <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-6">The UTXO Model</h3>
+            <p className="text-lg leading-relaxed text-slate-700 italic">When you receive Bitcoin, you receive UTXOs. When you spend Bitcoin, you consume those UTXOs and create new ones. Your balance is simply the sum of all UTXOs associated with your addresses.</p>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">UTXOs vs. Account Balances</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm"><h3 className="font-bold text-slate-900 uppercase tracking-widest mb-4">Traditional Banks</h3><ul className="space-y-3"><li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 shrink-0" /><span className="text-gray-600 text-sm">Single account balance</span></li><li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 shrink-0" /><span className="text-gray-600 text-sm">Central authority verifies</span></li><li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 shrink-0" /><span className="text-gray-600 text-sm">Simple for users</span></li></ul></section>
+            <section className="bg-white rounded-[2.5rem] p-10 border border-teal-200 shadow-sm"><h3 className="font-bold text-teal-600 uppercase tracking-widest mb-4">Bitcoin</h3><ul className="space-y-3"><li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600 text-sm">Multiple UTXOs</span></li><li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600 text-sm">Decentralized validation</span></li><li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600 text-sm">More sovereign</span></li></ul></section>
+          </div>
+          <div className="bg-teal-600 text-white rounded-[3rem] p-12 shadow-2xl"><h4 className="text-2xl font-black uppercase tracking-tight mb-6">The Coin Analogy</h4><p className="text-lg leading-relaxed font-light">Think of your wallet as a jar of coins, not as a bank account. Each coin is a UTXO. Your total wealth is the sum of all coins in the jar.</p></div>
+        </div>
+      );
+    }
+
+    if (id === 'what-is-bitcoin-address') {
+      return (
+        <div className="space-y-12">
+          <p>A Bitcoin address is a public label that tells people where to send you Bitcoin. It is derived from your public key through cryptographic hashing and is mathematically unique.</p>
+          <div className="bg-slate-50 border-l-4 border-teal-600 p-8 md:p-12 rounded-r-3xl shadow-sm my-16">
+            <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-6">Address Creation</h3>
+            <p className="text-lg leading-relaxed text-slate-700 italic">Your wallet generates a private key, derives a public key from it, then hashes the public key to create your address. This one-way process is cryptographically secure.</p>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">Types of Addresses</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <section className="bg-white rounded-[2rem] p-8 border border-gray-100 shadow-sm"><h4 className="font-black uppercase text-slate-900 text-sm mb-3">P2PKH (Legacy)</h4><p className="text-gray-600 text-xs font-light">Starts with "1", older format, larger transaction size</p></section>
+            <section className="bg-white rounded-[2rem] p-8 border border-gray-100 shadow-sm"><h4 className="font-black uppercase text-slate-900 text-sm mb-3">P2SH (SegWit)</h4><p className="text-gray-600 text-xs font-light">Starts with "3", reduced fees, backward compatible</p></section>
+            <section className="bg-white rounded-[2rem] p-8 border border-gray-100 shadow-sm"><h4 className="font-black uppercase text-slate-900 text-sm mb-3">P2WPKH (Native)</h4><p className="text-gray-600 text-xs font-light">Starts with "bc1", smallest size, most efficient</p></section>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">Best Practices</h2>
+          <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm"><h3 className="font-bold text-slate-900 uppercase tracking-widest mb-4">Verify Before Sending</h3><p className="text-gray-600 font-light">Always double-check the address before sending Bitcoin. Transactions are irreversible. There is no "undo" button.</p></section>
+          <div className="bg-teal-600 text-white rounded-[3rem] p-12 shadow-2xl"><h4 className="text-2xl font-black uppercase tracking-tight mb-6">The Public-Private Split</h4><p className="text-lg leading-relaxed font-light">Share your address freely. Never share your private key. Your public key sits between them, but it is not the same as your address.</p></div>
+        </div>
+      );
+    }
+
+    if (id === 'what-is-bitcoin-blockchain') {
+      return (
+        <div className="space-y-12">
+          <p>The Bitcoin blockchain is an immutable, transparent ledger of every Bitcoin transaction. It is a permanent record maintained by thousands of independent computers worldwide.</p>
+          <div className="bg-slate-50 border-l-4 border-teal-600 p-8 md:p-12 rounded-r-3xl shadow-sm my-16">
+            <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-6">How Blocks Link</h3>
+            <p className="text-lg leading-relaxed text-slate-700 italic">Each block contains the cryptographic hash of the previous block. This creates an unbreakable chain. Changing even one transaction would invalidate all following blocks.</p>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">Why The Chain Cannot Be Broken</h2>
+          <p>If someone tries to change an old transaction, it changes that block\'s hash, which breaks the link to all following blocks. To cover the attack, miners would have to re-mine every subsequent block, which costs more than it is worth.</p>
+          <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm"><h3 className="font-bold text-slate-900 uppercase tracking-widest mb-4">Block Contents</h3><ul className="space-y-4"><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600"><strong>Header:</strong> metadata and hash of previous block</span></li><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600"><strong>Transactions:</strong> the data being recorded</span></li><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600"><strong>Nonce:</strong> proof-of-work solution</span></li></ul></section>
+          <div className="bg-teal-600 text-white rounded-[3rem] p-12 shadow-2xl"><h4 className="text-2xl font-black uppercase tracking-tight mb-6">Immutability</h4><p className="text-lg leading-relaxed font-light">The blockchain is immutable not because of magic, but because it is more expensive to attack the network than defend it. Security comes from mathematics and economics.</p></div>
+        </div>
+      );
+    }
+
+    if (id === 'how-do-bitcoin-transactions-work') {
+      return (
+        <div className="space-y-12">
+          <p>A Bitcoin transaction moves funds from one address to another. It is signed with your private key and broadcast to the entire network for validation and confirmation.</p>
+          <div className="bg-slate-50 border-l-4 border-teal-600 p-8 md:p-12 rounded-r-3xl shadow-sm my-16">
+            <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-6">Transaction Anatomy</h3>
+            <p className="text-lg leading-relaxed text-slate-700 italic">Every transaction has inputs (UTXOs you are spending) and outputs (UTXOs you are creating). The difference is the fee paid to miners.</p>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">The Four Steps</h2>
+          <div className="space-y-6">
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm"><h3 className="font-bold text-slate-900 uppercase tracking-widest mb-4">1. Create</h3><p className="text-gray-600 font-light">Select UTXOs to spend and specify where the money goes.</p></section>
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm"><h3 className="font-bold text-slate-900 uppercase tracking-widest mb-4">2. Sign</h3><p className="text-gray-600 font-light">Your wallet signs with your private key. The signature proves you authorized this.</p></section>
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm"><h3 className="font-bold text-slate-900 uppercase tracking-widest mb-4">3. Broadcast</h3><p className="text-gray-600 font-light">Your node sends it to the network. Other nodes relay it across Bitcoin.</p></section>
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm"><h3 className="font-bold text-slate-900 uppercase tracking-widest mb-4">4. Confirm</h3><p className="text-gray-600 font-light">Miners include it in a block. Once mined, your transaction is confirmed.</p></section>
+          </div>
+          <div className="bg-teal-600 text-white rounded-[3rem] p-12 shadow-2xl"><h4 className="text-2xl font-black uppercase tracking-tight mb-6">Finality</h4><p className="text-lg leading-relaxed font-light">Once confirmed in the blockchain, your transaction is final. No refund, no reversal, no appeal. Bitcoin is cash, not credit.</p></div>
+        </div>
+      );
+    }
+
+    if (id === 'what-is-bitcoin-mining') {
+      return (
+        <div className="space-y-12">
+          <p>Mining is the process that secures the Bitcoin network and creates new Bitcoin. Miners compete to solve a computational puzzle, and the first to solve it earns the reward.</p>
+          <div className="bg-slate-50 border-l-4 border-teal-600 p-8 md:p-12 rounded-r-3xl shadow-sm my-16">
+            <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-6">How Mining Works</h3>
+            <p className="text-lg leading-relaxed text-slate-700 italic">Miners collect unconfirmed transactions and bundle them into a candidate block. They must solve a cryptographic puzzle (find a valid nonce) to create a valid block.</p>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">The Mining Reward</h2>
+          <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm"><h3 className="font-bold text-slate-900 uppercase tracking-widest mb-6">Block Subsidy + Fees</h3><p className="text-gray-600 mb-6 font-light">The first transaction in every block creates new Bitcoin. This is the block subsidy. Miners also collect all transaction fees.</p><div className="bg-slate-50 p-6 rounded-2xl border border-slate-200"><p className="font-black uppercase text-xs text-slate-500 mb-2">Current (2026)</p><p className="text-2xl font-black text-slate-900">3.125 BTC + fees per block</p><p className="text-xs text-slate-400 mt-2">Halves every 210,000 blocks (~4 years)</p></div></section>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">Why Mining Matters</h2>
+          <p>Mining secures Bitcoin. It creates an economic incentive for people to run nodes and validate transactions. Without mining rewards, there would be no reason to secure the network.</p>
+          <div className="bg-teal-600 text-white rounded-[3rem] p-12 shadow-2xl"><h4 className="text-2xl font-black uppercase tracking-tight mb-6">The Security Model</h4><p className="text-lg leading-relaxed font-light">Bitcoin\'s security is based on the cost of mining. If electricity is cheap, mining is profitable, and the network is well-defended. Security is an economic property.</p></div>
+        </div>
+      );
+    }
+
+    if (id === 'what-is-bitcoin-node') {
+      return (
+        <div className="space-y-12">
+          <p>A Bitcoin node is a computer that runs Bitcoin software and validates the entire blockchain. It is the backbone of Bitcoin\'s decentralization and the highest form of participation.</p>
+          <div className="bg-slate-50 border-l-4 border-teal-600 p-8 md:p-12 rounded-r-3xl shadow-sm my-16">
+            <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-6">Node Validation</h3>
+            <p className="text-lg leading-relaxed text-slate-700 italic">Nodes download and verify every transaction and block. They reject invalid blocks and transactions. Running a node means not trusting any third party.</p>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">Node vs. Mining</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm"><h3 className="font-bold text-slate-900 uppercase tracking-widest mb-4">Nodes</h3><ul className="space-y-3"><li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 shrink-0" /><span className="text-gray-600 text-sm">Validate all transactions</span></li><li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 shrink-0" /><span className="text-gray-600 text-sm">Enforce consensus rules</span></li><li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 shrink-0" /><span className="text-gray-600 text-sm">No reward for running</span></li></ul></section>
+            <section className="bg-white rounded-[2.5rem] p-10 border border-teal-200 shadow-sm"><h3 className="font-bold text-teal-600 uppercase tracking-widest mb-4">Miners</h3><ul className="space-y-3"><li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600 text-sm">Solve proof-of-work puzzle</span></li><li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600 text-sm">Create new blocks</span></li><li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600 text-sm">Earn block rewards</span></li></ul></section>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">Hardware Requirements</h2>
+          <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm"><ul className="space-y-4"><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600"><strong>Disk space:</strong> ~500GB for the full blockchain</span></li><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600"><strong>Bandwidth:</strong> Continuous connectivity required</span></li><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600"><strong>CPU:</strong> Modest requirements, not demanding</span></li></ul></section>
+          <div className="bg-teal-600 text-white rounded-[3rem] p-12 shadow-2xl"><h4 className="text-2xl font-black uppercase tracking-tight mb-6">True Sovereignty</h4><p className="text-lg leading-relaxed font-light">Running your own node is the most sovereign form of Bitcoin participation. You don\'t trust anyone. You verify everything yourself.</p></div>
+        </div>
+      );
+    }
+
+    if (id === 'what-is-seed-phrase-bitcoin') {
+      return (
+        <div className="space-y-12">
+          <p>A seed phrase is a human-readable backup of your Bitcoin private keys. It is usually 12 or 24 English words that can reconstruct all your wallets and private keys.</p>
+          <div className="bg-slate-50 border-l-4 border-teal-600 p-8 md:p-12 rounded-r-3xl shadow-sm my-16">
+            <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-6">The Master Key</h3>
+            <p className="text-lg leading-relaxed text-slate-700 italic">Your seed phrase is the master key to all wallets derived from it. Losing it means losing access to your Bitcoin forever. Sharing it means losing your Bitcoin to whoever has it.</p>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">Seed Phrase Standard</h2>
+          <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm"><h3 className="font-bold text-slate-900 uppercase tracking-widest mb-6">BIP39 Standard</h3><ul className="space-y-4"><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600"><strong>12 words:</strong> ~128 bits of entropy, standard minimum</span></li><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600"><strong>24 words:</strong> ~256 bits of entropy, maximum security</span></li><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600"><strong>English words only:</strong> From a standard list of 2048 words</span></li></ul></section>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">Backup Best Practices</h2>
+          <div className="space-y-6">
+            <section className="bg-white rounded-[2.5rem] p-10 border border-red-200 shadow-sm"><h3 className="font-bold text-red-600 uppercase tracking-widest mb-4">❌ Never Do This</h3><ul className="space-y-3"><li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-red-400 mt-2 shrink-0" /><span className="text-gray-600 text-sm">Store in a cloud account or email</span></li><li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-red-400 mt-2 shrink-0" /><span className="text-gray-600 text-sm">Take a photo with your phone</span></li><li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-red-400 mt-2 shrink-0" /><span className="text-gray-600 text-sm">Write it on a regular notepad</span></li></ul></section>
+            <section className="bg-white rounded-[2.5rem] p-10 border border-teal-200 shadow-sm"><h3 className="font-bold text-teal-600 uppercase tracking-widest mb-4">✓ Do This Instead</h3><ul className="space-y-3"><li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600 text-sm">Write on physical paper or metal</span></li><li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600 text-sm">Store in a safe deposit box</span></li><li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600 text-sm">Keep multiple copies in secure locations</span></li></ul></section>
+          </div>
+          <div className="bg-teal-600 text-white rounded-[3rem] p-12 shadow-2xl"><h4 className="text-2xl font-black uppercase tracking-tight mb-6">The Master Password</h4><p className="text-lg leading-relaxed font-light">Your seed phrase is the master password to all your Bitcoin. Anyone who has it can spend your coins. Guard it like you would guard the keys to your house or the access to your bank account.</p></div>
+        </div>
+      );
+    }
+
+    if (id === 'what-are-bitcoin-fees') {
+      return (
+        <div className="space-y-12">
+          <p>Bitcoin fees are payments to miners for including your transaction in a block. They depend on network congestion and the block size limit. Fee economics differ significantly between Bitcoin implementations.</p>
+          <div className="bg-slate-50 border-l-4 border-teal-600 p-8 md:p-12 rounded-r-3xl shadow-sm my-16">
+            <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-6">Fee Market</h3>
+            <p className="text-lg leading-relaxed text-slate-700 italic">Bitcoin fees work like an auction. Users bid for limited space in blocks. When demand is high, fees rise. When blocks have space, fees fall.</p>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">BTC vs. BSV Fee Economics</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm"><h3 className="font-bold text-slate-900 uppercase tracking-widest mb-4">Bitcoin Core (BTC)</h3><ul className="space-y-3"><li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 shrink-0" /><span className="text-gray-600 text-sm">1MB block size limit</span></li><li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 shrink-0" /><span className="text-gray-600 text-sm">Creates persistent congestion</span></li><li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 shrink-0" /><span className="text-gray-600 text-sm">Variable, high fees</span></li></ul></section>
+            <section className="bg-white rounded-[2.5rem] p-10 border border-teal-200 shadow-sm"><h3 className="font-bold text-teal-600 uppercase tracking-widest mb-4">Bitcoin SV (BSV)</h3><ul className="space-y-3"><li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600 text-sm">Unlimited block size</span></li><li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600 text-sm">Capacity exceeds demand</span></li><li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600 text-sm">Stable, low fees</span></li></ul></section>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">Fee Calculation</h2>
+          <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm"><p className="text-gray-600 mb-6 font-light">Fees are measured in satoshis per byte (sat/byte). Higher fee = faster confirmation. Choose your fee based on urgency.</p><div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-2"><p className="font-bold text-slate-900 uppercase text-sm">Example</p><p className="text-sm text-gray-600">500-byte transaction at 10 sat/byte = 5,000 satoshis (~$0.05)</p></div></section>
+          <div className="bg-teal-600 text-white rounded-[3rem] p-12 shadow-2xl"><h4 className="text-2xl font-black uppercase tracking-tight mb-6">Fee vs. Speed Trade-off</h4><p className="text-lg leading-relaxed font-light">Pay more to confirm faster, or pay less and wait. The choice depends on how urgent the transaction is.</p></div>
+        </div>
+      );
+    }
+
+    if (id === 'on-chain-vs-off-chain-bitcoin') {
+      return (
+        <div className="space-y-12">
+          <p>On-chain transactions settle directly on the blockchain. Off-chain transactions happen elsewhere and batch-settle later. Both have trade-offs depending on your use case.</p>
+          <div className="bg-slate-50 border-l-4 border-teal-600 p-8 md:p-12 rounded-r-3xl shadow-sm my-16">
+            <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-6">Two Paths to Payment</h3>
+            <p className="text-lg leading-relaxed text-slate-700 italic">On-chain is slow but final. Off-chain is fast but requires trust in an intermediary. The right choice depends on your needs.</p>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">Comparison</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm"><h3 className="font-bold text-slate-900 uppercase tracking-widest mb-6">On-Chain</h3><ul className="space-y-4"><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 shrink-0" /><span className="text-gray-600"><strong>Immutable:</strong> Once confirmed, final</span></li><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 shrink-0" /><span className="text-gray-600"><strong>Transparent:</strong> Everyone sees it</span></li><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 shrink-0" /><span className="text-gray-600"><strong>Slower:</strong> ~10 min per confirmation</span></li><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 shrink-0" /><span className="text-gray-600"><strong>Higher fees:</strong> Paying miners</span></li></ul></section>
+            <section className="bg-white rounded-[2.5rem] p-10 border border-teal-200 shadow-sm"><h3 className="font-bold text-teal-600 uppercase tracking-widest mb-6">Off-Chain</h3><ul className="space-y-4"><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600"><strong>Fast:</strong> Instant or near-instant</span></li><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600"><strong>Private:</strong> Only participants know</span></li><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600"><strong>Lower fees:</strong> Minimal cost</span></li><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600"><strong>Requires trust:</strong> In intermediary</span></li></ul></section>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">Solutions</h2>
+          <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm"><h3 className="font-bold text-slate-900 uppercase tracking-widest mb-4">Lightning Network</h3><p className="text-gray-600 font-light">A popular off-chain layer that enables fast, low-cost payments while settling to Bitcoin periodically.</p></section>
+          <div className="bg-teal-600 text-white rounded-[3rem] p-12 shadow-2xl"><h4 className="text-2xl font-black uppercase tracking-tight mb-6">Choose by Use Case</h4><p className="text-lg leading-relaxed font-light">Large settlement? Go on-chain. Daily coffee? Use off-chain. Understanding the trade-offs lets you choose the right tool.</p></div>
+        </div>
+      );
+    }
+
+    if (id === 'what-is-bitcoin-fork') {
+      return (
+        <div className="space-y-12">
+          <p>A fork changes Bitcoin\'s protocol rules. Soft forks are upgrades that stay backward-compatible. Hard forks create new coins if not adopted universally.</p>
+          <div className="bg-slate-50 border-l-4 border-teal-600 p-8 md:p-12 rounded-r-3xl shadow-sm my-16">
+            <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-6">Two Types of Forks</h3>
+            <p className="text-lg leading-relaxed text-slate-700 italic">Soft forks are conservative upgrades. Hard forks are revolutionary breaks. Forks reveal Bitcoin\'s governance: miners, nodes, and the market decide.</p>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">Soft Forks</h2>
+          <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm"><h3 className="font-bold text-slate-900 uppercase tracking-widest mb-6">Backward-Compatible Upgrades</h3><ul className="space-y-4"><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600">New rules are stricter than old rules</span></li><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600">Old nodes can still validate blocks</span></li><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600">No new coin created</span></li><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600">Example: Segwit (2017)</span></li></ul></section>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">Hard Forks</h2>
+          <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm"><h3 className="font-bold text-slate-900 uppercase tracking-widest mb-6">Breaking Changes</h3><ul className="space-y-4"><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 shrink-0" /><span className="text-gray-600">New rules incompatible with old</span></li><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 shrink-0" /><span className="text-gray-600">Creates new coin if not unanimous</span></li><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 shrink-0" /><span className="text-gray-600">Old nodes cannot validate new blocks</span></li><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 shrink-0" /><span className="text-gray-600">Examples: Bitcoin Cash (2017), Bitcoin SV (2018)</span></li></ul></section>
+          <div className="bg-teal-600 text-white rounded-[3rem] p-12 shadow-2xl"><h4 className="text-2xl font-black uppercase tracking-tight mb-6">Governance in Action</h4><p className="text-lg leading-relaxed font-light">Forks reveal Bitcoin\'s true governance. Without a CEO, a company, or a vote, the network decides through the choices of miners and nodes. The market then validates the result.</p></div>
+        </div>
+      );
+    }
+
+    if (id === 'what-is-bitcoin-halving') {
+      return (
+        <div className="space-y-12">
+          <p>The Bitcoin halving cuts the mining reward in half every 210,000 blocks (approximately every four years). It is built into Bitcoin\'s code and controls the inflation rate.</p>
+          <div className="bg-slate-50 border-l-4 border-teal-600 p-8 md:p-12 rounded-r-3xl shadow-sm my-16">
+            <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-6">Planned Scarcity</h3>
+            <p className="text-lg leading-relaxed text-slate-700 italic">The halving is a governor on Bitcoin\'s inflation. It ensures that new Bitcoin supply decreases over time, creating scarcity by design.</p>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">Halving History</h2>
+          <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm"><div className="space-y-4"><div className="flex justify-between items-center pb-4 border-b border-gray-100"><span className="font-bold text-slate-900 uppercase text-sm">2009 (Genesis)</span><span className="text-lg font-black text-teal-600">50 BTC/block</span></div><div className="flex justify-between items-center pb-4 border-b border-gray-100"><span className="font-bold text-slate-900 uppercase text-sm">2012 (Halving 1)</span><span className="text-lg font-black text-teal-600">25 BTC/block</span></div><div className="flex justify-between items-center pb-4 border-b border-gray-100"><span className="font-bold text-slate-900 uppercase text-sm">2016 (Halving 2)</span><span className="text-lg font-black text-teal-600">12.5 BTC/block</span></div><div className="flex justify-between items-center pb-4 border-b border-gray-100"><span className="font-bold text-slate-900 uppercase text-sm">2020 (Halving 3)</span><span className="text-lg font-black text-teal-600">6.25 BTC/block</span></div><div className="flex justify-between items-center"><span className="font-bold text-slate-900 uppercase text-sm">2024 (Halving 4)</span><span className="text-lg font-black text-teal-600">3.125 BTC/block</span></div></div></section>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">Why Halvings Matter</h2>
+          <p>The halving prevents Bitcoin from flooding the market. Each halving reduces new supply, which is inflationary pressure. Eventually, the subsidy becomes so small that transaction fees become the primary miner incentive.</p>
+          <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm"><h3 className="font-bold text-slate-900 uppercase tracking-widest mb-6">The End Game</h3><p className="text-gray-600 mb-6 font-light">After 32 halvings (~year 2140), the block subsidy approaches zero. At that point, miners are paid almost entirely by transaction fees, and Bitcoin\'s supply reaches its maximum: 21 million coins.</p></section>
+          <div className="bg-teal-600 text-white rounded-[3rem] p-12 shadow-2xl"><h4 className="text-2xl font-black uppercase tracking-tight mb-6">Fixed Supply</h4><p className="text-lg leading-relaxed font-light">Bitcoin\'s supply is fixed and predictable. No central bank can print more. The halving schedule is part of Bitcoin\'s DNA.</p></div>
+        </div>
+      );
+    }
+
+    if (id === 'how-to-get-bitcoin') {
+      return (
+        <div className="space-y-12">
+          <p>There are multiple ways to acquire Bitcoin: buying it with fiat currency, earning it for work, or mining it directly. Each method has different trade-offs.</p>
+          <div className="bg-slate-50 border-l-4 border-teal-600 p-8 md:p-12 rounded-r-3xl shadow-sm my-16">
+            <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-6">Getting Started</h3>
+            <p className="text-lg leading-relaxed text-slate-700 italic">You don\'t need much to get started. Even small amounts are valuable. Start with what you can afford and build over time.</p>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">Three Methods</h2>
+          <div className="space-y-6">
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm"><h3 className="font-bold text-slate-900 uppercase tracking-widest mb-6">Buying</h3><ul className="space-y-3"><li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600">Exchanges (Kraken, Swan, etc.)</span></li><li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600">Peer-to-peer trading</span></li><li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600">Bitcoin ATMs</span></li></ul></section>
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm"><h3 className="font-bold text-slate-900 uppercase tracking-widest mb-6">Earning</h3><ul className="space-y-3"><li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600">Accept Bitcoin for work or goods</span></li><li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600">Freelance for Bitcoin payment</span></li><li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600">Earn through Bitcoin rewards programs</span></li></ul></section>
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm"><h3 className="font-bold text-slate-900 uppercase tracking-widest mb-6">Mining</h3><ul className="space-y-3"><li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600">ASIC mining hardware (expensive)</span></li><li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600">Mining pools (shared rewards)</span></li><li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600">Cloud mining services</span></li></ul></section>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">Smart Accumulation</h2>
+          <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm"><h3 className="font-bold text-slate-900 uppercase tracking-widest mb-6">Dollar-Cost Averaging</h3><p className="text-gray-600 mb-4 font-light">Buy small amounts regularly (weekly, monthly) rather than trying to time the market. This reduces emotional decision-making and smooths out volatility.</p><div className="bg-slate-50 p-6 rounded-2xl border border-slate-200"><p className="text-sm text-slate-600 font-light">Example: $100/month, every month, for 10 years = automatic discipline</p></div></section>
+          <div className="bg-teal-600 text-white rounded-[3rem] p-12 shadow-2xl"><h4 className="text-2xl font-black uppercase tracking-tight mb-6">The Next Step</h4><p className="text-lg leading-relaxed font-light">Once you own Bitcoin, move it off exchanges to a wallet you control. "Not your keys, not your coins." Self-custody is the foundation of Bitcoin sovereignty.</p></div>
+        </div>
+      );
+    }
+
+    if (id === 'what-is-self-custody-bitcoin') {
+      return (
+        <div className="space-y-12">
+          <p>Self-custody means controlling your own private keys. "Not your keys, not your coins" is the foundation of Bitcoin sovereignty and personal financial freedom.</p>
+          <div className="bg-slate-50 border-l-4 border-teal-600 p-8 md:p-12 rounded-r-3xl shadow-sm my-16">
+            <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-6">Own Your Money</h3>
+            <p className="text-lg leading-relaxed text-slate-700 italic">When you hold your own keys, you are a sovereign actor. No exchange can freeze your account. No government can seize your coins. You are the bank.</p>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">The Risk of Leaving on Exchanges</h2>
+          <section className="bg-white rounded-[2.5rem] p-10 border border-red-200 shadow-sm"><h3 className="font-bold text-red-600 uppercase tracking-widest mb-6">Exchange Risks</h3><ul className="space-y-4"><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-red-400 mt-2 shrink-0" /><span className="text-gray-600"><strong>Hacks:</strong> Exchange wallets are targets for thieves</span></li><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-red-400 mt-2 shrink-0" /><span className="text-gray-600"><strong>Bankruptcy:</strong> Exchanges fail and customer funds disappear</span></li><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-red-400 mt-2 shrink-0" /><span className="text-gray-600"><strong>Frozen accounts:</strong> Exchanges can freeze your access</span></li><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-red-400 mt-2 shrink-0" /><span className="text-gray-600"><strong>Censorship:</strong> Exchanges can refuse to let you withdraw</span></li></ul></section>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">Self-Custody Options</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm"><h3 className="font-bold text-slate-900 uppercase tracking-widest mb-6">Software Wallets</h3><ul className="space-y-3"><li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 shrink-0" /><span className="text-gray-600">Apps on your phone or computer</span></li><li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 shrink-0" /><span className="text-gray-600">Convenient for daily use</span></li><li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 shrink-0" /><span className="text-gray-600">Requires secure device</span></li></ul></section>
+            <section className="bg-white rounded-[2.5rem] p-10 border border-teal-200 shadow-sm"><h3 className="font-bold text-teal-600 uppercase tracking-widest mb-6">Hardware Wallets</h3><ul className="space-y-3"><li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600">Physical devices (Ledger, Trezor)</span></li><li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600">Keys never touch the internet</span></li><li className="flex gap-3"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600">Gold standard for security</span></li></ul></section>
+          </div>
+          <div className="bg-teal-600 text-white rounded-[3rem] p-12 shadow-2xl"><h4 className="text-2xl font-black uppercase tracking-tight mb-6">True Ownership</h4><p className="text-lg leading-relaxed font-light">Self-custody is the whole point of Bitcoin. It is the ability to be your own bank, to move money without permission, and to prove no one can take it from you.</p></div>
+        </div>
+      );
+    }
+
+    if (id === 'bitcoin-vs-ethereum') {
+      return (
+        <div className="space-y-12">
+          <p>Bitcoin is digital money. Ethereum is a programmable computer. They have fundamentally different designs, purposes, and philosophical approaches to blockchain technology.</p>
+          <div className="bg-slate-50 border-l-4 border-teal-600 p-8 md:p-12 rounded-r-3xl shadow-sm my-16">
+            <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-6">Two Different Tools</h3>
+            <p className="text-lg leading-relaxed text-slate-700 italic">Bitcoin is gold; Ethereum is the internet. Both are valuable, but they serve different purposes and operate under different philosophies.</p>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">Core Differences</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm"><h3 className="font-bold text-slate-900 uppercase tracking-widest mb-6">Bitcoin</h3><ul className="space-y-4"><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 shrink-0" /><span className="text-gray-600"><strong>Purpose:</strong> Digital money</span></li><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 shrink-0" /><span className="text-gray-600"><strong>Supply:</strong> Fixed at 21 million</span></li><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 shrink-0" /><span className="text-gray-600"><strong>Programming:</strong> Limited (simple Script)</span></li><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 shrink-0" /><span className="text-gray-600"><strong>Consensus:</strong> Proof of Work</span></li></ul></section>
+            <section className="bg-white rounded-[2.5rem] p-10 border border-teal-200 shadow-sm"><h3 className="font-bold text-teal-600 uppercase tracking-widest mb-6">Ethereum</h3><ul className="space-y-4"><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600"><strong>Purpose:</strong> Programmable computer</span></li><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600"><strong>Supply:</strong> Flexible, no cap</span></li><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600"><strong>Programming:</strong> Turing-complete (EVM)</span></li><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600"><strong>Consensus:</strong> Proof of Stake (post-2022)</span></li></ul></section>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">Philosophy</h2>
+          <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm"><h3 className="font-bold text-slate-900 uppercase tracking-widest mb-6">Bitcoin: Conservative</h3><p className="text-gray-600 mb-6 font-light">Bitcoin prioritizes security and stability over features. Changes are rare and carefully considered. The goal is to be the best money possible.</p></section>
+          <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm"><h3 className="font-bold text-slate-900 uppercase tracking-widest mb-6">Ethereum: Experimental</h3><p className="text-gray-600 font-light">Ethereum prioritizes innovation and flexibility. The goal is to enable any decentralized application imaginable. This comes with more risk.</p></section>
+          <div className="bg-teal-600 text-white rounded-[3rem] p-12 shadow-2xl"><h4 className="text-2xl font-black uppercase tracking-tight mb-6">Both Have Value</h4><p className="text-lg leading-relaxed font-light">Bitcoin and Ethereum are not competitors. They are different tools for different jobs. Bitcoin is money. Ethereum is infrastructure. Both are essential to the crypto ecosystem.</p></div>
+        </div>
+      );
+    }
+
+    if (id === 'what-is-bitcoin-script') {
+      return (
+        <div className="space-y-12">
+          <p>Bitcoin Script is a simple but powerful programming language that enables smart contracts. It powers everything from multi-signature wallets to complex conditional payments.</p>
+          <div className="bg-slate-50 border-l-4 border-teal-600 p-8 md:p-12 rounded-r-3xl shadow-sm my-16">
+            <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-6">Bitcoin\'s Programming Language</h3>
+            <p className="text-lg leading-relaxed text-slate-700 italic">Bitcoin Script is intentionally simple. It is not Turing-complete (no loops), which prevents infinite computation. This design choice trades flexibility for security and predictability.</p>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">How Script Works</h2>
+          <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm"><h3 className="font-bold text-slate-900 uppercase tracking-widest mb-6">Stack-Based Execution</h3><p className="text-gray-600 mb-6 font-light">Bitcoin Script uses a stack machine. Operations push and pop values from a stack. The final result determines if a transaction is valid or invalid.</p><div className="bg-slate-50 p-6 rounded-2xl border border-slate-200"><p className="text-sm text-slate-600 font-light italic">Example: OP_DUP (duplicate top item) → OP_HASH160 (hash twice) → [expected hash] → OP_EQUAL (check equality)</p></div></section>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">Common Use Cases</h2>
+          <div className="space-y-6">
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm"><h3 className="font-bold text-slate-900 uppercase tracking-widest mb-4">Multi-Signature Wallets</h3><p className="text-gray-600 font-light">Require multiple private keys to spend. Example: 2-of-3 means two of three keys can authorize spending.</p></section>
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm"><h3 className="font-bold text-slate-900 uppercase tracking-widest mb-4">Timelocks</h3><p className="text-gray-600 font-light">Coins can be locked until a specific time or block height. Used for vesting schedules or delayed payments.</p></section>
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm"><h3 className="font-bold text-slate-900 uppercase tracking-widest mb-4">Hash Locks</h3><p className="text-gray-600 font-light">Coins are locked by a hash puzzle. Whoever knows the preimage can unlock them. Enables atomic swaps.</p></section>
+          </div>
+          <div className="bg-teal-600 text-white rounded-[3rem] p-12 shadow-2xl"><h4 className="text-2xl font-black uppercase tracking-tight mb-6">Simple but Powerful</h4><p className="text-lg leading-relaxed font-light">Bitcoin Script proves that you don\'t need Turing-completeness to enable sophisticated contracts. Simplicity is a feature, not a bug.</p></div>
+        </div>
+      );
+    }
+
+    if (id === 'what-is-proof-of-work') {
+      return (
+        <div className="space-y-12">
+          <p>Proof of Work is the consensus mechanism that secures Bitcoin. Miners must perform computational work to create valid blocks. This work is the foundation of Bitcoin\'s security.</p>
+          <div className="bg-slate-50 border-l-4 border-teal-600 p-8 md:p-12 rounded-r-3xl shadow-sm my-16">
+            <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-6">The Security Model</h3>
+            <p className="text-lg leading-relaxed text-slate-700 italic">Bitcoin\'s security comes from the economic cost of attacking it. Proof of Work makes attacking more expensive than defending, which aligns attacker incentives with network security.</p>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">How PoW Works</h2>
+          <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm"><h3 className="font-bold text-slate-900 uppercase tracking-widest mb-6">The Puzzle</h3><p className="text-gray-600 mb-6 font-light">Miners must find a nonce (number used once) such that the block hash starts with a specific number of zeros. The number of zeros required is the difficulty.</p><ul className="space-y-4"><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600"><strong>Easy to verify:</strong> Anyone can check if the hash is valid in milliseconds</span></li><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600"><strong>Hard to solve:</strong> Finding the nonce requires billions of attempts</span></li><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600"><strong>Adjusting difficulty:</strong> Network adjusts every 2,016 blocks to maintain ~10 min block time</span></li></ul></section>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">Security Through Cost</h2>
+          <p>To attack Bitcoin (rewrite history), an attacker would have to re-mine all blocks from the point of attack forward, faster than honest miners can add new blocks. This requires more hash power than 50% of the network.</p>
+          <section className="bg-white rounded-[2.5rem] p-10 border border-red-200 shadow-sm"><h3 className="font-bold text-red-600 uppercase tracking-widest mb-6">The Cost of Attack</h3><p className="text-gray-600 mb-6 font-light">To 51% attack Bitcoin would require more computing power, electricity, and capital than it is worth. The reward for attacking (~$10B in coins) is less than the cost of the attack.</p></section>
+          <div className="bg-teal-600 text-white rounded-[3rem] p-12 shadow-2xl"><h4 className="text-2xl font-black uppercase tracking-tight mb-6">Energy = Security</h4><p className="text-lg leading-relaxed font-light">Bitcoin\'s energy consumption is not wasteful; it is the price of security. Every kilowatt-hour spent on mining makes Bitcoin more expensive to attack.</p></div>
+        </div>
+      );
+    }
+
+    if (id === 'bitcoin-privacy-vs-anonymity') {
+      return (
+        <div className="space-y-12">
+          <p>Bitcoin is pseudonymous, not anonymous. All transactions are visible on the blockchain, and blockchain analysis can link addresses to real-world identities.</p>
+          <div className="bg-slate-50 border-l-4 border-teal-600 p-8 md:p-12 rounded-r-3xl shadow-sm my-16">
+            <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-6">Transparency is a Feature</h3>
+            <p className="text-lg leading-relaxed text-slate-700 italic">Bitcoin\'s transparency is part of its design. Everyone can see all transactions, which is why the ledger is immutable and trustless.</p>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">Pseudonymity vs. Anonymity</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm"><h3 className="font-bold text-slate-900 uppercase tracking-widest mb-6">Pseudonymous (Bitcoin)</h3><ul className="space-y-4"><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 shrink-0" /><span className="text-gray-600">Addresses are random labels</span></li><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 shrink-0" /><span className="text-gray-600">No real name required to use</span></li><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 shrink-0" /><span className="text-gray-600">But transactions are visible</span></li></ul></section>
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm"><h3 className="font-bold text-slate-900 uppercase tracking-widest mb-6">Anonymous</h3><ul className="space-y-4"><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600">No transaction history visible</span></li><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600">No way to link transactions</span></li><li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600">Monero and Zcash offer this</span></li></ul></section>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">Privacy Challenges</h2>
+          <section className="bg-white rounded-[2.5rem] p-10 border border-red-200 shadow-sm"><h3 className="font-bold text-red-600 uppercase tracking-widest mb-6">Blockchain Analysis</h3><p className="text-gray-600 mb-6 font-light">Companies analyze transaction patterns to identify addresses. Exchange withdrawals reveal when Bitcoin enters the traditional financial system, linking addresses to real identities.</p></section>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">Privacy Tools</h2>
+          <div className="space-y-4">
+            <section className="bg-white rounded-[2rem] p-8 border border-gray-100 shadow-sm"><h4 className="font-bold text-slate-900 uppercase tracking-widest text-sm mb-3">CoinJoin</h4><p className="text-gray-600 text-sm font-light">Mix your coins with others to obfuscate transaction history.</p></section>
+            <section className="bg-white rounded-[2rem] p-8 border border-gray-100 shadow-sm"><h4 className="font-bold text-slate-900 uppercase tracking-widest text-sm mb-3">Mixing Services</h4><p className="text-gray-600 text-sm font-light">Use a service to tumble coins, breaking the transaction chain.</p></section>
+            <section className="bg-white rounded-[2rem] p-8 border border-gray-100 shadow-sm"><h4 className="font-bold text-slate-900 uppercase tracking-widest text-sm mb-3">New Addresses</h4><p className="text-gray-600 text-sm font-light">Use a new address for each transaction to avoid linking.</p></section>
+          </div>
+          <div className="bg-teal-600 text-white rounded-[3rem] p-12 shadow-2xl"><h4 className="text-2xl font-black uppercase tracking-tight mb-6">Privacy Requires Effort</h4><p className="text-lg leading-relaxed font-light">Bitcoin\'s transparency is intentional. True privacy on Bitcoin requires deliberate practices and tools. This is a design trade-off: transparency for immutability and decentralization.</p></div>
+        </div>
+      );
+    }
+
+    if (id === 'what-is-satoshi') {
+      return (
+        <div className="space-y-12">
+          <p>A satoshi (sat) is the smallest unit of Bitcoin, worth one hundred millionth of one Bitcoin (0.00000001 BTC). As Bitcoin adoption grows, satoshis become increasingly important.</p>
+          <div className="bg-slate-50 border-l-4 border-teal-600 p-8 md:p-12 rounded-r-3xl shadow-sm my-16">
+            <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-6">Bitcoin\'s Smallest Unit</h3>
+            <p className="text-lg leading-relaxed text-slate-700 italic">The satoshi is named after Bitcoin\'s creator, Satoshi Nakamoto. It represents the finest granularity of Bitcoin divisibility.</p>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">Why Satoshis Matter</h2>
+          <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm"><h3 className="font-bold text-slate-900 uppercase tracking-widest mb-6">Divisibility is Strength</h3><p className="text-gray-600 mb-6 font-light">Bitcoin\'s divisibility into 8 decimal places means it can scale to any price. Even if one Bitcoin is worth millions of dollars, satoshis will remain tiny and affordable.</p></section>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">Conversion Reference</h2>
+          <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm"><div className="space-y-3 font-mono text-sm"><div className="flex justify-between"><span>1 BTC =</span><span className="font-black">100,000,000 satoshis</span></div><div className="flex justify-between"><span>0.1 BTC =</span><span className="font-black">10,000,000 satoshis</span></div><div className="flex justify-between"><span>0.01 BTC =</span><span className="font-black">1,000,000 satoshis</span></div><div className="flex justify-between"><span>0.001 BTC =</span><span className="font-black">100,000 satoshis</span></div><div className="flex justify-between"><span>0.00000001 BTC =</span><span className="font-black">1 satoshi</span></div></div></section>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">Why Think in Satoshis?</h2>
+          <p>As Bitcoin becomes more valuable, thinking in BTC becomes awkward. A coffee might be 500,000 satoshis instead of 0.005 BTC. Using satoshis makes numbers more intuitive as Bitcoin adoption grows.</p>
+          <div className="bg-teal-600 text-white rounded-[3rem] p-12 shadow-2xl"><h4 className="text-2xl font-black uppercase tracking-tight mb-6">The Future of Numbers</h4><p className="text-lg leading-relaxed font-light">In a Bitcoin-standard economy, satoshis become the natural unit of account. Instead of dollars or euros, people will price things in sats.</p></div>
+        </div>
+      );
+    }
+
+    if (id === 'bitcoin-glossary') {
+      return (
+        <div className="space-y-12">
+          <p>A comprehensive reference guide to Bitcoin and blockchain terminology. Use this glossary to understand the essential language of Bitcoin.</p>
+          <div className="bg-slate-50 border-l-4 border-teal-600 p-8 md:p-12 rounded-r-3xl shadow-sm my-16">
+            <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-6">Essential Terms</h3>
+            <p className="text-lg leading-relaxed text-slate-700 italic">Bitcoin has its own vocabulary. Understanding these terms unlocks your ability to read whitepapers, forums, and technical discussions.</p>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">Core Concepts</h2>
+          <div className="space-y-4">
+            {[
+              { term: 'Address', def: 'A public identifier (like an email) for receiving Bitcoin.' },
+              { term: 'Blockchain', def: 'The immutable ledger of all Bitcoin transactions.' },
+              { term: 'Block', def: 'A batch of transactions secured by mining.' },
+              { term: 'Fork', def: 'A change to the protocol rules (soft or hard).' },
+              { term: 'Hash', def: 'A cryptographic fingerprint of data.' },
+              { term: 'Mining', def: 'The process of securing new blocks and creating Bitcoin.' },
+              { term: 'Node', def: 'A computer running Bitcoin software and validating blocks.' },
+              { term: 'Private Key', def: 'A secret number that proves ownership and authorizes spending.' },
+              { term: 'Public Key', def: 'Derived from the private key, mathematically linked to addresses.' },
+              { term: 'UTXO', def: 'An unspent transaction output; a discrete amount of Bitcoin.' },
+              { term: 'Transaction', def: 'A move of Bitcoin from one address to another.' },
+              { term: 'Satoshi', def: 'The smallest unit of Bitcoin (0.00000001 BTC).' },
+              { term: 'Wallet', def: 'Software or hardware that manages private keys and addresses.' },
+              { term: 'Seed Phrase', def: 'A 12 or 24 word backup of your private keys.' },
+              { term: 'Halving', def: 'The event where mining rewards are cut in half every 4 years.' }
+            ].map((item, i) => (
+              <section key={i} className="bg-white rounded-[2rem] p-8 border border-gray-100 shadow-sm hover:shadow-lg transition-shadow">
+                <h4 className="font-black uppercase text-slate-900 mb-3 text-sm">{item.term}</h4>
+                <p className="text-gray-600 text-sm font-light">{item.def}</p>
+              </section>
+            ))}
+          </div>
+          <div className="bg-teal-600 text-white rounded-[3rem] p-12 shadow-2xl"><h4 className="text-2xl font-black uppercase tracking-tight mb-6">Keep Learning</h4><p className="text-lg leading-relaxed font-light">Bitcoin\'s terminology evolves as the technology matures. Bookmark this glossary and return when you encounter unfamiliar terms.</p></div>
+        </div>
+      );
+    }
+
     return (
       <div className="py-32 text-center border-2 border-dashed border-gray-100 rounded-[3rem] bg-slate-50/50">
         <p className="text-gray-400 font-bold uppercase tracking-widest text-[10px]">Authority Record Syncing...</p>
