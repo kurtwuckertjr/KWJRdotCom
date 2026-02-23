@@ -2014,84 +2014,99 @@ const Post: React.FC = () => {
       return (
         <div className="space-y-12">
           <p>There are three main ways to get Bitcoin: buy it, earn it, or mine it.</p>
-          <ol className="space-y-6">
-            <li className="flex gap-4">
-              <span className="bg-teal-600 text-white w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold shrink-0">1</span>
-              <span className="text-gray-600">Buying Bitcoin</span>
+
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
+            Three Ways to Get Bitcoin
+          </h2>
+
+          <ol className="space-y-12">
+            <li className="flex gap-6 group">
+              <div className="flex flex-col items-center shrink-0">
+                <div className="w-10 h-10 rounded-full bg-slate-900 text-teal-400 flex items-center justify-center font-black text-lg group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">1</div>
+                <div className="w-px h-full bg-slate-100 group-hover:bg-teal-100 mt-2 transition-colors" />
+              </div>
+              <div>
+                <h4 className="text-xl font-black uppercase text-slate-900 mb-2">Buying Bitcoin</h4>
+                <p className="text-gray-500 font-light leading-relaxed mb-4">This is the most common route for beginners.</p>
+                <ul className="space-y-6">
+                  <li className="flex gap-4">
+                    <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                    <span className="text-gray-600"><strong>Exchanges:</strong> Sign up with a reputable exchange, complete any required identity checks, deposit money, then buy Bitcoin. Withdraw to a self custody wallet if you want full control.</span>
+                  </li>
+                  <li className="flex gap-4">
+                    <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                    <span className="text-gray-600"><strong>Broker apps:</strong> Some fintech apps let you buy small amounts of Bitcoin from your phone. Make sure you understand whether you can withdraw to your own wallet.</span>
+                  </li>
+                  <li className="flex gap-4">
+                    <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                    <span className="text-gray-600"><strong>Bitcoin ATMs and peers:</strong> In some places, machines or peer to peer platforms let you buy for cash.</span>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li className="flex gap-6 group">
+              <div className="flex flex-col items-center shrink-0">
+                <div className="w-10 h-10 rounded-full bg-slate-900 text-teal-400 flex items-center justify-center font-black text-lg group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">2</div>
+                <div className="w-px h-full bg-slate-100 group-hover:bg-teal-100 mt-2 transition-colors" />
+              </div>
+              <div>
+                <h4 className="text-xl font-black uppercase text-slate-900 mb-2">Earning Bitcoin</h4>
+                <p className="text-gray-500 font-light leading-relaxed mb-4">Instead of spending fiat to buy Bitcoin, you can accept it as payment.</p>
+                <ul className="space-y-6">
+                  <li className="flex gap-4">
+                    <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                    <span className="text-gray-600"><strong>Freelance or salary:</strong> Offer your services or products and accept Bitcoin.</span>
+                  </li>
+                  <li className="flex gap-4">
+                    <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                    <span className="text-gray-600"><strong>Tips and rewards:</strong> Some sites, social platforms, or communities let people tip you in Bitcoin.</span>
+                  </li>
+                  <li className="flex gap-4">
+                    <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                    <span className="text-gray-600"><strong>Business invoices:</strong> Companies can integrate Bitcoin payments for customers, especially useful on low fee chains.</span>
+                  </li>
+                </ul>
+                <p className="text-gray-500 font-light leading-relaxed mt-4">Earning is often the most natural way to get Bitcoin because you are directly trading your time or products for coins.</p>
+              </div>
+            </li>
+            <li className="flex gap-6 group">
+              <div className="flex flex-col items-center shrink-0">
+                <div className="w-10 h-10 rounded-full bg-slate-900 text-teal-400 flex items-center justify-center font-black text-lg group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">3</div>
+              </div>
+              <div>
+                <h4 className="text-xl font-black uppercase text-slate-900 mb-2">Mining Bitcoin</h4>
+                <p className="text-gray-500 font-light leading-relaxed mb-4">Mining is the most technical option.</p>
+                <ul className="space-y-6">
+                  <li className="flex gap-4">
+                    <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                    <span className="text-gray-600">You buy specialized mining hardware and secure low cost power.</span>
+                  </li>
+                  <li className="flex gap-4">
+                    <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                    <span className="text-gray-600">You point your machines at a mining pool or run your own setup.</span>
+                  </li>
+                  <li className="flex gap-4">
+                    <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                    <span className="text-gray-600">You earn a share of the block rewards and fees for the work your machines do.</span>
+                  </li>
+                </ul>
+                <p className="text-gray-500 font-light leading-relaxed mt-4">For most individuals today, mining is a serious business decision, not a hobby with a laptop. It involves real capital, long term planning, and understanding of the specific chain's economics.</p>
+              </div>
             </li>
           </ol>
-          <p className="text-gray-600 leading-relaxed">This is the most common route for beginners.</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Exchanges: Sign up with a reputable exchange, complete any required identity checks, deposit money, then buy Bitcoin. Withdraw to a self custody wallet if you want full control.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Broker apps: Some fintech apps let you buy small amounts of Bitcoin from your phone. Make sure you understand whether you can withdraw to your own wallet.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Bitcoin ATMs and peers: In some places, machines or peer to peer platforms let you buy for cash.</span>
-            </li>
-          </ul>
-          <ol className="space-y-6">
-            <li className="flex gap-4">
-              <span className="bg-teal-600 text-white w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold shrink-0">1</span>
-              <span className="text-gray-600">Earning Bitcoin</span>
-            </li>
-          </ol>
-          <p className="text-gray-600 leading-relaxed">Instead of spending fiat to buy Bitcoin, you can accept it as payment.</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Freelance or salary: Offer your services or products and accept Bitcoin.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Tips and rewards: Some sites, social platforms, or communities let people tip you in Bitcoin.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Business invoices: Companies can integrate Bitcoin payments for customers, especially useful on low fee chains.</span>
-            </li>
-          </ul>
-          <p className="text-gray-600 leading-relaxed">Earning is often the most natural way to get Bitcoin because you are directly trading your time or products for coins.</p>
-          <ol className="space-y-6">
-            <li className="flex gap-4">
-              <span className="bg-teal-600 text-white w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold shrink-0">1</span>
-              <span className="text-gray-600">Mining Bitcoin</span>
-            </li>
-          </ol>
-          <p className="text-gray-600 leading-relaxed">Mining is the most technical option.</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">You buy specialized mining hardware and secure low cost power.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">You point your machines at a mining pool or run your own setup.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">You earn a share of the block rewards and fees for the work your machines do.</span>
-            </li>
-          </ul>
-          <p className="text-gray-600 leading-relaxed">For most individuals today, mining is a serious business decision, not a hobby with a laptop. It involves real capital, long term planning, and understanding of the specific chain’s economics.</p>
-          <p className="text-gray-600 leading-relaxed">No matter which method you choose, the key step is the same. Learn to use a reliable wallet, back up your seed phrase, and move coins into self custody if you want true control.</p>
+
+          <div className="bg-slate-900 text-white rounded-[3rem] p-12 mt-20 shadow-2xl relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/5 rounded-full blur-[100px] group-hover:bg-teal-500/10 transition-all duration-1000" />
+            <div className="flex flex-col md:flex-row gap-8 items-start relative z-10">
+              <div className="bg-teal-600 text-white p-4 rounded-2xl shadow-lg shrink-0">
+                <ShoppingBag size={32} />
+              </div>
+              <div>
+                <h4 className="text-2xl font-black uppercase tracking-tight mb-6 text-teal-400">The Key Step</h4>
+                <p className="text-gray-300 leading-relaxed text-lg">No matter which method you choose, the key step is the same. Learn to use a reliable wallet, back up your seed phrase, and move coins into self custody if you want true control.</p>
+              </div>
+            </div>
+          </div>
         </div>
       );
     }
