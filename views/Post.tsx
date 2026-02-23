@@ -1439,68 +1439,115 @@ const Post: React.FC = () => {
       return (
         <div className="space-y-12">
           <p>A seed phrase (also called a recovery phrase or mnemonic) is a list of 12, 18, or 24 words that backs up your Bitcoin wallet. From this list of words, your wallet can regenerate all the private keys and addresses it uses.</p>
-          <p>Here is how it works:</p>
-          <ol className="space-y-6">
-            <li className="flex gap-4">
-              <span className="bg-teal-600 text-white w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold shrink-0">1</span>
-              <span className="text-gray-600">When you create a new wallet, it generates a large random number.</span>
+
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
+            How It Works
+          </h2>
+
+          <ol className="space-y-12">
+            <li className="flex gap-6 group">
+              <div className="flex flex-col items-center shrink-0">
+                <div className="w-10 h-10 rounded-full bg-slate-900 text-teal-400 flex items-center justify-center font-black text-lg group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">1</div>
+                <div className="w-px h-full bg-slate-100 group-hover:bg-teal-100 mt-2 transition-colors" />
+              </div>
+              <div>
+                <h4 className="text-xl font-black uppercase text-slate-900 mb-2">Random Number Generation</h4>
+                <p className="text-gray-500 font-light leading-relaxed">When you create a new wallet, it generates a large random number.</p>
+              </div>
+            </li>
+            <li className="flex gap-6 group">
+              <div className="flex flex-col items-center shrink-0">
+                <div className="w-10 h-10 rounded-full bg-slate-900 text-teal-400 flex items-center justify-center font-black text-lg group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">2</div>
+                <div className="w-px h-full bg-slate-100 group-hover:bg-teal-100 mt-2 transition-colors" />
+              </div>
+              <div>
+                <h4 className="text-xl font-black uppercase text-slate-900 mb-2">Word Conversion</h4>
+                <p className="text-gray-500 font-light leading-relaxed">This number is converted into a list of words from a fixed dictionary.</p>
+              </div>
+            </li>
+            <li className="flex gap-6 group">
+              <div className="flex flex-col items-center shrink-0">
+                <div className="w-10 h-10 rounded-full bg-slate-900 text-teal-400 flex items-center justify-center font-black text-lg group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">3</div>
+              </div>
+              <div>
+                <h4 className="text-xl font-black uppercase text-slate-900 mb-2">Your Master Backup</h4>
+                <p className="text-gray-500 font-light leading-relaxed">That list is your seed phrase. All your wallet keys can be recreated from it.</p>
+              </div>
             </li>
           </ol>
-          <ol className="space-y-6">
-            <li className="flex gap-4">
-              <span className="bg-teal-600 text-white w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold shrink-0">1</span>
-              <span className="text-gray-600">This number is converted into a list of words from a fixed dictionary.</span>
-            </li>
-          </ol>
-          <ol className="space-y-6">
-            <li className="flex gap-4">
-              <span className="bg-teal-600 text-white w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold shrink-0">1</span>
-              <span className="text-gray-600">That list is your seed phrase. All your wallet keys can be recreated from it.</span>
-            </li>
-          </ol>
-          <p className="text-gray-600 leading-relaxed">Why it is important:</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">If you lose your phone or hardware wallet, you can install the same wallet app on a new device, enter the seed phrase, and recover all your coins.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">If someone else gets your seed phrase, they can also recover your coins. It is as powerful as your private keys.</span>
-            </li>
-          </ul>
-          <p className="text-gray-600 leading-relaxed">Safe backup tips:</p>
-          <ol className="space-y-6">
-            <li className="flex gap-4">
-              <span className="bg-teal-600 text-white w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold shrink-0">1</span>
-              <span className="text-gray-600">Write it down by hand</span>
-            </li>
-          </ol>
-          <p className="text-gray-600 leading-relaxed">Do not store it in plain text on your computer, email, or cloud storage. Those can be hacked.</p>
-          <ol className="space-y-6">
-            <li className="flex gap-4">
-              <span className="bg-teal-600 text-white w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold shrink-0">1</span>
-              <span className="text-gray-600">Keep multiple copies in safe places</span>
-            </li>
-          </ol>
-          <p className="text-gray-600 leading-relaxed">For example, one in a home safe and one in a safety deposit box. Consider using metal backup plates to resist fire and water.</p>
-          <ol className="space-y-6">
-            <li className="flex gap-4">
-              <span className="bg-teal-600 text-white w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold shrink-0">1</span>
-              <span className="text-gray-600">Never share it with anyone</span>
-            </li>
-          </ol>
-          <p className="text-gray-600 leading-relaxed">No support agent, exchange, or friend should ever ask for your seed phrase. If someone asks, it is a scam.</p>
-          <ol className="space-y-6">
-            <li className="flex gap-4">
-              <span className="bg-teal-600 text-white w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold shrink-0">1</span>
-              <span className="text-gray-600">Test recovery</span>
-            </li>
-          </ol>
-          <p className="text-gray-600 leading-relaxed">If possible, practice recovering a small test wallet so you are comfortable with the process.</p>
-          <p className="text-gray-600 leading-relaxed">The seed phrase is the ultimate backup. Treat it like the master key to your entire Bitcoin life.</p>
+
+          <div className="bg-slate-50 border-l-4 border-teal-600 p-8 md:p-12 rounded-r-3xl shadow-sm my-16">
+            <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-6 flex items-center gap-3">
+               Why It Is Important
+            </h3>
+            <ul className="space-y-6">
+              <li className="flex gap-4">
+                <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                <span><strong>Recovery power:</strong> If you lose your phone or hardware wallet, you can install the same wallet app on a new device, enter the seed phrase, and recover all your coins.</span>
+              </li>
+              <li className="flex gap-4">
+                <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                <span><strong>Equal danger:</strong> If someone else gets your seed phrase, they can also recover your coins. It is as powerful as your private keys.</span>
+              </li>
+            </ul>
+          </div>
+
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
+            Safe Backup Tips
+          </h2>
+
+          <div className="grid gap-12">
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6 flex items-center gap-3">
+                1. Write It Down by Hand
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Do not store it in plain text on your computer, email, or cloud storage. Those can be hacked.
+              </p>
+            </section>
+
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6 flex items-center gap-3">
+                2. Keep Multiple Copies in Safe Places
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                For example, one in a home safe and one in a safety deposit box. Consider using metal backup plates to resist fire and water.
+              </p>
+            </section>
+
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6 flex items-center gap-3">
+                3. Never Share It with Anyone
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                No support agent, exchange, or friend should ever ask for your seed phrase. If someone asks, it is a scam.
+              </p>
+            </section>
+
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6 flex items-center gap-3">
+                4. Test Recovery
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                If possible, practice recovering a small test wallet so you are comfortable with the process.
+              </p>
+            </section>
+          </div>
+
+          <div className="bg-slate-900 text-white rounded-[3rem] p-12 mt-20 shadow-2xl relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/5 rounded-full blur-[100px] group-hover:bg-teal-500/10 transition-all duration-1000" />
+            <div className="flex flex-col md:flex-row gap-8 items-start relative z-10">
+              <div className="bg-teal-600 text-white p-4 rounded-2xl shadow-lg shrink-0">
+                <Lock size={32} />
+              </div>
+              <div>
+                <h4 className="text-2xl font-black uppercase tracking-tight mb-6 text-teal-400">The Master Key</h4>
+                <p className="text-gray-300 leading-relaxed text-lg">
+                  The seed phrase is the ultimate backup. Treat it like the master key to your entire Bitcoin life.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       );
     }
