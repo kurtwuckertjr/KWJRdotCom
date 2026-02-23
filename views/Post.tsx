@@ -1797,70 +1797,112 @@ const Post: React.FC = () => {
     if (id === 'what-is-bitcoin-fork') {
       return (
         <div className="space-y-12">
-          <p>A Bitcoin fork is a change in the rules or the history of the Bitcoin network. The word “fork” comes from the idea of a path splitting into two directions.</p>
+          <p>A Bitcoin fork is a change in the rules or the history of the Bitcoin network. The word "fork" comes from the idea of a path splitting into two directions.</p>
           <p>There are two main types: hard forks and soft forks.</p>
-          <p className="text-gray-600 leading-relaxed">Soft fork</p>
+
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
+            Soft Fork
+          </h2>
+
+          <div className="bg-slate-50 border-l-4 border-teal-600 p-8 md:p-12 rounded-r-3xl shadow-sm my-16">
+            <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-6 flex items-center gap-3">
+               The Analogy
+            </h3>
+            <p className="text-gray-600 leading-relaxed">Think of a soft fork as a club that decides to enforce a stricter dress code. The building is the same, but the rules for entry change.</p>
+          </div>
+
           <p className="text-gray-600 leading-relaxed">A soft fork is a change that tightens the rules but remains compatible with older software, at least in theory.</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Nodes that upgrade follow the new stricter rules.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Nodes that do not upgrade still see the new blocks as valid, because the new rules are a subset of the old rules.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">In practice, social and economic pressure matters. Even soft forks can cause friction if many people disagree.</span>
-            </li>
-          </ul>
-          <p className="text-gray-600 leading-relaxed">Think of a soft fork as a club that decides to enforce a stricter dress code. The building is the same, but the rules for entry change.</p>
-          <p className="text-gray-600 leading-relaxed">Hard fork</p>
+
+          <div className="grid gap-12">
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6 flex items-center gap-3">
+                How Soft Forks Work
+              </h3>
+              <ul className="space-y-6">
+                <li className="flex gap-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                  <span className="text-gray-600">Nodes that upgrade follow the new stricter rules.</span>
+                </li>
+                <li className="flex gap-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                  <span className="text-gray-600">Nodes that do not upgrade still see the new blocks as valid, because the new rules are a subset of the old rules.</span>
+                </li>
+                <li className="flex gap-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                  <span className="text-gray-600">In practice, social and economic pressure matters. Even soft forks can cause friction if many people disagree.</span>
+                </li>
+              </ul>
+            </section>
+          </div>
+
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
+            Hard Fork
+          </h2>
+
           <p className="text-gray-600 leading-relaxed">A hard fork is a change that relaxes or changes the rules in a way that is not compatible with older software.</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Upgraded nodes accept new types of blocks or transactions.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Old nodes reject those blocks as invalid.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">If both groups keep mining and transacting, the blockchain can split into two separate networks with a shared history up to the fork point.</span>
-            </li>
-          </ul>
+
+          <div className="grid gap-12">
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6 flex items-center gap-3">
+                How Hard Forks Work
+              </h3>
+              <ul className="space-y-6">
+                <li className="flex gap-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                  <span className="text-gray-600">Upgraded nodes accept new types of blocks or transactions.</span>
+                </li>
+                <li className="flex gap-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                  <span className="text-gray-600">Old nodes reject those blocks as invalid.</span>
+                </li>
+                <li className="flex gap-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                  <span className="text-gray-600">If both groups keep mining and transacting, the blockchain can split into two separate networks with a shared history up to the fork point.</span>
+                </li>
+              </ul>
+            </section>
+          </div>
+
           <p className="text-gray-600 leading-relaxed">In that case, users can end up with coins on both chains, and the market decides which fork has more value and support.</p>
-          <p className="text-gray-600 leading-relaxed">Forks in Bitcoin history have been used to:</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Change block size limits.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Modify script rules.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Create new projects with different philosophies.</span>
-            </li>
-          </ul>
-          <p className="text-gray-600 leading-relaxed">They are important because they reveal governance in practice. Who gets to change the rules, under what conditions, and with what consequences.</p>
+
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
+            Forks in Bitcoin History
+          </h2>
+
+          <div className="grid gap-12">
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6 flex items-center gap-3">
+                What Forks Have Been Used For
+              </h3>
+              <ul className="space-y-6">
+                <li className="flex gap-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                  <span className="text-gray-600">Change block size limits.</span>
+                </li>
+                <li className="flex gap-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                  <span className="text-gray-600">Modify script rules.</span>
+                </li>
+                <li className="flex gap-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                  <span className="text-gray-600">Create new projects with different philosophies.</span>
+                </li>
+              </ul>
+            </section>
+          </div>
+
+          <div className="bg-slate-900 text-white rounded-[3rem] p-12 mt-20 shadow-2xl relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/5 rounded-full blur-[100px] group-hover:bg-teal-500/10 transition-all duration-1000" />
+            <div className="flex flex-col md:flex-row gap-8 items-start relative z-10">
+              <div className="bg-teal-600 text-white p-4 rounded-2xl shadow-lg shrink-0">
+                <Compass size={32} />
+              </div>
+              <div>
+                <h4 className="text-2xl font-black uppercase tracking-tight mb-6 text-teal-400">Why Forks Matter</h4>
+                <p className="text-gray-300 leading-relaxed text-lg">They are important because they reveal governance in practice. Who gets to change the rules, under what conditions, and with what consequences.</p>
+              </div>
+            </div>
+          </div>
         </div>
       );
     }
