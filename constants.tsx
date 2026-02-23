@@ -49,13 +49,13 @@ export const BLOG_POSTS: BlogPost[] = [
     tag: 'Foundations'
   },
 
-  // NEW: Bitcoin Basics Curriculum (23 Articles starting Feb 24, 2026)
+  // Bitcoin Basics Curriculum
   {
     id: 'what-is-utxo-bitcoin',
     title: 'What Is a UTXO in Bitcoin? Unspent Transaction Outputs Explained',
     category: Category.BITCOIN,
     excerpt: 'UTXOs are the foundation of Bitcoin\'s transaction model. Learn how unspent transaction outputs work and why they matter for understanding Bitcoin\'s economy.',
-    date: 'February 24, 2026',
+    date: 'February 10, 2025',
     image: 'https://raw.githubusercontent.com/kurtwuckertjr/KWJRdotCom/refs/heads/main/public/blog-images/4.%20What%20Is%20a%20UTXO%20in%20Bitcoin_%20Unspent%20Transaction%20Outputs%20Explained.webp',
     tag: 'Infrastructure'
   },
@@ -64,7 +64,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'What Is a Bitcoin Address and How Do You Create One?',
     category: Category.BITCOIN,
     excerpt: 'A Bitcoin address is a public label that tells people where to send your Bitcoin. Learn how addresses are created from public keys and why you should use new ones.',
-    date: 'February 26, 2026',
+    date: 'February 17, 2025',
     image: 'https://raw.githubusercontent.com/kurtwuckertjr/KWJRdotCom/refs/heads/main/public/blog-images/5.%20What%20Is%20a%20Bitcoin%20Address%20and%20How%20Do%20You%20Create%20One.webp',
     tag: 'Infrastructure'
   },
@@ -73,7 +73,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'What Is the Bitcoin Blockchain? Explained in Plain English',
     category: Category.BITCOIN,
     excerpt: 'The blockchain is a permanent, transparent ledger of all Bitcoin transactions. Understand how blocks chain together and why the blockchain is impossible to alter.',
-    date: 'March 3, 2026',
+    date: 'March 10, 2025',
     image: 'https://raw.githubusercontent.com/kurtwuckertjr/KWJRdotCom/refs/heads/main/public/blog-images/6.%20What%20Is%20the%20Bitcoin%20Blockchain_%20Explained%20in%20Plain%20English.webp',
     tag: 'Infrastructure'
   },
@@ -82,7 +82,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'How Do Bitcoin Transactions Work? Step by Step',
     category: Category.BITCOIN,
     excerpt: 'Bitcoin transactions move money from one address to another using cryptography. Walk through the steps of how a transaction is created, broadcast, and confirmed.',
-    date: 'March 10, 2026',
+    date: 'March 17, 2025',
     image: 'https://raw.githubusercontent.com/kurtwuckertjr/KWJRdotCom/refs/heads/main/public/blog-images/7.%20How%20Do%20Bitcoin%20Transactions%20Work%20Step%20by%20Step.webp',
     tag: 'Mechanics'
   },
@@ -91,7 +91,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'What Is Bitcoin Mining and Why Does It Matter?',
     category: Category.BITCOIN,
     excerpt: 'Mining is the process that secures the Bitcoin network and creates new coins. Discover why miners are essential and how the mining difficulty adjusts automatically.',
-    date: 'March 17, 2026',
+    date: 'March 24, 2025',
     image: 'https://raw.githubusercontent.com/kurtwuckertjr/KWJRdotCom/refs/heads/main/public/blog-images/8.%20What%20Is%20Bitcoin%20Mining%20and%20Why%20Does%20It%20Matter.webp',
     tag: 'Mechanics'
   },
@@ -100,7 +100,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'What Is a Bitcoin Node and What Does It Do?',
     category: Category.BITCOIN,
     excerpt: 'A Bitcoin node is a computer that validates all transactions and blocks. Learn why running a node is the most sovereign form of Bitcoin participation.',
-    date: 'March 24, 2026',
+    date: 'March 31, 2025',
     image: 'https://raw.githubusercontent.com/kurtwuckertjr/KWJRdotCom/refs/heads/main/public/blog-images/9.%20What%20Is%20a%20Bitcoin%20Node%20and%20What%20Does%20It%20Do.webp',
     tag: 'Mechanics'
   },
@@ -109,7 +109,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'What Is a Seed Phrase in Bitcoin and How Do You Back It Up Safely?',
     category: Category.BITCOIN,
     excerpt: 'A seed phrase is a human-readable backup of your Bitcoin private keys. Learn how to protect your seed phrase and why it\'s the master key to your digital wealth.',
-    date: 'March 31, 2026',
+    date: 'May 5, 2025',
     image: 'https://raw.githubusercontent.com/kurtwuckertjr/KWJRdotCom/refs/heads/main/public/blog-images/10.%20What%20Is%20a%20Seed%20Phrase%20in%20Bitcoin%20and%20How%20Do%20You%20Back%20It%20Up%20Safely.webp',
     tag: 'Mechanics'
   },
@@ -118,7 +118,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'What Are Bitcoin Fees, and Why Are They Stable on BSV but Variable on BTC?',
     category: Category.BITCOIN,
     excerpt: 'Bitcoin fees pay miners to include your transaction in a block. Understand how fee markets work and why fee economics differ across Bitcoin implementations.',
-    date: 'April 7, 2026',
+    date: 'May 12, 2025',
     image: 'https://raw.githubusercontent.com/kurtwuckertjr/KWJRdotCom/refs/heads/main/public/blog-images/11.%20What%20Are%20Bitcoin%20Fees%2C%20and%20Why%20Are%20They%20Stable%20on%20BSV%20but%20Variable%20on%20BTC.webp',
     tag: 'Advanced'
   },
@@ -127,7 +127,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'What Is On-Chain vs Off-Chain in Bitcoin? Key Differences Explained',
     category: Category.BITCOIN,
     excerpt: 'On-chain transactions settle on the blockchain; off-chain transactions happen elsewhere with the blockchain as settlement. Learn the trade-offs of both approaches.',
-    date: 'April 14, 2026',
+    date: 'May 19, 2025',
     image: 'https://raw.githubusercontent.com/kurtwuckertjr/KWJRdotCom/refs/heads/main/public/blog-images/12.%20What%20Is%20On-Chain%20vs%20Off-Chain%20in%20Bitcoin_%20Key%20Differences%20Explained.webp',
     tag: 'Advanced'
   },
@@ -136,7 +136,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'What Is a Bitcoin Fork? Hard Forks vs Soft Forks for Beginners',
     category: Category.BITCOIN,
     excerpt: 'A fork changes Bitcoin\'s rules. Hard forks create a new coin; soft forks are backward-compatible. Learn how forks happen and why they matter to Bitcoin\'s governance.',
-    date: 'April 21, 2026',
+    date: 'June 2, 2025',
     image: 'https://raw.githubusercontent.com/kurtwuckertjr/KWJRdotCom/refs/heads/main/public/blog-images/13.%20What%20Is%20a%20Bitcoin%20Fork_%20Hard%20Forks%20vs%20Soft%20Forks%20for%20Beginners.webp',
     tag: 'Advanced'
   },
@@ -145,7 +145,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'What Is the Bitcoin Halving and Why Is It Important?',
     category: Category.BITCOIN,
     excerpt: 'The halving cuts the mining reward in half every four years. Understand why halvings are built into Bitcoin\'s code and how they control inflation.',
-    date: 'April 28, 2026',
+    date: 'August 11, 2025',
     image: 'https://raw.githubusercontent.com/kurtwuckertjr/KWJRdotCom/refs/heads/main/public/blog-images/14.%20What%20Is%20the%20Bitcoin%20Halving%20and%20Why%20Is%20It%20Important.webp',
     tag: 'Advanced'
   },
@@ -154,7 +154,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'What Are Some Ways to Get Bitcoin? Buying, Earning, and Mining Explained',
     category: Category.BITCOIN,
     excerpt: 'You can get Bitcoin by buying it, earning it, or mining it. Explore the practical methods for acquiring Bitcoin in the modern economy.',
-    date: 'May 5, 2026',
+    date: 'September 15, 2025',
     image: 'https://raw.githubusercontent.com/kurtwuckertjr/KWJRdotCom/refs/heads/main/public/blog-images/15.%20What%20Are%20Some%20Ways%20to%20Get%20Bitcoin_%20Buying%2C%20Earning%2C%20and%20Mining%20Explained.webp',
     tag: 'Practical'
   },
@@ -163,7 +163,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'What Is Self-Custody in Bitcoin and Why It Beats Leaving Coins on Exchanges',
     category: Category.BITCOIN,
     excerpt: 'Self-custody means controlling your own private keys. Learn why "not your keys, not your coins" is the foundation of Bitcoin sovereignty.',
-    date: 'May 12, 2026',
+    date: 'September 29, 2025',
     image: 'https://raw.githubusercontent.com/kurtwuckertjr/KWJRdotCom/refs/heads/main/public/blog-images/16.%20What%20Is%20Self-Custody%20in%20Bitcoin%20and%20Why%20It%20Beats%20Leaving%20Coins%20on%20Exchanges.webp',
     tag: 'Practical'
   },
@@ -172,7 +172,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'What Is the Difference Between Bitcoin and Ethereum?',
     category: Category.BITCOIN,
     excerpt: 'Bitcoin is money; Ethereum is a computer. Learn the fundamental differences in design, purpose, and philosophical approach.',
-    date: 'May 19, 2026',
+    date: 'October 20, 2025',
     image: 'https://raw.githubusercontent.com/kurtwuckertjr/KWJRdotCom/refs/heads/main/public/blog-images/17.%20What%20Is%20the%20Difference%20Between%20Bitcoin%20and%20Ethereum.webp',
     tag: 'Practical'
   },
@@ -181,8 +181,8 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'What Is Bitcoin Script and How Does It Enable Smart Contracts?',
     category: Category.BITCOIN,
     excerpt: 'Bitcoin Script is a simple but powerful programming language that enables everything from multi-sig wallets to complex contracts.',
-    date: 'May 26, 2026',
-    image: 'https://raw.githubusercontent.com/kurtwuckertjr/KWJRdotCom/refs/heads/main/public/blog-images/19.%20What%20Is%20Proof%20of%20Work%20in%20Bitcoin%20and%20How%20Does%20It%20Secure%20the%20Network.webp',
+    date: 'November 10, 2025',
+    image: 'https://raw.githubusercontent.com/kurtwuckertjr/KWJRdotCom/refs/heads/main/public/blog-images/What%20is%20Bitcoin%20Script.webp',
     tag: 'Advanced'
   },
   {
@@ -190,7 +190,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'What Is Proof of Work in Bitcoin and How Does It Secure the Network?',
     category: Category.BITCOIN,
     excerpt: 'Proof of Work is the consensus mechanism that secures Bitcoin. Learn how miners solve hard puzzles to create an immutable record of transactions.',
-    date: 'June 2, 2026',
+    date: 'December 1, 2025',
     image: 'https://raw.githubusercontent.com/kurtwuckertjr/KWJRdotCom/refs/heads/main/public/blog-images/19.%20What%20Is%20Proof%20of%20Work%20in%20Bitcoin%20and%20How%20Does%20It%20Secure%20the%20Network.webp',
     tag: 'Advanced'
   },
@@ -199,7 +199,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'Is Bitcoin Anonymous? The Truth About Privacy vs Anonymity',
     category: Category.BITCOIN,
     excerpt: 'Bitcoin is pseudonymous, not anonymous. Learn why privacy and anonymity are different and how the blockchain creates transparency.',
-    date: 'June 9, 2026',
+    date: 'December 15, 2025',
     image: 'https://raw.githubusercontent.com/kurtwuckertjr/KWJRdotCom/refs/heads/main/public/blog-images/20.%20Is%20Bitcoin%20Anonymous_%20The%20Truth%20About%20Privacy%20vs%20Anonymity.webp',
     tag: 'Advanced'
   },
@@ -208,7 +208,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'What Is a Satoshi (or a "sat") in Bitcoin?',
     category: Category.BITCOIN,
     excerpt: 'A satoshi is the smallest unit of Bitcoin, worth one hundred millionth of one Bitcoin. Learn why satoshis matter as Bitcoin adoption grows.',
-    date: 'June 16, 2026',
+    date: 'December 29, 2025',
     image: 'https://raw.githubusercontent.com/kurtwuckertjr/KWJRdotCom/refs/heads/main/public/blog-images/21.%20What%20is%20a%20satoshi%20%28or%20a%20_sat__%29%20in%20Bitcoin.webp',
     tag: 'Foundations'
   },
@@ -217,7 +217,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'Bitcoin Glossary: Essential Terms for Understanding Crypto',
     category: Category.BITCOIN,
     excerpt: 'A comprehensive glossary of Bitcoin and blockchain terminology. Use this reference to understand the language of Bitcoin.',
-    date: 'June 23, 2026',
+    date: 'February 2, 2026',
     image: 'https://raw.githubusercontent.com/kurtwuckertjr/KWJRdotCom/refs/heads/main/public/blog-images/1.%20Blockchain%20Terms%20Glossary.webp',
     tag: 'Foundations'
   }
