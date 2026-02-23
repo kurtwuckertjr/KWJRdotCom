@@ -1209,71 +1209,111 @@ const Post: React.FC = () => {
     if (id === 'what-is-bitcoin-mining') {
       return (
         <div className="space-y-12">
-          <p>Bitcoin mining is the process of adding new blocks of transactions to the blockchain and securing the network. It is called “mining” because miners also earn newly created coins as a reward, similar to mining gold.</p>
-          <p>Here is what miners actually do:</p>
-          <ol className="space-y-6">
-            <li className="flex gap-4">
-              <span className="bg-teal-600 text-white w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold shrink-0">1</span>
-              <span className="text-gray-600">Collect transactions</span>
+          <p>Bitcoin mining is the process of adding new blocks of transactions to the blockchain and securing the network. It is called "mining" because miners also earn newly created coins as a reward, similar to mining gold.</p>
+
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
+            What Miners Actually Do
+          </h2>
+
+          <ol className="space-y-12">
+            <li className="flex gap-6 group">
+              <div className="flex flex-col items-center shrink-0">
+                <div className="w-10 h-10 rounded-full bg-slate-900 text-teal-400 flex items-center justify-center font-black text-lg group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">1</div>
+                <div className="w-px h-full bg-slate-100 group-hover:bg-teal-100 mt-2 transition-colors" />
+              </div>
+              <div>
+                <h4 className="text-xl font-black uppercase text-slate-900 mb-2">Collect Transactions</h4>
+                <p className="text-gray-500 font-light leading-relaxed">Miners gather valid transactions from the network and assemble them into a candidate block.</p>
+              </div>
+            </li>
+            <li className="flex gap-6 group">
+              <div className="flex flex-col items-center shrink-0">
+                <div className="w-10 h-10 rounded-full bg-slate-900 text-teal-400 flex items-center justify-center font-black text-lg group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">2</div>
+                <div className="w-px h-full bg-slate-100 group-hover:bg-teal-100 mt-2 transition-colors" />
+              </div>
+              <div>
+                <h4 className="text-xl font-black uppercase text-slate-900 mb-2">Do Proof of Work</h4>
+                <p className="text-gray-500 font-light leading-relaxed">To add their block, they must solve a cryptographic puzzle. This involves trying many different inputs until they find a hash that meets the current difficulty target. This work is done by specialized hardware called ASICs.</p>
+              </div>
+            </li>
+            <li className="flex gap-6 group">
+              <div className="flex flex-col items-center shrink-0">
+                <div className="w-10 h-10 rounded-full bg-slate-900 text-teal-400 flex items-center justify-center font-black text-lg group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">3</div>
+                <div className="w-px h-full bg-slate-100 group-hover:bg-teal-100 mt-2 transition-colors" />
+              </div>
+              <div>
+                <h4 className="text-xl font-black uppercase text-slate-900 mb-2">Broadcast the Block</h4>
+                <p className="text-gray-500 font-light leading-relaxed">When a miner finds a valid block, they send it to the network. Other nodes verify the proof of work and the transactions.</p>
+              </div>
+            </li>
+            <li className="flex gap-6 group">
+              <div className="flex flex-col items-center shrink-0">
+                <div className="w-10 h-10 rounded-full bg-slate-900 text-teal-400 flex items-center justify-center font-black text-lg group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">4</div>
+              </div>
+              <div>
+                <h4 className="text-xl font-black uppercase text-slate-900 mb-2">Earn Rewards</h4>
+                <p className="text-gray-500 font-light leading-relaxed mb-4">If the block is accepted into the chain, the miner receives:</p>
+                <ul className="space-y-3">
+                  <li className="flex gap-4">
+                    <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                    <span className="text-gray-500 font-light">The <strong>block subsidy</strong> (new coins created by the protocol).</span>
+                  </li>
+                  <li className="flex gap-4">
+                    <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                    <span className="text-gray-500 font-light">The <strong>transaction fees</strong> paid by users.</span>
+                  </li>
+                </ul>
+              </div>
             </li>
           </ol>
-          <p className="text-gray-600 leading-relaxed">Miners gather valid transactions from the network and assemble them into a candidate block.</p>
-          <ol className="space-y-6">
-            <li className="flex gap-4">
-              <span className="bg-teal-600 text-white w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold shrink-0">1</span>
-              <span className="text-gray-600">Do proof of work</span>
-            </li>
-          </ol>
-          <p className="text-gray-600 leading-relaxed">To add their block, they must solve a cryptographic puzzle. This involves trying many different inputs until they find a hash that meets the current difficulty target. This work is done by specialized hardware called ASICs.</p>
-          <ol className="space-y-6">
-            <li className="flex gap-4">
-              <span className="bg-teal-600 text-white w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold shrink-0">1</span>
-              <span className="text-gray-600">Broadcast the block</span>
-            </li>
-          </ol>
-          <p className="text-gray-600 leading-relaxed">When a miner finds a valid block, they send it to the network. Other nodes verify the proof of work and the transactions.</p>
-          <ol className="space-y-6">
-            <li className="flex gap-4">
-              <span className="bg-teal-600 text-white w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold shrink-0">1</span>
-              <span className="text-gray-600">Earn rewards</span>
-            </li>
-          </ol>
-          <p className="text-gray-600 leading-relaxed">If the block is accepted into the chain, the miner receives:</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">The block subsidy (new coins created by the protocol).</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">The transaction fees paid by users.</span>
-            </li>
-          </ul>
-          <p className="text-gray-600 leading-relaxed">Why mining matters:</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Security</span>
-            </li>
-          </ul>
-          <p className="text-gray-600 leading-relaxed">Proof of work makes it very expensive to rewrite history. An attacker would need huge amounts of energy and hardware to outcompete honest miners.</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Decentralization</span>
-            </li>
-          </ul>
-          <p className="text-gray-600 leading-relaxed">Many independent miners compete. No single party is supposed to control the network.</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Ordering and finality</span>
-            </li>
-          </ul>
-          <p className="text-gray-600 leading-relaxed">Miners decide the order of transactions in blocks, giving the system a clear timeline and eventual finality.</p>
-          <p className="text-gray-600 leading-relaxed">On scalable networks, mining also becomes a competitive data processing industry, not just a game of speculation. Miners are rewarded for providing real services to users.</p>
+
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
+            Why Mining Matters
+          </h2>
+
+          <div className="grid gap-12">
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6 flex items-center gap-3">
+                Security
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Proof of work makes it very expensive to rewrite history. An attacker would need huge amounts of energy and hardware to outcompete honest miners.
+              </p>
+            </section>
+
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6 flex items-center gap-3">
+                Decentralization
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Many independent miners compete. No single party is supposed to control the network.
+              </p>
+            </section>
+
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6 flex items-center gap-3">
+                Ordering and Finality
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Miners decide the order of transactions in blocks, giving the system a clear timeline and eventual finality.
+              </p>
+            </section>
+          </div>
+
+          <div className="bg-slate-900 text-white rounded-[3rem] p-12 mt-20 shadow-2xl relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/5 rounded-full blur-[100px] group-hover:bg-teal-500/10 transition-all duration-1000" />
+            <div className="flex flex-col md:flex-row gap-8 items-start relative z-10">
+              <div className="bg-teal-600 text-white p-4 rounded-2xl shadow-lg shrink-0">
+                <HardDrive size={32} />
+              </div>
+              <div>
+                <h4 className="text-2xl font-black uppercase tracking-tight mb-6 text-teal-400">Mining as an Industry</h4>
+                <p className="text-gray-300 leading-relaxed text-lg">
+                  On scalable networks, mining also becomes a competitive data processing industry, not just a game of speculation. Miners are rewarded for providing real services to users.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       );
     }
