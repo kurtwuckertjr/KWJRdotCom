@@ -1075,99 +1075,133 @@ const Post: React.FC = () => {
     if (id === 'how-do-bitcoin-transactions-work') {
       return (
         <div className="space-y-12">
-          <p>A Bitcoin transaction is the process of moving coins from one set of addresses to another. Here is the high level flow.</p>
-          <ol className="space-y-6">
-            <li className="flex gap-4">
-              <span className="bg-teal-600 text-white w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold shrink-0">1</span>
-              <span className="text-gray-600">You create the transaction</span>
+          <p>A Bitcoin transaction is the process of moving coins from one set of addresses to another. Here is the high-level flow.</p>
+
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
+            Step by Step
+          </h2>
+
+          <ol className="space-y-12">
+            <li className="flex gap-6 group">
+              <div className="flex flex-col items-center shrink-0">
+                <div className="w-10 h-10 rounded-full bg-slate-900 text-teal-400 flex items-center justify-center font-black text-lg group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">1</div>
+                <div className="w-px h-full bg-slate-100 group-hover:bg-teal-100 mt-2 transition-colors" />
+              </div>
+              <div>
+                <h4 className="text-xl font-black uppercase text-slate-900 mb-2">You Create the Transaction</h4>
+                <p className="text-gray-500 font-light leading-relaxed mb-4">Using your wallet, you:</p>
+                <ul className="space-y-3">
+                  <li className="flex gap-4">
+                    <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                    <span className="text-gray-500 font-light">Choose how much Bitcoin you want to send.</span>
+                  </li>
+                  <li className="flex gap-4">
+                    <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                    <span className="text-gray-500 font-light">Paste or scan the recipient's address.</span>
+                  </li>
+                  <li className="flex gap-4">
+                    <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                    <span className="text-gray-500 font-light">The wallet selects one or more UTXOs you control as inputs and creates outputs that pay the recipient and return any change back to you.</span>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li className="flex gap-6 group">
+              <div className="flex flex-col items-center shrink-0">
+                <div className="w-10 h-10 rounded-full bg-slate-900 text-teal-400 flex items-center justify-center font-black text-lg group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">2</div>
+                <div className="w-px h-full bg-slate-100 group-hover:bg-teal-100 mt-2 transition-colors" />
+              </div>
+              <div>
+                <h4 className="text-xl font-black uppercase text-slate-900 mb-2">Your Wallet Signs It</h4>
+                <p className="text-gray-500 font-light leading-relaxed">The wallet uses your private key to create digital signatures on the inputs. These signatures prove that you are allowed to spend those specific UTXOs.</p>
+              </div>
+            </li>
+            <li className="flex gap-6 group">
+              <div className="flex flex-col items-center shrink-0">
+                <div className="w-10 h-10 rounded-full bg-slate-900 text-teal-400 flex items-center justify-center font-black text-lg group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">3</div>
+                <div className="w-px h-full bg-slate-100 group-hover:bg-teal-100 mt-2 transition-colors" />
+              </div>
+              <div>
+                <h4 className="text-xl font-black uppercase text-slate-900 mb-2">The Transaction Is Broadcast</h4>
+                <p className="text-gray-500 font-light leading-relaxed">Your wallet sends the signed transaction to the Bitcoin network. It is relayed from node to node and reaches miners and other participants.</p>
+              </div>
+            </li>
+            <li className="flex gap-6 group">
+              <div className="flex flex-col items-center shrink-0">
+                <div className="w-10 h-10 rounded-full bg-slate-900 text-teal-400 flex items-center justify-center font-black text-lg group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">4</div>
+                <div className="w-px h-full bg-slate-100 group-hover:bg-teal-100 mt-2 transition-colors" />
+              </div>
+              <div>
+                <h4 className="text-xl font-black uppercase text-slate-900 mb-2">Nodes Validate It</h4>
+                <p className="text-gray-500 font-light leading-relaxed mb-4">Each node checks:</p>
+                <ul className="space-y-3">
+                  <li className="flex gap-4">
+                    <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                    <span className="text-gray-500 font-light">The signatures are valid.</span>
+                  </li>
+                  <li className="flex gap-4">
+                    <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                    <span className="text-gray-500 font-light">The inputs are real, unspent outputs on the blockchain.</span>
+                  </li>
+                  <li className="flex gap-4">
+                    <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                    <span className="text-gray-500 font-light">The transaction follows the consensus rules (no negative values, proper fees, correct scripts, and so on).</span>
+                  </li>
+                </ul>
+                <p className="text-gray-500 font-light leading-relaxed mt-4">If it passes, they hold it in their memory pool (mempool) as a candidate for inclusion in a block.</p>
+              </div>
+            </li>
+            <li className="flex gap-6 group">
+              <div className="flex flex-col items-center shrink-0">
+                <div className="w-10 h-10 rounded-full bg-slate-900 text-teal-400 flex items-center justify-center font-black text-lg group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">5</div>
+                <div className="w-px h-full bg-slate-100 group-hover:bg-teal-100 mt-2 transition-colors" />
+              </div>
+              <div>
+                <h4 className="text-xl font-black uppercase text-slate-900 mb-2">Miners Include It in a Block</h4>
+                <p className="text-gray-500 font-light leading-relaxed">Miners pick transactions from the mempool, gather them into a block, and work on the proof-of-work puzzle. When a miner finds a valid proof, it broadcasts the block.</p>
+              </div>
+            </li>
+            <li className="flex gap-6 group">
+              <div className="flex flex-col items-center shrink-0">
+                <div className="w-10 h-10 rounded-full bg-slate-900 text-teal-400 flex items-center justify-center font-black text-lg group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">6</div>
+              </div>
+              <div>
+                <h4 className="text-xl font-black uppercase text-slate-900 mb-2">The Block Is Accepted</h4>
+                <p className="text-gray-500 font-light leading-relaxed">Other nodes verify the block and add it to their copy of the blockchain. Your transaction is now confirmed.</p>
+              </div>
             </li>
           </ol>
-          <p className="text-gray-600 leading-relaxed">Using your wallet, you:</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Choose how much Bitcoin you want to send.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Paste or scan the recipient’s address.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">The wallet selects one or more UTXOs you control as inputs and creates outputs that pay the recipient and return any change back to you.</span>
-            </li>
-          </ul>
-          <ol className="space-y-6">
-            <li className="flex gap-4">
-              <span className="bg-teal-600 text-white w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold shrink-0">1</span>
-              <span className="text-gray-600">Your wallet signs it</span>
-            </li>
-          </ol>
-          <p className="text-gray-600 leading-relaxed">The wallet uses your private key to create digital signatures on the inputs. These signatures prove that you are allowed to spend those specific UTXOs.</p>
-          <ol className="space-y-6">
-            <li className="flex gap-4">
-              <span className="bg-teal-600 text-white w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold shrink-0">1</span>
-              <span className="text-gray-600">The transaction is broadcast</span>
-            </li>
-          </ol>
-          <p className="text-gray-600 leading-relaxed">Your wallet sends the signed transaction to the Bitcoin network. It is relayed from node to node and reaches miners and other participants.</p>
-          <ol className="space-y-6">
-            <li className="flex gap-4">
-              <span className="bg-teal-600 text-white w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold shrink-0">1</span>
-              <span className="text-gray-600">Nodes validate it</span>
-            </li>
-          </ol>
-          <p className="text-gray-600 leading-relaxed">Each node checks:</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">The signatures are valid.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">The inputs are real, unspent outputs on the blockchain.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">The transaction follows the consensus rules (no negative values, proper fees, correct scripts, and so on).</span>
-            </li>
-          </ul>
-          <p className="text-gray-600 leading-relaxed">If it passes, they hold it in their memory pool (mempool) as a candidate for inclusion in a block.</p>
-          <ol className="space-y-6">
-            <li className="flex gap-4">
-              <span className="bg-teal-600 text-white w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold shrink-0">1</span>
-              <span className="text-gray-600">Miners include it in a block</span>
-            </li>
-          </ol>
-          <p className="text-gray-600 leading-relaxed">Miners pick transactions from the mempool, gather them into a block, and work on the proof of work puzzle. When a miner finds a valid proof, it broadcasts the block.</p>
-          <ol className="space-y-6">
-            <li className="flex gap-4">
-              <span className="bg-teal-600 text-white w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold shrink-0">1</span>
-              <span className="text-gray-600">The block is accepted</span>
-            </li>
-          </ol>
-          <p className="text-gray-600 leading-relaxed">Other nodes verify the block and add it to their copy of the blockchain. Your transaction is now confirmed.</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">One block confirmation means it is in the latest block.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">More confirmations mean the block is deeper in the chain and harder to reverse.</span>
-            </li>
-          </ul>
-          <p className="text-gray-600 leading-relaxed">In practice, on a well scaled chain like BSV, this all happens quickly and can support large volumes of transactions. For the user, it usually feels like sending money with an online payment app, but the rules are enforced by software and miners, not a central company.</p>
+
+          <div className="bg-slate-50 border-l-4 border-teal-600 p-8 md:p-12 rounded-r-3xl shadow-sm my-16">
+            <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-6 flex items-center gap-3">
+               Confirmations
+            </h3>
+            <ul className="space-y-6">
+              <li className="flex gap-4">
+                <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                <span><strong>One confirmation</strong> means it is in the latest block.</span>
+              </li>
+              <li className="flex gap-4">
+                <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                <span><strong>More confirmations</strong> mean the block is deeper in the chain and harder to reverse.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="bg-slate-900 text-white rounded-[3rem] p-12 mt-20 shadow-2xl relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/5 rounded-full blur-[100px] group-hover:bg-teal-500/10 transition-all duration-1000" />
+            <div className="flex flex-col md:flex-row gap-8 items-start relative z-10">
+              <div className="bg-teal-600 text-white p-4 rounded-2xl shadow-lg shrink-0">
+                <Zap size={32} />
+              </div>
+              <div>
+                <h4 className="text-2xl font-black uppercase tracking-tight mb-6 text-teal-400">In Practice</h4>
+                <p className="text-gray-300 leading-relaxed text-lg">
+                  On a well-scaled chain like BSV, this all happens quickly and can support large volumes of transactions. For the user, it usually feels like sending money with an online payment app, but the rules are enforced by software and miners, not a central company.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       );
     }
