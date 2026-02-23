@@ -1556,90 +1556,101 @@ const Post: React.FC = () => {
       return (
         <div className="space-y-12">
           <p>Every Bitcoin transaction includes a fee paid to miners. The fee is the difference between the total inputs and the total outputs in the transaction. Miners collect these fees as part of their reward for including your transaction in a block.</p>
-          <p>Fees exist because:</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Miners spend real money on hardware and electricity.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">The protocol subsidizes them with new coins for a while, but over time fees become more important.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Fees also help prevent spam by making it costly to flood the network with useless transactions.</span>
-            </li>
-          </ul>
+
+          <div className="bg-slate-50 border-l-4 border-teal-600 p-8 md:p-12 rounded-r-3xl shadow-sm my-16">
+            <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-6 flex items-center gap-3">
+               Why Fees Exist
+            </h3>
+            <ul className="space-y-6">
+              <li className="flex gap-4">
+                <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                <span><strong>Miner compensation:</strong> Miners spend real money on hardware and electricity.</span>
+              </li>
+              <li className="flex gap-4">
+                <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                <span><strong>Long-term sustainability:</strong> The protocol subsidizes them with new coins for a while, but over time fees become more important.</span>
+              </li>
+              <li className="flex gap-4">
+                <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                <span><strong>Spam prevention:</strong> Fees make it costly to flood the network with useless transactions.</span>
+              </li>
+            </ul>
+          </div>
+
           <p className="text-gray-600 leading-relaxed">Why fees behave differently on BSV vs BTC comes down to block size and capacity.</p>
-          <p className="text-gray-600 leading-relaxed">On BTC:</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">The block size is intentionally limited to a small capacity.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">During busy periods, there is more demand for block space than there is supply.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Users compete for limited space by bidding higher fees.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">This creates volatile fees, sometimes very high, and confirmation delays for low fee transactions.</span>
-            </li>
-          </ul>
-          <p className="text-gray-600 leading-relaxed">On BSV:</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">The protocol allows very large blocks and focuses on scaling on chain.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Miners can process a much higher volume of transactions.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Because capacity is abundant, there is less competition for space.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Fees can be kept very low and stable, and miners make money on volume rather than high fees per transaction.</span>
-            </li>
-          </ul>
-          <p className="text-gray-600 leading-relaxed">In simple terms:</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">BTC behaves like a crowded highway with tolls that spike during rush hour.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">BSV behaves like a multi lane highway that keeps adding lanes so everyday tolls stay low and predictable.</span>
-            </li>
-          </ul>
-          <p className="text-gray-600 leading-relaxed">For regular users and businesses, stable and low fees make it easier to plan and build real world applications.</p>
+
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
+            BTC vs BSV Fee Economics
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-amber-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-amber-500 uppercase tracking-widest mb-6">On BTC</h3>
+              <ul className="space-y-4">
+                <li className="flex gap-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 shrink-0" />
+                  <span className="text-gray-600">The block size is intentionally limited to a small capacity.</span>
+                </li>
+                <li className="flex gap-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 shrink-0" />
+                  <span className="text-gray-600">During busy periods, there is more demand for block space than there is supply.</span>
+                </li>
+                <li className="flex gap-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 shrink-0" />
+                  <span className="text-gray-600">Users compete for limited space by bidding higher fees.</span>
+                </li>
+                <li className="flex gap-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 shrink-0" />
+                  <span className="text-gray-600">This creates volatile fees, sometimes very high, and confirmation delays for low-fee transactions.</span>
+                </li>
+              </ul>
+            </section>
+
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6">On BSV</h3>
+              <ul className="space-y-4">
+                <li className="flex gap-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                  <span className="text-gray-600">The protocol allows very large blocks and focuses on scaling on-chain.</span>
+                </li>
+                <li className="flex gap-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                  <span className="text-gray-600">Miners can process a much higher volume of transactions.</span>
+                </li>
+                <li className="flex gap-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                  <span className="text-gray-600">Because capacity is abundant, there is less competition for space.</span>
+                </li>
+                <li className="flex gap-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                  <span className="text-gray-600">Fees can be kept very low and stable, and miners make money on volume rather than high fees per transaction.</span>
+                </li>
+              </ul>
+            </section>
+          </div>
+
+          <div className="bg-slate-900 text-white rounded-[3rem] p-12 mt-20 shadow-2xl relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/5 rounded-full blur-[100px] group-hover:bg-teal-500/10 transition-all duration-1000" />
+            <div className="flex flex-col md:flex-row gap-8 items-start relative z-10">
+              <div className="bg-teal-600 text-white p-4 rounded-2xl shadow-lg shrink-0">
+                <Zap size={32} />
+              </div>
+              <div>
+                <h4 className="text-2xl font-black uppercase tracking-tight mb-6 text-teal-400">The Highway Analogy</h4>
+                <ul className="space-y-4">
+                  <li className="flex gap-4">
+                    <span className="w-1.5 h-1.5 rounded-full bg-teal-400 mt-2 shrink-0" />
+                    <span className="text-gray-300 leading-relaxed text-lg"><strong className="text-white">BTC</strong> behaves like a crowded highway with tolls that spike during rush hour.</span>
+                  </li>
+                  <li className="flex gap-4">
+                    <span className="w-1.5 h-1.5 rounded-full bg-teal-400 mt-2 shrink-0" />
+                    <span className="text-gray-300 leading-relaxed text-lg"><strong className="text-white">BSV</strong> behaves like a multi-lane highway that keeps adding lanes so everyday tolls stay low and predictable.</span>
+                  </li>
+                </ul>
+                <p className="text-gray-400 mt-6 font-light">For regular users and businesses, stable and low fees make it easier to plan and build real-world applications.</p>
+              </div>
+            </div>
+          </div>
         </div>
       );
     }
