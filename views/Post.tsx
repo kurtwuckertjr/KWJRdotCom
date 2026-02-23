@@ -716,6 +716,99 @@ const Post: React.FC = () => {
       );
     }
 
+    if (id === 'what-is-bitcoin-beginners-guide') {
+      return (
+        <div className="space-y-12">
+          <p>
+            Bitcoin is a digital form of money that runs on a public network instead of a bank. You can send it to anyone, anywhere in the world, without asking permission from a company or government.
+          </p>
+
+          <div className="bg-slate-50 border-l-4 border-teal-600 p-8 md:p-12 rounded-r-3xl shadow-sm my-16">
+            <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-6 flex items-center gap-3">
+              <BookOpen size={24} className="text-teal-600" /> The Shared Spreadsheet
+            </h3>
+            <p className="text-gray-600 leading-relaxed">
+              At the core of Bitcoin is a public ledger called the <strong>blockchain</strong>. Think of the blockchain as a shared spreadsheet that lists every transaction ever made. Thousands of computers around the world keep copies of this spreadsheet and agree on what it contains.
+            </p>
+          </div>
+
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
+            How Bitcoin Works
+          </h2>
+
+          <p className="text-gray-600 leading-relaxed">
+            Bitcoin works with three basic parts:
+          </p>
+
+          {/* Numbered step timeline */}
+          <div className="relative pl-12 space-y-16 before:absolute before:left-[1.15rem] before:top-2 before:bottom-2 before:w-px before:bg-gradient-to-b before:from-teal-600 before:to-teal-100">
+            <div className="relative">
+              <span className="absolute -left-12 top-0 w-10 h-10 rounded-full bg-teal-600 text-white font-black flex items-center justify-center text-sm shadow-lg shadow-teal-600/30">1</span>
+              <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-4">Addresses &amp; Wallets</h3>
+              <p className="text-gray-600 leading-relaxed">
+                You receive Bitcoin to a digital address, similar to an email address. A <strong>wallet</strong> is software or hardware that manages your addresses and the keys that control them.
+              </p>
+            </div>
+            <div className="relative">
+              <span className="absolute -left-12 top-0 w-10 h-10 rounded-full bg-teal-600 text-white font-black flex items-center justify-center text-sm shadow-lg shadow-teal-600/30">2</span>
+              <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-4">Private Keys &amp; Signing</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Each address is controlled by a <strong>private key</strong>, which is a secret number. When you send Bitcoin, your wallet uses your private key to create a digital signature. This proves that you are allowed to spend those coins, without revealing your key.
+              </p>
+            </div>
+            <div className="relative">
+              <span className="absolute -left-12 top-0 w-10 h-10 rounded-full bg-teal-600 text-white font-black flex items-center justify-center text-sm shadow-lg shadow-teal-600/30">3</span>
+              <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-4">Nodes &amp; Miners</h3>
+              <p className="text-gray-600 leading-relaxed">
+                <strong>Nodes</strong> are computers running Bitcoin software that check every transaction to be sure it follows the rules. <strong>Miners</strong> group valid transactions into blocks, compete using computing power (proof of work) and add blocks to the chain. As a reward, they earn new coins and transaction fees.
+              </p>
+            </div>
+          </div>
+
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
+            Why It Matters
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6 flex items-center gap-3">
+                <Globe size={20} /> Decentralized
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                There is no single point of failure. No company or government controls the network.
+              </p>
+            </section>
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6 flex items-center gap-3">
+                <ShieldCheck size={20} /> Rules, Not Rulers
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                The rules are enforced by software and economic incentives, not by a central authority.
+              </p>
+            </section>
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6 flex items-center gap-3">
+                <Lock size={20} /> Permissionless
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Anyone can send or receive Bitcoin without asking permission from a bank or institution.
+              </p>
+            </section>
+          </div>
+
+          {/* Dark summary box */}
+          <div className="bg-slate-900 text-white rounded-[2.5rem] p-10 md:p-16 my-16">
+            <h3 className="text-2xl font-black uppercase tracking-tight mb-6 flex items-center gap-3">
+              <Info size={24} className="text-amber-400" /> The Bottom Line
+            </h3>
+            <p className="text-gray-300 leading-relaxed text-lg">
+              Bitcoin is digital money that runs on a shared public ledger maintained by thousands of computers worldwide. It combines addresses, private keys, and a network of nodes and miners to create a permissionless, decentralized financial system — no banks required.
+            </p>
+          </div>
+        </div>
+      );
+    }
+
     // NEW BITCOIN BASICS CURRICULUM ARTICLES (4-23)
 
     if (id === 'what-is-utxo-bitcoin') {
