@@ -2454,84 +2454,112 @@ const Post: React.FC = () => {
       return (
         <div className="space-y-12">
           <p>Bitcoin is often called anonymous, but a more accurate word is pseudonymous.</p>
-          <p>On the blockchain:</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">You are represented by addresses, not your real name.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Anyone can see the movement of coins between addresses.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">The ledger is public and permanent.</span>
-            </li>
-          </ul>
-          <p className="text-gray-600 leading-relaxed">So, you have pseudonyms (addresses), not complete anonymity.</p>
-          <p className="text-gray-600 leading-relaxed">Where privacy comes from:</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Using new addresses for different payments makes it harder to link all your activity.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Careful wallet practices and some on-chain techniques can improve privacy.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">On chains with rich scripting and data capabilities, tools can be built to help users manage privacy better.</span>
-            </li>
-          </ul>
-          <p className="text-gray-600 leading-relaxed">Where anonymity breaks down:</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Exchanges and many services use identity checks. If you withdraw to a personal wallet, they know which address you withdrew to.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Blockchain analysis companies can track patterns and cluster addresses, especially when users reuse addresses or interact with known services.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">If you publicly post an address, anyone can see its history.</span>
-            </li>
-          </ul>
-          <p className="text-gray-600 leading-relaxed">So the reality is:</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Bitcoin offers more privacy than a typical bank account that you hand over to every merchant.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">It does not offer perfect anonymity like cash handed over in person.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Good practices can improve privacy, but careless behavior can expose a lot of information.</span>
-            </li>
-          </ul>
-          <p className="text-gray-600 leading-relaxed">For most people, the right framing is this. Bitcoin gives you transparency and control by default, and privacy is something you can actively manage. It is not a magic invisibility cloak, but with smart usage, it can give you a healthier balance between openness and personal financial privacy than many legacy systems.</p>
+
+          <div className="bg-slate-50 border-l-4 border-teal-600 p-8 md:p-12 rounded-r-3xl shadow-sm my-16">
+            <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-6 flex items-center gap-3">
+               On the Blockchain
+            </h3>
+            <ul className="space-y-6">
+              <li className="flex gap-4">
+                <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                <span><strong>Pseudonymous addresses:</strong> You are represented by addresses, not your real name.</span>
+              </li>
+              <li className="flex gap-4">
+                <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                <span><strong>Transparent movements:</strong> Anyone can see the movement of coins between addresses.</span>
+              </li>
+              <li className="flex gap-4">
+                <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                <span><strong>Permanent record:</strong> The ledger is public and permanent.</span>
+              </li>
+            </ul>
+            <p className="text-gray-600 leading-relaxed mt-6">So, you have pseudonyms (addresses), not complete anonymity.</p>
+          </div>
+
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
+            Privacy vs Anonymity
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6 flex items-center gap-3">
+                Where Privacy Comes From
+              </h3>
+              <ul className="space-y-6">
+                <li className="flex gap-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                  <span className="text-gray-600">Using new addresses for different payments makes it harder to link all your activity.</span>
+                </li>
+                <li className="flex gap-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                  <span className="text-gray-600">Careful wallet practices and some on-chain techniques can improve privacy.</span>
+                </li>
+                <li className="flex gap-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                  <span className="text-gray-600">On chains with rich scripting and data capabilities, tools can be built to help users manage privacy better.</span>
+                </li>
+              </ul>
+            </section>
+
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-amber-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-amber-600 uppercase tracking-widest mb-6 flex items-center gap-3">
+                Where Anonymity Breaks Down
+              </h3>
+              <ul className="space-y-6">
+                <li className="flex gap-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-600 mt-2 shrink-0" />
+                  <span className="text-gray-600">Exchanges and many services use identity checks. If you withdraw to a personal wallet, they know which address you withdrew to.</span>
+                </li>
+                <li className="flex gap-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-600 mt-2 shrink-0" />
+                  <span className="text-gray-600">Blockchain analysis companies can track patterns and cluster addresses, especially when users reuse addresses or interact with known services.</span>
+                </li>
+                <li className="flex gap-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-600 mt-2 shrink-0" />
+                  <span className="text-gray-600">If you publicly post an address, anyone can see its history.</span>
+                </li>
+              </ul>
+            </section>
+          </div>
+
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
+            The Reality
+          </h2>
+
+          <div className="grid gap-12">
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6 flex items-center gap-3">
+                What Bitcoin Actually Offers
+              </h3>
+              <ul className="space-y-6">
+                <li className="flex gap-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                  <span className="text-gray-600">Bitcoin offers more privacy than a typical bank account that you hand over to every merchant.</span>
+                </li>
+                <li className="flex gap-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                  <span className="text-gray-600">It does not offer perfect anonymity like cash handed over in person.</span>
+                </li>
+                <li className="flex gap-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                  <span className="text-gray-600">Good practices can improve privacy, but careless behavior can expose a lot of information.</span>
+                </li>
+              </ul>
+            </section>
+          </div>
+
+          <div className="bg-slate-900 text-white rounded-[3rem] p-12 mt-20 shadow-2xl relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/5 rounded-full blur-[100px] group-hover:bg-teal-500/10 transition-all duration-1000" />
+            <div className="flex flex-col md:flex-row gap-8 items-start relative z-10">
+              <div className="bg-teal-600 text-white p-4 rounded-2xl shadow-lg shrink-0">
+                <ShieldCheck size={32} />
+              </div>
+              <div>
+                <h4 className="text-2xl font-black uppercase tracking-tight mb-6 text-teal-400">The Right Framing</h4>
+                <p className="text-gray-300 leading-relaxed text-lg">For most people, the right framing is this. Bitcoin gives you transparency and control by default, and privacy is something you can actively manage. It is not a magic invisibility cloak, but with smart usage, it can give you a healthier balance between openness and personal financial privacy than many legacy systems.</p>
+              </div>
+            </div>
+          </div>
         </div>
       );
     }
