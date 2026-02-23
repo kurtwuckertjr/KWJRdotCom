@@ -2567,113 +2567,162 @@ const Post: React.FC = () => {
     if (id === 'what-is-satoshi') {
       return (
         <div className="space-y-12">
-          <p>A satoshi, often shortened to “sat,” is the smallest unit of bitcoin. It is named in honor of Bitcoin’s creator, Satoshi Nakamoto. One bitcoin is divided into 100 million satoshis, so one sat equals 0.00000001 bitcoin. In dollar terms, the value of a satoshi depends entirely on the current market price of bitcoin. As bitcoin’s price rises and the total supply approaches its fixed limit of 21 million coins, people will naturally use smaller units like sats for everyday amounts. It is a lot easier to say “I paid 50,000 sats” than “I paid 0.0005 bitcoin.”</p>
+          <p>A satoshi, often shortened to "sat," is the smallest unit of bitcoin. It is named in honor of Bitcoin's creator, Satoshi Nakamoto. One bitcoin is divided into 100 million satoshis, so one sat equals 0.00000001 bitcoin. In dollar terms, the value of a satoshi depends entirely on the current market price of bitcoin. As bitcoin's price rises and the total supply approaches its fixed limit of 21 million coins, people will naturally use smaller units like sats for everyday amounts. It is a lot easier to say "I paid 50,000 sats" than "I paid 0.0005 bitcoin."</p>
           <p>Satoshis make it possible to divide bitcoin very finely, which is important for small payments and micro-transactions. They also give users a simple way to talk about value without juggling long strings of decimal places.</p>
 
-          <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm">
-            <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6">Why Satoshis Matter</h3>
-          <p className="text-gray-600 leading-relaxed">Because one sat is one hundred millionth of a bitcoin, you can represent very small amounts without breaking the unit further. For example, if one bitcoin is worth 10,000 dollars, then:</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">1 satoshi is worth 0.0001 dollars (one ten-thousandth of a dollar).</span>
-            </li>
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">A 100 dollar purchase would be 1,000,000 satoshis at that price level.</span>
-            </li>
-          </ul>
-          <p className="text-gray-600 leading-relaxed">You can think in whole numbers instead of long decimals, which is easier for most people to read and discuss.</p>
-          <p className="text-gray-600 leading-relaxed">The need for satoshis arises from the same basic reason we have cents under a dollar or pennies under a pound. As the base unit becomes more valuable, smaller denominations become necessary for everyday use.</p>
-          </section>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
+            Why Satoshis Matter
+          </h2>
 
-          <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm">
-            <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6">Naming and the Double-Spend Problem</h3>
-          <p className="text-gray-600 leading-relaxed">As was stated above, the name “satoshi” pays tribute to the pseudonymous author of the 2008 white paper “Bitcoin: A Peer-to-Peer Electronic Cash System.” That paper laid out how to solve a core problem for digital money: double spending.</p>
-          <p className="text-gray-600 leading-relaxed">With physical cash, you cannot hand the same bill to two different people at the same time. The note is either in your wallet or someone else’s. In digital systems, a balance is just a number in a database. Without strong rules, someone could try to spend the same unit twice, like writing two 100 dollar checks on a 100 dollar account and hoping both are honored by the merchants; one of which will be the victim of theft of the goods that are not actually paid for.</p>
-          <p className="text-gray-600 leading-relaxed">Bitcoin prevents this behavior by using a public ledger (the blockchain) and a consensus process. Every valid satoshi transfer is recorded in this shared history. Nodes verify that each satoshi is only spent once, so a user cannot reuse the same unit for multiple transactions. This protection applies whether you are dealing in whole bitcoins or tiny satoshi amounts.</p>
-          </section>
+          <div className="bg-slate-50 border-l-4 border-teal-600 p-8 md:p-12 rounded-r-3xl shadow-sm my-16">
+            <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-6 flex items-center gap-3">
+               Quick Math
+            </h3>
+            <p className="text-gray-600 leading-relaxed mb-6">Because one sat is one hundred millionth of a bitcoin, you can represent very small amounts without breaking the unit further. For example, if one bitcoin is worth 10,000 dollars, then:</p>
+            <ul className="space-y-6">
+              <li className="flex gap-4">
+                <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                <span><strong>1 satoshi</strong> is worth 0.0001 dollars (one ten-thousandth of a dollar).</span>
+              </li>
+              <li className="flex gap-4">
+                <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                <span><strong>A 100 dollar purchase</strong> would be 1,000,000 satoshis at that price level.</span>
+              </li>
+            </ul>
+            <p className="text-gray-600 leading-relaxed mt-6">You can think in whole numbers instead of long decimals, which is easier for most people to read and discuss.</p>
+            <p className="text-gray-600 leading-relaxed mt-4">The need for satoshis arises from the same basic reason we have cents under a dollar or pennies under a pound. As the base unit becomes more valuable, smaller denominations become necessary for everyday use.</p>
+          </div>
 
-          <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm">
-            <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6">Using Satoshis in Practice</h3>
-          <p className="text-gray-600 leading-relaxed">In the real world, satoshis are what you actually move around when you send or receive bitcoin. You can:</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Deposit traditional currency into an exchange.</span>
-            </li>
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Convert that balance into bitcoin, which the system tracks internally as satoshis.</span>
-            </li>
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Spend sats at merchants or services that accept bitcoin.</span>
-            </li>
-          </ul>
-          <p className="text-gray-600 leading-relaxed">Not every merchant takes bitcoin, so it is wise to check who accepts what before you plan to pay in sats.</p>
-          <p className="text-gray-600 leading-relaxed">Even though sats are not a separate currency, you can always talk about prices in satoshis instead of fractions of a bitcoin. Many wallets and interfaces let you toggle between Bitcoin and sats display so you can choose whichever unit feels clearer.</p>
-          </section>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
+            Naming & the Double-Spend Problem
+          </h2>
 
-          <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm">
-            <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6">Satoshis and Other Denominations</h3>
-          <p className="text-gray-600 leading-relaxed">Different blockchains choose different unit structures. Bitcoin has one base asset, and its smallest unit is the satoshi.</p>
-          <p className="text-gray-600 leading-relaxed">Ethereum, for example, uses a different layout. Its smallest unit is called wei:</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">1 wei = 0.000000000000000001 ether (one quintillionth of an ether)</span>
-            </li>
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">1 gwei = 1,000,000,000 wei</span>
-            </li>
-          </ul>
-          <p className="text-gray-600 leading-relaxed">Both systems let you express very small pieces of the main asset. The exact names and scales differ, so one satoshi has a different monetary value than one gwei, and both move up and down in price as Bitcoin and Ethereum markets change.</p>
-          <p className="text-gray-600 leading-relaxed">To convert between sats and dollars in simple terms:</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Take the current bitcoin price and divide by 100,000,000 to get the value of one sat in dollars.</span>
-            </li>
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">To see how many sats equal a certain dollar amount, divide the dollar amount by the dollar value of one sat.</span>
-            </li>
-          </ul>
-          </section>
+          <div className="grid gap-12">
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6 flex items-center gap-3">
+                The Origin of the Name
+              </h3>
+              <p className="text-gray-600 leading-relaxed">As was stated above, the name "satoshi" pays tribute to the pseudonymous author of the 2008 white paper "Bitcoin: A Peer-to-Peer Electronic Cash System." That paper laid out how to solve a core problem for digital money: double spending.</p>
+              <p className="text-gray-600 leading-relaxed mt-4">With physical cash, you cannot hand the same bill to two different people at the same time. The note is either in your wallet or someone else's. In digital systems, a balance is just a number in a database. Without strong rules, someone could try to spend the same unit twice, like writing two 100 dollar checks on a 100 dollar account and hoping both are honored by the merchants; one of which will be the victim of theft of the goods that are not actually paid for.</p>
+              <p className="text-gray-600 leading-relaxed mt-4">Bitcoin prevents this behavior by using a public ledger (the blockchain) and a consensus process. Every valid satoshi transfer is recorded in this shared history. Nodes verify that each satoshi is only spent once, so a user cannot reuse the same unit for multiple transactions. This protection applies whether you are dealing in whole bitcoins or tiny satoshi amounts.</p>
+            </section>
+          </div>
 
-          <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm">
-            <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6">How Much Is One Satoshi?</h3>
-          <p className="text-gray-600 leading-relaxed">The value of a satoshi is always tied to bitcoin’s price. Examples:</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">If 1 Bitcoin = 10,000 dollars, then 1 sat = 0.0001 dollars.</span>
-            </li>
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">If 1 Bitcoin = 50,000 dollars, then 1 sat = 0.0005 dollars.</span>
-            </li>
-          </ul>
-          <p className="text-gray-600 leading-relaxed">No matter what the market does, the relationship inside the protocol stays fixed:</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">1 bitcoin = 100,000,000 satoshis</span>
-            </li>
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">1 satoshi = 0.00000001 bitcoin</span>
-            </li>
-          </ul>
-          <p className="text-gray-600 leading-relaxed">Only the exchange rate between bitcoin and your local currency changes.</p>
-          </section>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
+            Using Satoshis in Practice
+          </h2>
 
-          <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm">
-            <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6">The Bottom Line</h3>
-          <p className="text-gray-600 leading-relaxed">A satoshi is the smallest unit of bitcoin, and there are 100 million of them in every coin. The unit is named after Satoshi Nakamoto, the inventor of Bitcoin. Talking in sats makes it easier to handle real-world amounts without a sea of zeros after the decimal point. As bitcoin’s price and usage grow, sats are likely to become the main way people quote prices, pay for goods and services, and think about everyday transactions in the Bitcoin economy.</p>
-          </section>
+          <div className="grid gap-12">
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6 flex items-center gap-3">
+                How You Use Sats
+              </h3>
+              <p className="text-gray-600 leading-relaxed mb-6">In the real world, satoshis are what you actually move around when you send or receive bitcoin. You can:</p>
+              <ul className="space-y-6">
+                <li className="flex gap-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                  <span className="text-gray-600">Deposit traditional currency into an exchange.</span>
+                </li>
+                <li className="flex gap-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                  <span className="text-gray-600">Convert that balance into bitcoin, which the system tracks internally as satoshis.</span>
+                </li>
+                <li className="flex gap-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                  <span className="text-gray-600">Spend sats at merchants or services that accept bitcoin.</span>
+                </li>
+              </ul>
+              <p className="text-gray-600 leading-relaxed mt-6">Not every merchant takes bitcoin, so it is wise to check who accepts what before you plan to pay in sats.</p>
+              <p className="text-gray-600 leading-relaxed mt-4">Even though sats are not a separate currency, you can always talk about prices in satoshis instead of fractions of a bitcoin. Many wallets and interfaces let you toggle between Bitcoin and sats display so you can choose whichever unit feels clearer.</p>
+            </section>
+          </div>
+
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
+            Satoshis & Other Denominations
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6 flex items-center gap-3">
+                Bitcoin (Satoshis)
+              </h3>
+              <p className="text-gray-600 leading-relaxed mb-4">Different blockchains choose different unit structures. Bitcoin has one base asset, and its smallest unit is the satoshi.</p>
+              <p className="text-gray-600 leading-relaxed">To convert between sats and dollars in simple terms:</p>
+              <ul className="space-y-4 mt-4">
+                <li className="flex gap-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                  <span className="text-gray-600">Take the current bitcoin price and divide by 100,000,000 to get the value of one sat in dollars.</span>
+                </li>
+                <li className="flex gap-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                  <span className="text-gray-600">To see how many sats equal a certain dollar amount, divide the dollar amount by the dollar value of one sat.</span>
+                </li>
+              </ul>
+            </section>
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-amber-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-amber-600 uppercase tracking-widest mb-6 flex items-center gap-3">
+                Ethereum (Wei)
+              </h3>
+              <p className="text-gray-600 leading-relaxed mb-4">Ethereum, for example, uses a different layout. Its smallest unit is called wei:</p>
+              <ul className="space-y-4">
+                <li className="flex gap-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-600 mt-2 shrink-0" />
+                  <span className="text-gray-600">1 wei = 0.000000000000000001 ether (one quintillionth of an ether)</span>
+                </li>
+                <li className="flex gap-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-600 mt-2 shrink-0" />
+                  <span className="text-gray-600">1 gwei = 1,000,000,000 wei</span>
+                </li>
+              </ul>
+              <p className="text-gray-600 leading-relaxed mt-4">Both systems let you express very small pieces of the main asset. The exact names and scales differ, so one satoshi has a different monetary value than one gwei, and both move up and down in price as Bitcoin and Ethereum markets change.</p>
+            </section>
+          </div>
+
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
+            How Much Is One Satoshi?
+          </h2>
+
+          <div className="bg-slate-50 border-l-4 border-teal-600 p-8 md:p-12 rounded-r-3xl shadow-sm my-16">
+            <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-6 flex items-center gap-3">
+               Price Examples
+            </h3>
+            <p className="text-gray-600 leading-relaxed mb-6">The value of a satoshi is always tied to bitcoin's price. Examples:</p>
+            <ul className="space-y-6">
+              <li className="flex gap-4">
+                <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                <span>If 1 Bitcoin = <strong>10,000 dollars</strong>, then 1 sat = 0.0001 dollars.</span>
+              </li>
+              <li className="flex gap-4">
+                <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                <span>If 1 Bitcoin = <strong>50,000 dollars</strong>, then 1 sat = 0.0005 dollars.</span>
+              </li>
+            </ul>
+            <p className="text-gray-600 leading-relaxed mt-6">No matter what the market does, the relationship inside the protocol stays fixed:</p>
+            <ul className="space-y-6 mt-4">
+              <li className="flex gap-4">
+                <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                <span><strong>1 bitcoin</strong> = 100,000,000 satoshis</span>
+              </li>
+              <li className="flex gap-4">
+                <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                <span><strong>1 satoshi</strong> = 0.00000001 bitcoin</span>
+              </li>
+            </ul>
+            <p className="text-gray-600 leading-relaxed mt-6">Only the exchange rate between bitcoin and your local currency changes.</p>
+          </div>
+
+          <div className="bg-slate-900 text-white rounded-[3rem] p-12 mt-20 shadow-2xl relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/5 rounded-full blur-[100px] group-hover:bg-teal-500/10 transition-all duration-1000" />
+            <div className="flex flex-col md:flex-row gap-8 items-start relative z-10">
+              <div className="bg-teal-600 text-white p-4 rounded-2xl shadow-lg shrink-0">
+                <Info size={32} />
+              </div>
+              <div>
+                <h4 className="text-2xl font-black uppercase tracking-tight mb-6 text-teal-400">The Bottom Line</h4>
+                <p className="text-gray-300 leading-relaxed text-lg">A satoshi is the smallest unit of bitcoin, and there are 100 million of them in every coin. The unit is named after Satoshi Nakamoto, the inventor of Bitcoin. Talking in sats makes it easier to handle real-world amounts without a sea of zeros after the decimal point. As bitcoin's price and usage grow, sats are likely to become the main way people quote prices, pay for goods and services, and think about everyday transactions in the Bitcoin economy.</p>
+              </div>
+            </div>
+          </div>
         </div>
       );
     }
