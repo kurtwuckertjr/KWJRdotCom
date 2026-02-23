@@ -1659,102 +1659,137 @@ const Post: React.FC = () => {
       return (
         <div className="space-y-12">
           <p>In Bitcoin, on-chain and off-chain describe where a transaction or piece of data is recorded and enforced.</p>
-          <p>On-chain means:</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">The transaction is recorded directly on the blockchain.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">It is validated by nodes and miners according to the consensus rules.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">It becomes part of the permanent public history once confirmed.</span>
-            </li>
-          </ul>
-          <p className="text-gray-600 leading-relaxed">Examples of on-chain activity:</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Sending coins from one address to another in a standard transaction.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Storing data in transaction outputs.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Smart contract style scripts executed by the Bitcoin protocol.</span>
-            </li>
-          </ul>
-          <p className="text-gray-600 leading-relaxed">Off-chain means:</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">The transfer or agreement is tracked somewhere else, not directly on the blockchain.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">It might rely on a company, a side network, or a legal contract to enforce who owns what.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Final settlement may or may not eventually touch the main chain.</span>
-            </li>
-          </ul>
-          <p className="text-gray-600 leading-relaxed">Examples of off-chain activity:</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Balances inside a centralized exchange. They keep an internal ledger and settle on chain in batches.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Payment channels and second layer networks that update balances off-chain and settle later.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">IOUs, vouchers, or wrapped tokens that represent Bitcoin but are not themselves UTXOs on the chain.</span>
-            </li>
-          </ul>
-          <p className="text-gray-600 leading-relaxed">Key differences:</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Trust: On-chain transactions rely on network rules and proof of work. Off-chain solutions often add trust in a company, gateway, or protocol.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Finality: On-chain settlements, once deeply confirmed, are hard to reverse. Off-chain records can change based on policies or agreements.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Scalability: Off-chain methods can sometimes offer speed and convenience, but they trade away some of the transparency and trust minimization that on-chain gives you.</span>
-            </li>
-          </ul>
-          <p className="text-gray-600 leading-relaxed">In a well designed system, on-chain is the foundation, and off-chain tools are used where they make sense, without undermining the security and clarity of the underlying chain.</p>
+
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
+            On-Chain
+          </h2>
+
+          <div className="bg-slate-50 border-l-4 border-teal-600 p-8 md:p-12 rounded-r-3xl shadow-sm my-16">
+            <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-6 flex items-center gap-3">
+               What On-Chain Means
+            </h3>
+            <ul className="space-y-6">
+              <li className="flex gap-4">
+                <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                <span><strong>Recorded directly:</strong> The transaction is recorded directly on the blockchain.</span>
+              </li>
+              <li className="flex gap-4">
+                <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                <span><strong>Validated by consensus:</strong> It is validated by nodes and miners according to the consensus rules.</span>
+              </li>
+              <li className="flex gap-4">
+                <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                <span><strong>Permanent history:</strong> It becomes part of the permanent public history once confirmed.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="grid gap-12">
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6 flex items-center gap-3">
+                Examples of On-Chain Activity
+              </h3>
+              <ul className="space-y-6">
+                <li className="flex gap-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                  <span className="text-gray-600">Sending coins from one address to another in a standard transaction.</span>
+                </li>
+                <li className="flex gap-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                  <span className="text-gray-600">Storing data in transaction outputs.</span>
+                </li>
+                <li className="flex gap-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                  <span className="text-gray-600">Smart contract style scripts executed by the Bitcoin protocol.</span>
+                </li>
+              </ul>
+            </section>
+          </div>
+
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
+            Off-Chain
+          </h2>
+
+          <div className="bg-slate-50 border-l-4 border-teal-600 p-8 md:p-12 rounded-r-3xl shadow-sm my-16">
+            <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-6 flex items-center gap-3">
+               What Off-Chain Means
+            </h3>
+            <ul className="space-y-6">
+              <li className="flex gap-4">
+                <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                <span><strong>Tracked elsewhere:</strong> The transfer or agreement is tracked somewhere else, not directly on the blockchain.</span>
+              </li>
+              <li className="flex gap-4">
+                <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                <span><strong>Third-party enforcement:</strong> It might rely on a company, a side network, or a legal contract to enforce who owns what.</span>
+              </li>
+              <li className="flex gap-4">
+                <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                <span><strong>Optional settlement:</strong> Final settlement may or may not eventually touch the main chain.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="grid gap-12">
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6 flex items-center gap-3">
+                Examples of Off-Chain Activity
+              </h3>
+              <ul className="space-y-6">
+                <li className="flex gap-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                  <span className="text-gray-600">Balances inside a centralized exchange. They keep an internal ledger and settle on chain in batches.</span>
+                </li>
+                <li className="flex gap-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                  <span className="text-gray-600">Payment channels and second layer networks that update balances off-chain and settle later.</span>
+                </li>
+                <li className="flex gap-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                  <span className="text-gray-600">IOUs, vouchers, or wrapped tokens that represent Bitcoin but are not themselves UTXOs on the chain.</span>
+                </li>
+              </ul>
+            </section>
+          </div>
+
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
+            Key Differences
+          </h2>
+
+          <div className="grid gap-12">
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6 flex items-center gap-3">
+                Comparing On-Chain vs Off-Chain
+              </h3>
+              <ul className="space-y-6">
+                <li className="flex gap-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                  <span className="text-gray-600"><strong>Trust:</strong> On-chain transactions rely on network rules and proof of work. Off-chain solutions often add trust in a company, gateway, or protocol.</span>
+                </li>
+                <li className="flex gap-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                  <span className="text-gray-600"><strong>Finality:</strong> On-chain settlements, once deeply confirmed, are hard to reverse. Off-chain records can change based on policies or agreements.</span>
+                </li>
+                <li className="flex gap-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                  <span className="text-gray-600"><strong>Scalability:</strong> Off-chain methods can sometimes offer speed and convenience, but they trade away some of the transparency and trust minimization that on-chain gives you.</span>
+                </li>
+              </ul>
+            </section>
+          </div>
+
+          <div className="bg-slate-900 text-white rounded-[3rem] p-12 mt-20 shadow-2xl relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/5 rounded-full blur-[100px] group-hover:bg-teal-500/10 transition-all duration-1000" />
+            <div className="flex flex-col md:flex-row gap-8 items-start relative z-10">
+              <div className="bg-teal-600 text-white p-4 rounded-2xl shadow-lg shrink-0">
+                <Globe size={32} />
+              </div>
+              <div>
+                <h4 className="text-2xl font-black uppercase tracking-tight mb-6 text-teal-400">The Bottom Line</h4>
+                <p className="text-gray-300 leading-relaxed text-lg">In a well designed system, on-chain is the foundation, and off-chain tools are used where they make sense, without undermining the security and clarity of the underlying chain.</p>
+              </div>
+            </div>
+          </div>
         </div>
       );
     }
