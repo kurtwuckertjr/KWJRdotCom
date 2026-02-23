@@ -2358,54 +2358,94 @@ const Post: React.FC = () => {
       return (
         <div className="space-y-12">
           <p>Proof of Work (PoW) is the mechanism Bitcoin uses to secure the blockchain and choose which version of history is valid.</p>
-          <p>In PoW, miners compete to solve a mathematical puzzle:</p>
-          <ol className="space-y-6">
-            <li className="flex gap-4">
-              <span className="bg-teal-600 text-white w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold shrink-0">1</span>
-              <span className="text-gray-600">A miner collects transactions and builds a candidate block.</span>
+
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
+            How It Works
+          </h2>
+
+          <p className="text-gray-600 leading-relaxed">In PoW, miners compete to solve a mathematical puzzle:</p>
+
+          <ol className="space-y-12">
+            <li className="flex gap-6 group">
+              <div className="flex flex-col items-center shrink-0">
+                <div className="w-10 h-10 rounded-full bg-slate-900 text-teal-400 flex items-center justify-center font-black text-lg group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">1</div>
+                <div className="w-px h-full bg-slate-100 group-hover:bg-teal-100 mt-2 transition-colors" />
+              </div>
+              <div>
+                <h4 className="text-xl font-black uppercase text-slate-900 mb-2">Collect Transactions</h4>
+                <p className="text-gray-500 font-light leading-relaxed">A miner collects transactions and builds a candidate block.</p>
+              </div>
+            </li>
+            <li className="flex gap-6 group">
+              <div className="flex flex-col items-center shrink-0">
+                <div className="w-10 h-10 rounded-full bg-slate-900 text-teal-400 flex items-center justify-center font-black text-lg group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">2</div>
+                <div className="w-px h-full bg-slate-100 group-hover:bg-teal-100 mt-2 transition-colors" />
+              </div>
+              <div>
+                <h4 className="text-xl font-black uppercase text-slate-900 mb-2">Hash the Block Header</h4>
+                <p className="text-gray-500 font-light leading-relaxed">They repeatedly hash the block header with different inputs (called nonces) until the resulting hash is below a target value set by the network.</p>
+              </div>
+            </li>
+            <li className="flex gap-6 group">
+              <div className="flex flex-col items-center shrink-0">
+                <div className="w-10 h-10 rounded-full bg-slate-900 text-teal-400 flex items-center justify-center font-black text-lg group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">3</div>
+                <div className="w-px h-full bg-slate-100 group-hover:bg-teal-100 mt-2 transition-colors" />
+              </div>
+              <div>
+                <h4 className="text-xl font-black uppercase text-slate-900 mb-2">Expend Real Work</h4>
+                <p className="text-gray-500 font-light leading-relaxed">Finding such a hash requires huge numbers of attempts, which means real computational work and energy use.</p>
+              </div>
+            </li>
+            <li className="flex gap-6 group">
+              <div className="flex flex-col items-center shrink-0">
+                <div className="w-10 h-10 rounded-full bg-slate-900 text-teal-400 flex items-center justify-center font-black text-lg group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">4</div>
+              </div>
+              <div>
+                <h4 className="text-xl font-black uppercase text-slate-900 mb-2">Broadcast & Verify</h4>
+                <p className="text-gray-500 font-light leading-relaxed">When a miner finds a valid solution, it broadcasts the block. Other nodes can quickly verify that the work is correct.</p>
+              </div>
             </li>
           </ol>
-          <ol className="space-y-6">
-            <li className="flex gap-4">
-              <span className="bg-teal-600 text-white w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold shrink-0">1</span>
-              <span className="text-gray-600">They repeatedly hash the block header with different inputs (called nonces) until the resulting hash is below a target value set by the network.</span>
-            </li>
-          </ol>
-          <ol className="space-y-6">
-            <li className="flex gap-4">
-              <span className="bg-teal-600 text-white w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold shrink-0">1</span>
-              <span className="text-gray-600">Finding such a hash requires huge numbers of attempts, which means real computational work and energy use.</span>
-            </li>
-          </ol>
-          <ol className="space-y-6">
-            <li className="flex gap-4">
-              <span className="bg-teal-600 text-white w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold shrink-0">1</span>
-              <span className="text-gray-600">When a miner finds a valid solution, it broadcasts the block. Other nodes can quickly verify that the work is correct.</span>
-            </li>
-          </ol>
-          <p className="text-gray-600 leading-relaxed">This process secures Bitcoin in several ways:</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Hard to rewrite history</span>
-            </li>
-          </ul>
-          <p className="text-gray-600 leading-relaxed">To change a past block, an attacker would need to redo the proof of work for that block and all blocks after it, then catch up and overtake the honest chain. If honest miners control most of the total computing power, this is extremely expensive.</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Objective chain selection</span>
-            </li>
-          </ul>
-          <p className="text-gray-600 leading-relaxed">Nodes do not rely on trust or voting. They simply follow the chain with the most cumulative proof of work, which is the one that required the most energy and computation to produce.</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Economic alignment</span>
-            </li>
-          </ul>
-          <p className="text-gray-600 leading-relaxed">Miners invest heavily in hardware and electricity. Their incentives are to follow the rules and protect the value of the system, because they are rewarded in Bitcoin and fees.</p>
-          <p className="text-gray-600 leading-relaxed">Proof of work is sometimes criticized for energy use, but its purpose is clear. It turns energy and computation into a wall that protects the history of transactions. This makes Bitcoin resistant to cheap manipulation and central control.</p>
+
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
+            How PoW Secures Bitcoin
+          </h2>
+
+          <div className="grid gap-12">
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6 flex items-center gap-3">
+                Hard to Rewrite History
+              </h3>
+              <p className="text-gray-600 leading-relaxed">To change a past block, an attacker would need to redo the proof of work for that block and all blocks after it, then catch up and overtake the honest chain. If honest miners control most of the total computing power, this is extremely expensive.</p>
+            </section>
+
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6 flex items-center gap-3">
+                Objective Chain Selection
+              </h3>
+              <p className="text-gray-600 leading-relaxed">Nodes do not rely on trust or voting. They simply follow the chain with the most cumulative proof of work, which is the one that required the most energy and computation to produce.</p>
+            </section>
+
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6 flex items-center gap-3">
+                Economic Alignment
+              </h3>
+              <p className="text-gray-600 leading-relaxed">Miners invest heavily in hardware and electricity. Their incentives are to follow the rules and protect the value of the system, because they are rewarded in Bitcoin and fees.</p>
+            </section>
+          </div>
+
+          <div className="bg-slate-900 text-white rounded-[3rem] p-12 mt-20 shadow-2xl relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/5 rounded-full blur-[100px] group-hover:bg-teal-500/10 transition-all duration-1000" />
+            <div className="flex flex-col md:flex-row gap-8 items-start relative z-10">
+              <div className="bg-teal-600 text-white p-4 rounded-2xl shadow-lg shrink-0">
+                <Zap size={32} />
+              </div>
+              <div>
+                <h4 className="text-2xl font-black uppercase tracking-tight mb-6 text-teal-400">The Bottom Line</h4>
+                <p className="text-gray-300 leading-relaxed text-lg">Proof of work is sometimes criticized for energy use, but its purpose is clear. It turns energy and computation into a wall that protects the history of transactions. This makes Bitcoin resistant to cheap manipulation and central control.</p>
+              </div>
+            </div>
+          </div>
         </div>
       );
     }
