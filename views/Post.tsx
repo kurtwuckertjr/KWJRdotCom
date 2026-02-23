@@ -2242,72 +2242,114 @@ const Post: React.FC = () => {
       return (
         <div className="space-y-12">
           <p>Bitcoin and Ethereum are both large blockchain networks, but they have different designs, goals, and trade offs.</p>
-          <p>Purpose</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Bitcoin began as peer to peer electronic cash, focused on sound money, secure settlement, and a stable protocol that businesses can build on.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Ethereum was created as a “world computer” for running general purpose smart contracts and decentralized applications.</span>
-            </li>
-          </ul>
-          <p className="text-gray-600 leading-relaxed">Data model</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Bitcoin uses a UTXO model. Coins are discrete outputs that can be combined and split. This model is simple to verify and scales well for parallel processing.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Ethereum uses an account based model. Each account has a changing balance and state. This can be convenient for complex contracts but is more state heavy.</span>
-            </li>
-          </ul>
-          <p className="text-gray-600 leading-relaxed">Protocol philosophy</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Bitcoin places a lot of importance on a long term stable base protocol and external legal and commercial frameworks on top.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Ethereum has changed its core rules several times, including shifting from proof of work to proof of stake, which places more emphasis on protocol level governance and experimentation.</span>
-            </li>
-          </ul>
-          <p className="text-gray-600 leading-relaxed">Smart contracts</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Bitcoin supports scripting and smart contracts through a stack based language and op codes. On scalable implementations, very complex logic can be expressed on chain.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Ethereum was designed from the start for general purpose smart contracts using the Ethereum Virtual Machine and languages like Solidity, so most dApps and tokens today are on Ethereum or similar platforms.</span>
-            </li>
-          </ul>
-          <p className="text-gray-600 leading-relaxed">Consensus and security</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Classic Bitcoin uses proof of work, where security comes from miners committing energy and hardware.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Ethereum started with proof of work and later moved to proof of stake, where security comes from locked coins and protocol rules about slashing.</span>
-            </li>
-          </ul>
-          <p className="text-gray-600 leading-relaxed">In short, Bitcoin focuses on being a durable, high integrity foundation for money and data, while Ethereum focuses more on being a flexible platform for programmable assets and applications. Both approaches have benefits and trade offs that users and developers should understand.</p>
+
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
+            Purpose
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6 flex items-center gap-3">
+                Bitcoin
+              </h3>
+              <p className="text-gray-600 leading-relaxed">Bitcoin began as peer to peer electronic cash, focused on sound money, secure settlement, and a stable protocol that businesses can build on.</p>
+            </section>
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-amber-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-amber-600 uppercase tracking-widest mb-6 flex items-center gap-3">
+                Ethereum
+              </h3>
+              <p className="text-gray-600 leading-relaxed">Ethereum was created as a "world computer" for running general purpose smart contracts and decentralized applications.</p>
+            </section>
+          </div>
+
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
+            Data Model
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6 flex items-center gap-3">
+                UTXO Model
+              </h3>
+              <p className="text-gray-600 leading-relaxed">Bitcoin uses a UTXO model. Coins are discrete outputs that can be combined and split. This model is simple to verify and scales well for parallel processing.</p>
+            </section>
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-amber-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-amber-600 uppercase tracking-widest mb-6 flex items-center gap-3">
+                Account Model
+              </h3>
+              <p className="text-gray-600 leading-relaxed">Ethereum uses an account based model. Each account has a changing balance and state. This can be convenient for complex contracts but is more state heavy.</p>
+            </section>
+          </div>
+
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
+            Protocol Philosophy
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6 flex items-center gap-3">
+                Stability First
+              </h3>
+              <p className="text-gray-600 leading-relaxed">Bitcoin places a lot of importance on a long term stable base protocol and external legal and commercial frameworks on top.</p>
+            </section>
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-amber-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-amber-600 uppercase tracking-widest mb-6 flex items-center gap-3">
+                Experimentation First
+              </h3>
+              <p className="text-gray-600 leading-relaxed">Ethereum has changed its core rules several times, including shifting from proof of work to proof of stake, which places more emphasis on protocol level governance and experimentation.</p>
+            </section>
+          </div>
+
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
+            Smart Contracts
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6 flex items-center gap-3">
+                Bitcoin Script
+              </h3>
+              <p className="text-gray-600 leading-relaxed">Bitcoin supports scripting and smart contracts through a stack based language and op codes. On scalable implementations, very complex logic can be expressed on chain.</p>
+            </section>
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-amber-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-amber-600 uppercase tracking-widest mb-6 flex items-center gap-3">
+                EVM & Solidity
+              </h3>
+              <p className="text-gray-600 leading-relaxed">Ethereum was designed from the start for general purpose smart contracts using the Ethereum Virtual Machine and languages like Solidity, so most dApps and tokens today are on Ethereum or similar platforms.</p>
+            </section>
+          </div>
+
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
+            Consensus & Security
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6 flex items-center gap-3">
+                Proof of Work
+              </h3>
+              <p className="text-gray-600 leading-relaxed">Classic Bitcoin uses proof of work, where security comes from miners committing energy and hardware.</p>
+            </section>
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-amber-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-amber-600 uppercase tracking-widest mb-6 flex items-center gap-3">
+                Proof of Stake
+              </h3>
+              <p className="text-gray-600 leading-relaxed">Ethereum started with proof of work and later moved to proof of stake, where security comes from locked coins and protocol rules about slashing.</p>
+            </section>
+          </div>
+
+          <div className="bg-slate-900 text-white rounded-[3rem] p-12 mt-20 shadow-2xl relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/5 rounded-full blur-[100px] group-hover:bg-teal-500/10 transition-all duration-1000" />
+            <div className="flex flex-col md:flex-row gap-8 items-start relative z-10">
+              <div className="bg-teal-600 text-white p-4 rounded-2xl shadow-lg shrink-0">
+                <Compass size={32} />
+              </div>
+              <div>
+                <h4 className="text-2xl font-black uppercase tracking-tight mb-6 text-teal-400">The Bottom Line</h4>
+                <p className="text-gray-300 leading-relaxed text-lg">In short, Bitcoin focuses on being a durable, high integrity foundation for money and data, while Ethereum focuses more on being a flexible platform for programmable assets and applications. Both approaches have benefits and trade offs that users and developers should understand.</p>
+              </div>
+            </div>
+          </div>
         </div>
       );
     }
