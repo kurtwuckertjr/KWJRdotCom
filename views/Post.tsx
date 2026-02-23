@@ -1322,74 +1322,115 @@ const Post: React.FC = () => {
       return (
         <div className="space-y-12">
           <p>A Bitcoin node is a computer that runs Bitcoin software and participates in the network by verifying and relaying data. Not every node mines, but every node that follows the rules helps keep the system honest.</p>
-          <p>Here is what nodes do:</p>
-          <ol className="space-y-6">
-            <li className="flex gap-4">
-              <span className="bg-teal-600 text-white w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold shrink-0">1</span>
-              <span className="text-gray-600">Maintain a copy of the blockchain</span>
+
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
+            What Nodes Do
+          </h2>
+
+          <ol className="space-y-12">
+            <li className="flex gap-6 group">
+              <div className="flex flex-col items-center shrink-0">
+                <div className="w-10 h-10 rounded-full bg-slate-900 text-teal-400 flex items-center justify-center font-black text-lg group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">1</div>
+                <div className="w-px h-full bg-slate-100 group-hover:bg-teal-100 mt-2 transition-colors" />
+              </div>
+              <div>
+                <h4 className="text-xl font-black uppercase text-slate-900 mb-2">Maintain a Copy of the Blockchain</h4>
+                <p className="text-gray-500 font-light leading-relaxed">Nodes download and store the current blockchain or at least the parts they need. This lets them independently verify transactions and blocks.</p>
+              </div>
+            </li>
+            <li className="flex gap-6 group">
+              <div className="flex flex-col items-center shrink-0">
+                <div className="w-10 h-10 rounded-full bg-slate-900 text-teal-400 flex items-center justify-center font-black text-lg group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">2</div>
+                <div className="w-px h-full bg-slate-100 group-hover:bg-teal-100 mt-2 transition-colors" />
+              </div>
+              <div>
+                <h4 className="text-xl font-black uppercase text-slate-900 mb-2">Validate Transactions</h4>
+                <p className="text-gray-500 font-light leading-relaxed mb-4">When nodes receive a transaction, they check:</p>
+                <ul className="space-y-3">
+                  <li className="flex gap-4">
+                    <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                    <span className="text-gray-500 font-light">Are the inputs valid unspent outputs?</span>
+                  </li>
+                  <li className="flex gap-4">
+                    <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                    <span className="text-gray-500 font-light">Are the signatures correct?</span>
+                  </li>
+                  <li className="flex gap-4">
+                    <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
+                    <span className="text-gray-500 font-light">Do the amounts add up?</span>
+                  </li>
+                </ul>
+                <p className="text-gray-500 font-light leading-relaxed mt-4">If a transaction breaks the rules, they reject it and do not relay it further.</p>
+              </div>
+            </li>
+            <li className="flex gap-6 group">
+              <div className="flex flex-col items-center shrink-0">
+                <div className="w-10 h-10 rounded-full bg-slate-900 text-teal-400 flex items-center justify-center font-black text-lg group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">3</div>
+                <div className="w-px h-full bg-slate-100 group-hover:bg-teal-100 mt-2 transition-colors" />
+              </div>
+              <div>
+                <h4 className="text-xl font-black uppercase text-slate-900 mb-2">Validate Blocks</h4>
+                <p className="text-gray-500 font-light leading-relaxed">When a miner broadcasts a block, nodes verify the proof of work and every transaction inside. Only if the block is valid do they attach it to their chain and pass it on.</p>
+              </div>
+            </li>
+            <li className="flex gap-6 group">
+              <div className="flex flex-col items-center shrink-0">
+                <div className="w-10 h-10 rounded-full bg-slate-900 text-teal-400 flex items-center justify-center font-black text-lg group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">4</div>
+              </div>
+              <div>
+                <h4 className="text-xl font-black uppercase text-slate-900 mb-2">Relay Data</h4>
+                <p className="text-gray-500 font-light leading-relaxed">Nodes relay valid transactions and blocks to their peers. This helps the network stay connected and up to date.</p>
+              </div>
             </li>
           </ol>
-          <p className="text-gray-600 leading-relaxed">Nodes download and store the current blockchain or at least the parts they need. This lets them independently verify transactions and blocks.</p>
-          <ol className="space-y-6">
-            <li className="flex gap-4">
-              <span className="bg-teal-600 text-white w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold shrink-0">1</span>
-              <span className="text-gray-600">Validate transactions</span>
-            </li>
-          </ol>
-          <p className="text-gray-600 leading-relaxed">When nodes receive a transaction, they check:</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Are the inputs valid unspent outputs?</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Are the signatures correct?</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Do the amounts add up?</span>
-            </li>
-          </ul>
-          <p className="text-gray-600 leading-relaxed">If a transaction breaks the rules, they reject it and do not relay it further.</p>
-          <ol className="space-y-6">
-            <li className="flex gap-4">
-              <span className="bg-teal-600 text-white w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold shrink-0">1</span>
-              <span className="text-gray-600">Validate blocks</span>
-            </li>
-          </ol>
-          <p className="text-gray-600 leading-relaxed">When a miner broadcasts a block, nodes verify the proof of work and every transaction inside. Only if the block is valid do they attach it to their chain and pass it on.</p>
-          <ol className="space-y-6">
-            <li className="flex gap-4">
-              <span className="bg-teal-600 text-white w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold shrink-0">1</span>
-              <span className="text-gray-600">Relay data</span>
-            </li>
-          </ol>
-          <p className="text-gray-600 leading-relaxed">Nodes relay valid transactions and blocks to their peers. This helps the network stay connected and up to date.</p>
-          <p className="text-gray-600 leading-relaxed">There are different types of nodes:</p>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Full nodes: Store and validate the whole chain.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Pruned or simplified nodes: Store only part of the data, or use proofs from full nodes, to reduce storage needs.</span>
-            </li>
-          </ul>
-          <ul className="space-y-4">
-            <li className="flex gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" />
-              <span className="text-gray-600">Mining nodes: Full nodes that also construct blocks and compete in proof of work.</span>
-            </li>
-          </ul>
-          <p className="text-gray-600 leading-relaxed">Running a node gives you direct insight into the network and lets you verify that the rules are being followed, rather than trusting someone else’s copy of Bitcoin.</p>
+
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
+            Types of Nodes
+          </h2>
+
+          <div className="grid gap-12">
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6 flex items-center gap-3">
+                Full Nodes
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Store and validate the whole chain. They can independently compute the current state without trusting external sources.
+              </p>
+            </section>
+
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6 flex items-center gap-3">
+                Pruned or Simplified Nodes
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Store only part of the data, or use proofs from full nodes, to reduce storage needs.
+              </p>
+            </section>
+
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6 flex items-center gap-3">
+                Mining Nodes
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Full nodes that also construct blocks and compete in proof of work. These are the engines of the network.
+              </p>
+            </section>
+          </div>
+
+          <div className="bg-slate-900 text-white rounded-[3rem] p-12 mt-20 shadow-2xl relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/5 rounded-full blur-[100px] group-hover:bg-teal-500/10 transition-all duration-1000" />
+            <div className="flex flex-col md:flex-row gap-8 items-start relative z-10">
+              <div className="bg-teal-600 text-white p-4 rounded-2xl shadow-lg shrink-0">
+                <Globe size={32} />
+              </div>
+              <div>
+                <h4 className="text-2xl font-black uppercase tracking-tight mb-6 text-teal-400">Verify, Don't Trust</h4>
+                <p className="text-gray-300 leading-relaxed text-lg">
+                  Running a node gives you direct insight into the network and lets you verify that the rules are being followed, rather than trusting someone else's copy of Bitcoin.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       );
     }
