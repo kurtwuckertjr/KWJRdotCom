@@ -1,12 +1,12 @@
 
-import React, { useMemo, useEffect } from 'react';
+import React, { useMemo, useEffect, useState, useRef, useCallback } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { BLOG_POSTS } from '../constants';
 import { Category } from '../types';
 import { GLOSSARY_TERMS } from '../glossaryData';
 import { buildPostSchemaGraph } from '../schemaUtils';
-import { ArrowLeft, Calendar, Share2, ShieldCheck, ArrowRight, Info, CheckCircle2, Clock, Tool, BookOpen, AlertCircle, HelpCircle, Compass, Dumbbell, Zap, Footprints, ShoppingBag, Wallet, Smartphone, HardDrive, Lock, Globe } from 'lucide-react';
+import { ArrowLeft, Calendar, Share2, ShieldCheck, ArrowRight, Info, CheckCircle2, Clock, Tool, BookOpen, AlertCircle, HelpCircle, Compass, Dumbbell, Zap, Footprints, ShoppingBag, Wallet, Smartphone, HardDrive, Lock, Globe, Link2, Check } from 'lucide-react';
 
 const Post: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -2884,6 +2884,45 @@ const Post: React.FC = () => {
 
   const jsonLd = useMemo(() => buildPostSchemaGraph(post, authorTitle), [post, authorTitle]);
 
+  const [isShareOpen, setIsShareOpen] = useState(false);
+  const [copied, setCopied] = useState(false);
+  const shareRef = useRef<HTMLDivElement>(null);
+
+  const shareUrl = `https://kurtwuckertjr.com/post/${id}`;
+
+  useEffect(() => {
+    if (!isShareOpen) return;
+    const handleClick = (e: MouseEvent) => {
+      if (shareRef.current && !shareRef.current.contains(e.target as Node)) setIsShareOpen(false);
+    };
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setIsShareOpen(false);
+    };
+    document.addEventListener('mousedown', handleClick);
+    document.addEventListener('keydown', handleEscape);
+    return () => {
+      document.removeEventListener('mousedown', handleClick);
+      document.removeEventListener('keydown', handleEscape);
+    };
+  }, [isShareOpen]);
+
+  const handleCopy = useCallback(() => {
+    navigator.clipboard.writeText(shareUrl).then(() => {
+      setCopied(true);
+      setTimeout(() => { setCopied(false); setIsShareOpen(false); }, 1200);
+    });
+  }, [shareUrl]);
+
+  const handleShareX = useCallback(() => {
+    window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(post.title)}`, '_blank', 'width=600,height=400');
+    setIsShareOpen(false);
+  }, [shareUrl, post.title]);
+
+  const handleShareFB = useCallback(() => {
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`, '_blank', 'width=600,height=400');
+    setIsShareOpen(false);
+  }, [shareUrl]);
+
   return (
     <article className="bg-white min-h-screen py-32" itemScope itemType="http://schema.org/BlogPosting">
       <script type="application/ld+json">
@@ -2938,9 +2977,41 @@ const Post: React.FC = () => {
 
           <footer className="mt-24 pt-12 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-12">
              <div className="flex items-center gap-6">
-                <button className="flex items-center gap-3 bg-slate-900 text-white px-8 py-4 rounded-full font-bold uppercase tracking-widest text-[10px] hover:bg-amber-500 transition-all shadow-xl shadow-black/5 group">
-                  <Share2 size={16} className="group-hover:scale-110 transition-transform" /> Share Insights
-                </button>
+                <div className="relative" ref={shareRef}>
+                  <button
+                    onClick={() => setIsShareOpen(o => !o)}
+                    aria-expanded={isShareOpen}
+                    aria-haspopup="true"
+                    className="flex items-center gap-3 bg-slate-900 text-white px-8 py-4 rounded-full font-bold uppercase tracking-widest text-[10px] hover:bg-amber-500 transition-all shadow-xl shadow-black/5 group"
+                  >
+                    <Share2 size={16} className="group-hover:scale-110 transition-transform" /> Share Insights
+                  </button>
+                  <AnimatePresence>
+                    {isShareOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 8 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 8 }}
+                        transition={{ duration: 0.15 }}
+                        role="menu"
+                        className="absolute bottom-full left-0 mb-3 w-56 bg-white rounded-2xl shadow-2xl border border-gray-100 p-3 space-y-1 z-50"
+                      >
+                        <button onClick={handleCopy} role="menuitem" className="flex items-center gap-3 w-full px-4 py-3 rounded-xl text-sm font-semibold text-slate-700 hover:bg-slate-50 transition-colors">
+                          {copied ? <Check size={16} className="text-teal-600" /> : <Link2 size={16} />}
+                          {copied ? 'Copied!' : 'Copy URL'}
+                        </button>
+                        <button onClick={handleShareX} role="menuitem" className="flex items-center gap-3 w-full px-4 py-3 rounded-xl text-sm font-semibold text-slate-700 hover:bg-slate-50 transition-colors">
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                          Share on X
+                        </button>
+                        <button onClick={handleShareFB} role="menuitem" className="flex items-center gap-3 w-full px-4 py-3 rounded-xl text-sm font-semibold text-slate-700 hover:bg-slate-50 transition-colors">
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                          Share on Facebook
+                        </button>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
                 <div className="flex items-center gap-2 text-teal-600">
                   <ShieldCheck size={18} />
                   <span className="text-[10px] font-black uppercase tracking-widest">Verified Record</span>
