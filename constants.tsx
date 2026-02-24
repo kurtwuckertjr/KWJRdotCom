@@ -220,6 +220,38 @@ export const BLOG_POSTS: BlogPost[] = [
     date: 'February 2, 2026',
     image: 'https://raw.githubusercontent.com/kurtwuckertjr/KWJRdotCom/refs/heads/main/public/blog-images/1.%20Blockchain%20Terms%20Glossary.webp',
     tag: 'Foundations'
+  },
+
+  // Religion & Politics
+  {
+    id: 'christian-response-involuntary-taxation',
+    title: 'A Christian Response to Involuntary Taxation',
+    category: Category.RELIGION,
+    categories: [Category.RELIGION, Category.POLITICS],
+    excerpt: 'Involuntary taxation is never morally neutral — it is always a claim about authority, ownership, and lordship. Christians should refuse the state\'s messianic pretensions and work to rebuild a culture where civil power is limited, local, and accountable to God.',
+    date: 'February 10, 2026',
+    image: 'https://raw.githubusercontent.com/kurtwuckertjr/KWJRdotCom/refs/heads/main/public/blog-images/A%20Christian%20Response%20to%20Involuntary%20Taxation.webp',
+    tag: 'Faith & Sovereignty'
+  },
+  {
+    id: 'christs-dominion-over-everything',
+    title: 'Christ\'s Dominion Over Everything',
+    category: Category.RELIGION,
+    categories: [Category.RELIGION, Category.POLITICS],
+    excerpt: 'Christ does not offer to be Lord of your private feelings while the rest of life belongs to other gods. He is Lord of everything, and every rival sovereignty is either a servant under Him or a rebel heading for judgment.',
+    date: 'February 17, 2026',
+    image: 'https://raw.githubusercontent.com/kurtwuckertjr/KWJRdotCom/refs/heads/main/public/blog-images/Christ%E2%80%99s%20Dominion%20Over%20Everything.webp',
+    tag: 'Faith & Sovereignty'
+  },
+  {
+    id: 'american-christian-political-discourse',
+    title: 'The American Christian and His Role in Political Discourse',
+    category: Category.RELIGION,
+    categories: [Category.RELIGION, Category.POLITICS],
+    excerpt: 'The American Christian must speak in political discourse as a citizen of Christ\'s Kingdom first. That means refusing political idolatry, exposing false neutrality, and insisting that only the Triune God provides the preconditions for justice, liberty, and coherent public reasoning.',
+    date: 'February 24, 2026',
+    image: 'https://raw.githubusercontent.com/kurtwuckertjr/KWJRdotCom/refs/heads/main/public/blog-images/The%20American%20Christian%20and%20His%20Role%20in%20Political%20Discourse.webp',
+    tag: 'Faith & Sovereignty'
   }
 ];
 

@@ -22,7 +22,7 @@ const Archive: React.FC = () => {
 
   const filteredPosts = useMemo(() => {
     if (activeCategory === Category.ALL) return BLOG_POSTS;
-    return BLOG_POSTS.filter(post => post.category === activeCategory);
+    return BLOG_POSTS.filter(post => post.categories ? post.categories.includes(activeCategory) : post.category === activeCategory);
   }, [activeCategory]);
 
   const archiveSchema = useMemo(() => buildArchiveItemList(filteredPosts), [filteredPosts]);

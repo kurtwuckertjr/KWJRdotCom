@@ -17,7 +17,7 @@ function parsePosts() {
   const src = readFileSync(join(ROOT, 'constants.tsx'), 'utf8');
   const posts = [];
   // Match each post object in the BLOG_POSTS array
-  const postRegex = /\{\s*id:\s*'([^']+)',\s*title:\s*'([^']*(?:\\'[^']*)*)',\s*category:\s*Category\.(\w+),\s*excerpt:\s*'([^']*(?:\\'[^']*)*)',\s*date:\s*'([^']+)',\s*image:\s*'([^']+)',\s*tag:\s*'([^']+)'\s*\}/g;
+  const postRegex = /\{\s*id:\s*'([^']+)',\s*title:\s*'([^']*(?:\\'[^']*)*)',\s*category:\s*Category\.(\w+),(?:\s*categories:\s*\[[^\]]*\],)?\s*excerpt:\s*'([^']*(?:\\'[^']*)*)',\s*date:\s*'([^']+)',\s*image:\s*'([^']+)',\s*tag:\s*'([^']+)'\s*\}/g;
   let m;
   while ((m = postRegex.exec(src)) !== null) {
     posts.push({
