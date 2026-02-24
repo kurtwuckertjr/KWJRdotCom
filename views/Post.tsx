@@ -2866,8 +2866,13 @@ const Post: React.FC = () => {
     if (id === 'christian-response-involuntary-taxation') {
       return (
         <div className="space-y-12">
-          <p>
-            You open your paycheck, and it feels like someone else got there first. Not a donation, not a cheerful "community investment," but a compulsory extraction with penalties — up to and including the threat of imprisonment — attached if you resist.
+
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
+            Thesis
+          </h2>
+
+          <p className="text-gray-600 leading-relaxed mb-8">
+            You open your paycheck, and it feels like someone else got there first. Not a donation, not a cheerful &quot;community investment,&quot; but a compulsory extraction with penalties (up to and including the threat of imprisonment) attached if you resist.
           </p>
 
           <div className="bg-slate-50 border-l-4 border-teal-600 p-8 md:p-12 rounded-r-3xl shadow-sm my-16">
@@ -2875,7 +2880,7 @@ const Post: React.FC = () => {
               <BookOpen size={24} className="text-teal-600" /> Thesis
             </h3>
             <p className="text-gray-600 leading-relaxed">
-              Taxes are not automatically evil, but involuntary taxation is never morally neutral, because it is always a claim about authority, ownership, and lordship. Christians should refuse the state's messianic pretensions, obey lawful demands without surrendering conscience, and work — patiently and courageously — to rebuild a culture where civil power is limited, local, and accountable to God.
+              My thesis is simple: taxes are not automatically evil, but involuntary taxation is never morally neutral, because it is always a claim about authority, ownership, and lordship. Christians should refuse the state&apos;s messianic pretensions, obey lawful demands without surrendering conscience, and work, patiently and courageously, to rebuild a culture where civil power is limited, local, and accountable to God.
             </p>
           </div>
 
@@ -2883,21 +2888,21 @@ const Post: React.FC = () => {
             The Problem
           </h2>
 
-          <p className="text-gray-600 leading-relaxed">
-            The modern world wants you to treat taxation like weather. It just happens, and serious people do not ask moral questions about clouds. That posture is not "neutral" — it is a confession. It assumes the state has a standing right to take first, redefine the source of property rights, and then reframe their taking as a social virtue. It assumes sovereignty is located in "the public," interpreted by administrators and enforced by the threat of violence.
+          <p className="text-gray-600 leading-relaxed mb-8">
+            The modern world wants you to treat taxation like weather. It just happens, and serious people do not ask moral questions about clouds. That posture is not &quot;neutral,&quot; it is a confession. It assumes the state has a standing right to take first, redefine the source of property rights, and then reframe their taking as a social virtue. It assumes sovereignty is located in &quot;the public,&quot; interpreted by administrators and enforced by the threat of violence.
           </p>
 
           <div className="grid md:grid-cols-2 gap-8 my-12">
             <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
               <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6">The Secular Assumption</h3>
               <p className="text-gray-600 leading-relaxed">
-                Secular humanism does not merely reject God — it replaces Him with managerial bureaucracy as a form of social salvation. The state becomes the provider of meaning, safety, equity, identity, health, education, and "justice," defined by the whims of shifting committees. When people fear chaos more than God, they beg for control, and they call that control "compassion."
+                Underneath that is a rival religion. Secular humanism does not merely reject God, it replaces Him with managerial bureaucracy as a form of social salvation. The state becomes the provider of meaning, safety, equity, identity, health, education, and &quot;justice,&quot; as defined by Hegelian whims of shifting committees. When people fear chaos more than God, they beg for control, and they call that control &quot;compassion.&quot;
               </p>
             </section>
             <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-amber-100 transition-all duration-500">
               <h3 className="text-xl font-bold text-amber-500 uppercase tracking-widest mb-6">The Christian Cannot Accept This</h3>
               <p className="text-gray-600 leading-relaxed">
-                Even when the goals sound noble, or even if the outcomes are indeed "good," the method catechizes the soul: you are ultimately owned, and the highest moral act is compliance with the system. This quietly makes the magistrate into a proxy god.
+                The Christian cannot accept that framing, because it quietly makes the magistrate into a proxy god. Even when the goals sound noble, or even if the outcomes are indeed &quot;good,&quot; the method catechizes the soul: you are ultimately owned, and the highest moral act is compliance with the system.
               </p>
             </section>
           </div>
@@ -2907,36 +2912,40 @@ const Post: React.FC = () => {
           </h2>
 
           <p className="text-gray-600 leading-relaxed mb-8">
-            Start with lordship. The Nicene Creed begins where sanity begins — with God as "Maker of heaven and earth," and Jesus Christ as the one "through whom all things were made." If God made it, God owns it. That one premise destabilizes the entire modern moral mythology of the state. From there, everything else lines up.
+            Start with lordship. The Nicene Creed begins where sanity begins, with God as &quot;Maker of heaven and earth,&quot; and Jesus Christ as the one &quot;through whom all things were made.&quot; If God made it, God owns it. That one premise destabilizes the entire modern moral mythology of the state.
+          </p>
+
+          <p className="text-gray-600 leading-relaxed mb-8">
+            From there, everything else lines up.
           </p>
 
           <div className="relative pl-12 space-y-16 before:absolute before:left-[1.15rem] before:top-2 before:bottom-2 before:w-px before:bg-gradient-to-b before:from-teal-600 before:to-teal-100">
             <div className="relative">
               <span className="absolute -left-12 top-0 w-10 h-10 rounded-full bg-teal-600 text-white font-black flex items-center justify-center text-sm shadow-lg shadow-teal-600/30">1</span>
-              <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-4">There Is No Neutrality</h3>
+              <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-4">There Is No Neutrality in Anything</h3>
               <p className="text-gray-600 leading-relaxed">
-                The state will claim ultimate jurisdiction as broadly as it can. Either it is a minister under God with limited tasks, or it will act like a rival sovereignty that defines good and evil by decree. Involuntary taxation sits right at that fault line because it is enforced worship through tithe — not in a liturgical sense, but in a covenantal sense. It declares whose law is first and final, whose claims cannot be refused, and whose penalties are ultimate.
+                First, there is no neutrality in anything. The state will claim ultimate jurisdiction as broadly as it can. Either it is a minister under God with limited tasks, or it will act like a rival sovereignty that defines good and evil by decree. Involuntary taxation sits right at that fault line because it is enforced worship through tithe. Not in a liturgical sense, but in a covenantal sense. It declares whose law is first and final, whose claims cannot be refused, and whose penalties are ultimate.
               </p>
             </div>
             <div className="relative">
               <span className="absolute -left-12 top-0 w-10 h-10 rounded-full bg-teal-600 text-white font-black flex items-center justify-center text-sm shadow-lg shadow-teal-600/30">2</span>
-              <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-4">Coercion Has Bounds</h3>
+              <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-4">Coercion Is a Tool God Gives, but Only Within Bounds</h3>
               <p className="text-gray-600 leading-relaxed">
-                Scripture describes the magistrate as bearing "the sword" to punish evil and praise good — not as a total-life shepherd. The Westminster Confession speaks of liberty of conscience as freedom from "the doctrines and commandments of men" when they are imposed as religious necessity. A modern tax regime rarely stays in the lane of justice. It funds godless missions, immoral visions, and anti-Christian educational liturgies that often run directly against the Word of God.
+                Second, coercion is a tool God gives, but only within bounds. Scripture describes the magistrate as bearing &quot;the sword&quot; to punish evil and praise good, not as a total-life shepherd. The Westminster Confession speaks of liberty of conscience as freedom from &quot;the doctrines and commandments of men&quot; when they are imposed as religious necessity. That matters because a modern tax regime rarely stays in the lane of justice. It funds godless missions, immoral visions, and anti-Christian educational liturgies that often run directly against the Word of God in rhetoric, and always run against it in structure.
               </p>
             </div>
             <div className="relative">
               <span className="absolute -left-12 top-0 w-10 h-10 rounded-full bg-teal-600 text-white font-black flex items-center justify-center text-sm shadow-lg shadow-teal-600/30">3</span>
-              <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-4">Consent Is a Moral Category</h3>
+              <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-4">Consent and Jurisdiction Are Moral Categories</h3>
               <p className="text-gray-600 leading-relaxed">
-                A tax that is truly voluntary functions like a subscription or insurance — you can opt in, opt out, and choose alternatives. In a free society, spending should be constrained by consent, because taxation is downstream of spending. When spending becomes unbounded, taxation becomes predatory, and when direct taxation becomes politically painful, the temptation rises to use hidden taxes like currency debasement — often called "inflation" in modern politics. Economists describe government revenue from money creation as "seigniorage," often discussed as an "inflation tax," because it erodes purchasing power without a line item on your pay stub.
+                Third, consent and jurisdiction are not side issues. They are moral categories. A tax that is truly voluntary functions like a subscription or insurance, you can opt in, opt out, and choose alternatives. In a free society, spending should be constrained by consent, because taxation is downstream of spending. When spending becomes unbounded, taxation becomes predatory, and when direct taxation becomes politically painful, the temptation rises to use hidden taxes like currency debasement (often called &quot;inflation&quot; in modern politics.) Economists even describe government revenue from money creation as &quot;seigniorage,&quot; often discussed as an &quot;inflation tax,&quot; because it erodes purchasing power without a line item on your pay stub.
               </p>
             </div>
             <div className="relative">
               <span className="absolute -left-12 top-0 w-10 h-10 rounded-full bg-teal-600 text-white font-black flex items-center justify-center text-sm shadow-lg shadow-teal-600/30">4</span>
               <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-4">Obedience Is Not Worship</h3>
               <p className="text-gray-600 leading-relaxed">
-                There is a difference between paying what is demanded and baptizing the demand as righteous. If the state is overreaching, Christians can comply without surrendering the moral right to name the overreach, resist it where conscience demands, and build alternatives that make the overreach unnecessary.
+                Finally, Christians must not confuse obedience with worship. There is a difference between paying what is demanded and baptizing the demand as righteous. If the state is overreaching, Christians can comply without surrendering the moral vocabulary that calls overreach what it is.
               </p>
             </div>
           </div>
@@ -2945,70 +2954,105 @@ const Post: React.FC = () => {
             Scripture as the Foundation
           </h2>
 
+          <p className="text-gray-600 leading-relaxed mb-8">
+            I will stick to the ESV.
+          </p>
+
           <div className="grid gap-8 my-12">
             <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
-              <h3 className="text-lg font-bold text-teal-600 uppercase tracking-widest mb-4">Romans 13:1, 4, 7 (ESV)</h3>
-              <p className="text-gray-600 leading-relaxed italic mb-4">"Let every person be subject to the governing authorities... for he is God's servant for your good... Pay to all what is owed to them."</p>
-              <p className="text-gray-600 leading-relaxed">Paul is not authorizing unlimited power. He is placing the magistrate under God as a servant with a defined moral lane. When taxes are owed, pay them. But "owed" is a moral claim, not a blank check.</p>
+              <h3 className="text-lg font-bold text-teal-600 uppercase tracking-widest mb-4">Romans 13:1 (ESV)</h3>
+              <p className="text-gray-600 leading-relaxed italic mb-4">&quot;Let every person be subject to the governing authorities. For there is no authority except from God...&quot;</p>
+              <p className="text-gray-600 leading-relaxed">Paul&apos;s point is not that every demand is righteous, but that authority itself is not self-generated. Magistrates are derivative. That means they are accountable. It should also be noted that Paul was executed for resisting the evils of his government.</p>
+            </section>
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
+              <h3 className="text-lg font-bold text-teal-600 uppercase tracking-widest mb-4">Romans 13:4 (ESV)</h3>
+              <p className="text-gray-600 leading-relaxed italic mb-4">&quot;...he is God&apos;s servant for your good.&quot;</p>
+              <p className="text-gray-600 leading-relaxed">The magistrate is a servant, not a savior. The Christian must keep saying this out loud in an age that treats the state like a redeemer.</p>
+            </section>
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
+              <h3 className="text-lg font-bold text-teal-600 uppercase tracking-widest mb-4">Romans 13:7 (ESV)</h3>
+              <p className="text-gray-600 leading-relaxed italic mb-4">&quot;Pay to all what is owed to them: taxes to whom taxes are owed...&quot;</p>
+              <p className="text-gray-600 leading-relaxed">Yes, Christians pay. Even under imperfect regimes. But &quot;owed&quot; is not the same as &quot;holy,&quot; and payment is not the same as moral endorsement.</p>
             </section>
             <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
               <h3 className="text-lg font-bold text-teal-600 uppercase tracking-widest mb-4">Matthew 22:21 (ESV)</h3>
-              <p className="text-gray-600 leading-relaxed italic mb-4">"Render to Caesar the things that are Caesar's, and to God the things that are God's."</p>
-              <p className="text-gray-600 leading-relaxed">Jesus made taxation a moral debate by placing Caesar under God in the same sentence. Caesar is not ultimate. The real question is always: what belongs to Caesar, and what belongs to God? When Caesar claims what God has reserved, Christians must say no.</p>
+              <p className="text-gray-600 leading-relaxed italic mb-4">&quot;Therefore render to Caesar the things that are Caesar&apos;s, and to God the things that are God&apos;s.&quot;</p>
+              <p className="text-gray-600 leading-relaxed">Jesus refuses the trap. He does not enthrone Caesar, and He does not start a tax riot. He puts Caesar back in his creaturely place under God with a clever play on words describing Caesar&apos;s (idolatrous) graven image stamped into the coin.</p>
             </section>
             <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
               <h3 className="text-lg font-bold text-teal-600 uppercase tracking-widest mb-4">Acts 5:29 (ESV)</h3>
-              <p className="text-gray-600 leading-relaxed italic mb-4">"We must obey God rather than men."</p>
-              <p className="text-gray-600 leading-relaxed">This is the line in the sand. When human authority crosses God's authority, the Christian conscience is not optional. Obedience to God is the highest political act.</p>
-            </section>
-            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
-              <h3 className="text-lg font-bold text-teal-600 uppercase tracking-widest mb-4">1 Samuel 8:10-18 &amp; McCulloch v. Maryland</h3>
-              <p className="text-gray-600 leading-relaxed italic mb-4">"The power to tax involves the power to destroy." — Chief Justice John Marshall</p>
-              <p className="text-gray-600 leading-relaxed">Samuel warned Israel that a king would take their sons, their daughters, their fields, their vineyards, and a tenth of their grain and flocks. The warning was prophetic and perpetual: centralized power always expands its claims. The American legal tradition echoed this in McCulloch v. Maryland — an acknowledgment that taxation is inherently a power claim, not merely a revenue mechanism.</p>
+              <p className="text-gray-600 leading-relaxed italic mb-4">&quot;We must obey God rather than men.&quot;</p>
+              <p className="text-gray-600 leading-relaxed">This is the boundary line. When the state commands sin, Christians disobey. That principle does not require constant rebellion, but focused refusal when necessary, and it requires clear allegiance and swim-lanes directly from Scripture.</p>
             </section>
           </div>
 
           <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
-            Modern Challenges
+            Modern Challenges (focus on the 2020&apos;s)
           </h2>
 
           <p className="text-gray-600 leading-relaxed mb-8">
-            The 2020s revealed something many Christians already suspected: the modern state's appetite is not limited to roads and bridges. Politics has become a religion with its own liturgy, daily office, and moral signaling system. Institutions catechize children and citizens far more hours per week than any church. Technology has created a culture of "default consent," where you are opted in to surveillance, ideological sorting, and emotional manipulation unless you actively resist.
+            The 2020s made two things obvious.
           </p>
 
           <p className="text-gray-600 leading-relaxed mb-8">
-            In that environment, the question of taxation is not just fiscal — it is spiritual. Every dollar taken by compulsion and spent on anti-Christian programs is a dollar conscripted into rival worship. That does not mean every tax is evil. It means every Christian must think clearly about what the state is funding, and whether compliance requires silence.
+            First, politics has become religion for millions of people. The slogans are liturgy, the news cycle is the daily office, and outrage is the sacrament, and the permanent state of war and abortion is the blood sacrifice on the altar to the godless nationstate. Taxes, in that environment, are not merely revenue. They are moral signaling, a forced tithe to whichever moral vision has captured the bureaucracy and raised its flag over your plantation-state.
+          </p>
+
+          <p className="text-gray-600 leading-relaxed mb-8">
+            Second, institutions are openly catechizing children and rewarding ideological compliance. Many parents feel it, even if they cannot articulate it. They sense that the state does not want &quot;educated citizens&quot; as much as it wants managed subjects. A tax regime that funds that machine becomes emotionally explosive, because it demands the compulsory payment for the formation of your child into someone else&apos;s disciple.
+          </p>
+
+          <p className="text-gray-600 leading-relaxed mb-8">
+            Third, tech saturation has trained people to accept non-consensual extraction as normal. Terms of service, dark patterns, subscriptions you forget to cancel, data harvested by default. The state is not separate from that spirit. It is often the biggest practitioner of &quot;default consent,&quot; where you are treated as having agreed because you did not escape.
+          </p>
+
+          <p className="text-gray-600 leading-relaxed mb-8">
+            So yes, taxation is an economic issue, but it is also discipleship. It teaches you what you are, who owns you, and what you should fear.
           </p>
 
           <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
-            Practical Counsel
+            Pastoral Application Without Softness
           </h2>
+
+          <p className="text-gray-600 leading-relaxed mb-8">
+            Here is the straight advice.
+          </p>
 
           <div className="relative pl-12 space-y-16 before:absolute before:left-[1.15rem] before:top-2 before:bottom-2 before:w-px before:bg-gradient-to-b before:from-teal-600 before:to-teal-100">
             <div className="relative">
               <span className="absolute -left-12 top-0 w-10 h-10 rounded-full bg-teal-600 text-white font-black flex items-center justify-center text-sm shadow-lg shadow-teal-600/30">1</span>
-              <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-4">Refuse the State's Theological Claims in Your Own Mind</h3>
-              <p className="text-gray-600 leading-relaxed">You can pay taxes while refusing to believe the state is your provider, your protector, or your moral guide. That internal posture matters more than most people think, because it shapes how you raise your children, how you talk about authority, and how you pray.</p>
+              <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-4">Refuse the State&apos;s Theological Claims in Your Own Mind</h3>
+              <p className="text-gray-600 leading-relaxed">
+                You can pay what is demanded without calling it virtuous. You can comply without mentally bowing.
+              </p>
             </div>
             <div className="relative">
               <span className="absolute -left-12 top-0 w-10 h-10 rounded-full bg-teal-600 text-white font-black flex items-center justify-center text-sm shadow-lg shadow-teal-600/30">2</span>
               <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-4">Do Not Lie, Cheat, or Perform Righteousness Through Fraud</h3>
-              <p className="text-gray-600 leading-relaxed">If your resistance to unjust taxation looks like dishonesty, you have already lost the moral argument. Christians must be scrupulously honest, even when the system is not. Your integrity is your witness.</p>
+              <p className="text-gray-600 leading-relaxed">
+                Christians should not build a &quot;freedom ethic&quot; on dishonesty. Pay what is legally required, challenge what is unjust through lawful means, and keep your conscience clean.
+              </p>
             </div>
             <div className="relative">
               <span className="absolute -left-12 top-0 w-10 h-10 rounded-full bg-teal-600 text-white font-black flex items-center justify-center text-sm shadow-lg shadow-teal-600/30">3</span>
               <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-4">Rebuild Local Competence</h3>
-              <p className="text-gray-600 leading-relaxed">Strengthen what the state cannot replace: family worship, family care, church diaconal strength, mutual aid, local business, local schooling. The state expands when these collapse. Rebuild them and you shrink the state's excuse for existing in those domains.</p>
+              <p className="text-gray-600 leading-relaxed">
+                The most effective protest against bloated taxation is not a meme, it is a parallel economy of real responsibility: family care, church diaconal strength, mutual aid, local business, local schooling, real charity that is personal and accountable.
+              </p>
             </div>
             <div className="relative">
               <span className="absolute -left-12 top-0 w-10 h-10 rounded-full bg-teal-600 text-white font-black flex items-center justify-center text-sm shadow-lg shadow-teal-600/30">4</span>
               <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-4">Treat Spending as the Real Battlefield</h3>
-              <p className="text-gray-600 leading-relaxed">Taxation is downstream of spending, and endless spending is a moral problem before it is a budget problem. Ask, every time, "By what authority does the state do this?" and "Who consented, in a meaningful way, and how could we have withdrawn consent?"</p>
+              <p className="text-gray-600 leading-relaxed">
+                Taxation is downstream of spending, so endless spending is a moral problem before it is a budget problem. Ask, every time, &quot;By what authority does the state do this?&quot; and &quot;Who consented, in a meaningful way, and how could we have withdrawn consent?&quot;
+              </p>
             </div>
             <div className="relative">
               <span className="absolute -left-12 top-0 w-10 h-10 rounded-full bg-teal-600 text-white font-black flex items-center justify-center text-sm shadow-lg shadow-teal-600/30">5</span>
               <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-4">Be Very Cautious with the Language of Violence</h3>
-              <p className="text-gray-600 leading-relaxed">Scripture recognizes legitimate force in the hands of lawful authority, and it recognizes self-defense, but it never gives Christians permission to romanticize bloodshed. If you ever find yourself excited by the idea of violence, that is not zeal — it is a warning light on your dashboard. God calls His people to courage, not intoxication.</p>
+              <p className="text-gray-600 leading-relaxed">
+                Scripture recognizes legitimate force in the hands of lawful authority, and it recognizes self-defense, but it never gives Christians permission to romanticize bloodshed. If you ever find yourself excited by the idea of violence, that is not zeal, it is a warning light on your dashboard. God calls His people to courage, not intoxication.
+              </p>
             </div>
           </div>
 
@@ -3017,41 +3061,77 @@ const Post: React.FC = () => {
               <Compass size={24} className="text-teal-600" /> Personal Note
             </h3>
             <p className="text-gray-600 leading-relaxed">
-              I live with the same tension you do. I am libertarian enough to want the smallest state possible, and Christian enough to know my real citizenship is in the Kingdom. So I pay what I owe, I do not pretend it is all righteous, and I try to push everything I can back down to the family, the church, and the local community. The goal is not to "win politics." The goal is to keep my household faithful, keep my conscience clear, and keep my instincts trained on Christ's lordship rather than the daily panic cycle.
+              Now, personally, I live with the same tension you do. I am libertarian enough to want the smallest state possible, and Christian enough to know my real citizenship is in the Kingdom. So I pay what I owe, I do not pretend it is all righteous, and I try to push everything I can back down to the family, the church, and the local community. The goal is not to &quot;win politics.&quot; The goal is to keep my household faithful, keep my conscience clear, and keep my instincts trained on Christ&apos;s lordship rather than the daily panic cycle.
             </p>
           </div>
 
           <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
-            Objections &amp; Honest Replies
+            Objections and Honest Replies
           </h2>
 
           <div className="grid gap-8 my-12">
             <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
-              <h3 className="text-lg font-bold text-teal-600 uppercase tracking-widest mb-4">"Romans 13 means stop criticizing taxation."</h3>
+              <h3 className="text-lg font-bold text-teal-600 uppercase tracking-widest mb-4">Objection 1: &quot;Romans 13 means you have to stop criticizing taxation.&quot;</h3>
               <p className="text-gray-600 leading-relaxed">Romans 13 commands submission, not silence. The prophets critiqued kings. John the Baptist confronted rulers even to the point of execution. Submission means you do not treat yourself as sovereign. It does not mean you call every policy good.</p>
             </section>
             <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
-              <h3 className="text-lg font-bold text-teal-600 uppercase tracking-widest mb-4">"Without involuntary taxes, society collapses."</h3>
+              <h3 className="text-lg font-bold text-teal-600 uppercase tracking-widest mb-4">Objection 2: &quot;Without involuntary taxes, society collapses.&quot;</h3>
               <p className="text-gray-600 leading-relaxed">That is a faith claim. It assumes people cannot coordinate, cannot covenant, cannot build institutions, cannot educate, cannot care for the needy, unless coerced by central power. Christianity says the opposite: regenerate people, strong families, and a courageous church can do far more good than a bureaucratic machine, and do it with real accountability.</p>
             </section>
             <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
-              <h3 className="text-lg font-bold text-teal-600 uppercase tracking-widest mb-4">"Jesus said render to Caesar, so taxation is beyond moral debate."</h3>
+              <h3 className="text-lg font-bold text-teal-600 uppercase tracking-widest mb-4">Objection 3: &quot;Jesus said render to Caesar, so taxation is beyond moral debate.&quot;</h3>
               <p className="text-gray-600 leading-relaxed">Jesus made taxation a moral debate by placing Caesar under God in the same sentence. Caesar is not ultimate. The real question is always, what belongs to Caesar, and what belongs to God? When Caesar claims what God has reserved, Christians must say no.</p>
             </section>
             <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
-              <h3 className="text-lg font-bold text-teal-600 uppercase tracking-widest mb-4">"Talking about consent is just libertarian ideology dressed up as theology."</h3>
-              <p className="text-gray-600 leading-relaxed">It can be, if it is detached from Christ's lordship. But consent and jurisdiction are not modern inventions. They are downstream of a deeper claim: no creature has absolute rights over other creatures, because God alone is sovereign. The moment the state becomes absolute, it is no longer "just politics." It is idolatry.</p>
+              <h3 className="text-lg font-bold text-teal-600 uppercase tracking-widest mb-4">Objection 4: &quot;Talking about consent is just libertarian ideology dressed up as theology.&quot;</h3>
+              <p className="text-gray-600 leading-relaxed">It can be, if it is detached from Christ&apos;s lordship. But consent and jurisdiction are not modern inventions. They are downstream of a deeper claim: no creature has absolute rights over other creatures, because God alone is sovereign. The moment the state becomes absolute, it is no longer &quot;just politics.&quot; It is idolatry.</p>
             </section>
           </div>
+
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
+            Conclusion
+          </h2>
 
           <div className="bg-slate-900 text-white rounded-[2.5rem] p-10 md:p-16 my-16">
             <h3 className="text-2xl font-black uppercase tracking-tight mb-6 flex items-center gap-3">
               <Info size={24} className="text-amber-400" /> The Bottom Line
             </h3>
+            <p className="text-gray-300 leading-relaxed text-lg mb-6">
+              Involuntary taxation is not just an argument about dollars. It is an argument about dominion, conscience, and worship. The Christian response is not to panic, not to fantasize about purity through chaos, and not to baptize the modern state as a benevolent god.
+            </p>
             <p className="text-gray-300 leading-relaxed text-lg">
-              Involuntary taxation is not just an argument about dollars. It is an argument about dominion, conscience, and worship. We render what is owed, we refuse the state's messianic posture, we obey God rather than men when the line is crossed, and we rebuild the kind of local, covenantal strength that makes tyranny less plausible. The future does not belong to bureaucratic permanence. It belongs to Christ, who reigns now, and who will judge every authority that pretends otherwise.
+              We render what is owed, we refuse the state&apos;s messianic posture, we obey God rather than men when the line is crossed, and we rebuild the kind of local, covenantal strength that makes tyranny less plausible. The future does not belong to bureaucratic permanence. It belongs to Christ, who reigns now, and who will judge every authority that pretends otherwise.
             </p>
           </div>
+
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
+            References
+          </h2>
+
+          <div className="space-y-4">
+            <p className="text-gray-600 leading-relaxed">
+              <strong>The Nicene Creed</strong> (text): CCEL. Christian Classics Ethereal Library
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              <strong>Westminster Confession of Faith, Chapter 20</strong> (Christian liberty and conscience): Blue Letter Bible. Blue Letter Bible
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              <strong>&quot;Taxation, Liberty, and the Bible&quot;</strong> (position paper, Chalcedon Foundation): Martin G. Selbrede. Chalcedon
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              <strong>Augustine, <em>City of God</em>, Book IV, ch. 4</strong> (kingdoms without justice): Open Oklahoma State. Open Oklahoma State Library
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              <strong>McCulloch v. Maryland</strong> (re: &quot;the power to tax involves the power to destroy&quot;): U.S. National Archives. National Archives
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              <strong>Seigniorage and inflation as a form of taxation</strong> (economic framing): Brookings working paper discussing seigniorage and inflation in optimal taxation models. Brookings
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              <strong>Scripture (ESV)</strong> quoted: Romans 13:1, 13:4, 13:7; Matthew 22:21; Acts 5:29. biblegateway.com
+            </p>
+          </div>
+
         </div>
       );
     }
@@ -3059,52 +3139,44 @@ const Post: React.FC = () => {
     if (id === 'christs-dominion-over-everything') {
       return (
         <div className="space-y-12">
-          <p>
-            The average, contemporary person in the western hemisphere doesn't realize that Ba'al worship is at an all-time high. The god of fertility and storms has taken over the minds and hearts of most people, even if few of them know he exists. Through the successful influence of secular humanism, Ba'al has tricked the world into catechizing their kids through screens, outsourcing conscience to "experts," and treating elections like liturgies.
+
+          {/* ── Thesis ── */}
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">Thesis</h2>
+
+          <p className="text-gray-600 leading-relaxed mb-8">
+            The average, contemporary person in the western hemisphere doesn&apos;t realize that Ba&apos;al worship is at an all-time high. The god of fertility and storms has taken over the minds and hearts of most people, even they few of them know he exists. Through the successful influence of secular humanism, Ba&apos;al has tricked the world into catechizing their kids through screens, outsourcing conscience to &ldquo;experts,&rdquo; and treating elections like liturgies.
           </p>
 
           <div className="bg-slate-50 border-l-4 border-teal-600 p-8 md:p-12 rounded-r-3xl shadow-sm my-16">
-            <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-6 flex items-center gap-3">
-              <BookOpen size={24} className="text-teal-600" /> Thesis
-            </h3>
-            <p className="text-gray-600 leading-relaxed">
-              Christ does not offer to be Lord of your private feelings while the rest of life belongs to other gods. He is Lord of everything, and every rival "sovereignty" is either a servant under Him or a rebel heading for judgment.
+            <div className="flex items-center gap-3 mb-6">
+              <BookOpen className="w-6 h-6 text-teal-600" />
+              <span className="text-sm font-bold text-teal-600 uppercase tracking-widest">Core Thesis</span>
+            </div>
+            <p className="text-gray-800 text-lg md:text-xl leading-relaxed font-medium">
+              My thesis is simple: Christ does not offer to be Lord of your private feelings while the rest of life belongs to other gods. He is Lord of everything, and every rival &ldquo;sovereignty&rdquo; is either a servant under Him or a rebel heading for judgment.
             </p>
           </div>
 
-          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
-            The Problem
-          </h2>
+          {/* ── The Problem ── */}
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">The Problem</h2>
 
           <p className="text-gray-600 leading-relaxed mb-8">
-            The modern Western default is not "neutral." It is a rival faith. It assumes man is autonomous, meaning is self-authored, and authority is negotiated rather than revealed. That is why the same culture that says "my truth" also demands institutional compliance. It wants personal sovereignty and centralized sovereignty at the same time, which is impossible unless the state becomes a substitute god.
+            The modern Western default is not &ldquo;neutral.&rdquo; It is a rival faith. It assumes man is autonomous, meaning is self-authored, and authority is negotiated rather than revealed. That is why the same culture that says &ldquo;my truth&rdquo; also demands institutional compliance. It wants personal sovereignty and centralized sovereignty at the same time, which is impossible unless the state becomes a substitute god.
           </p>
 
-          <div className="grid md:grid-cols-2 gap-8 my-12">
-            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
-              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6">Rival Salvations</h3>
-              <ul className="space-y-4">
-                <li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600">The state promises salvation by legislation</span></li>
-                <li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600">The market promises salvation by consumption</span></li>
-                <li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600">The algorithm promises salvation by attention</span></li>
-                <li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600">The self promises salvation by self-definition</span></li>
-              </ul>
-              <p className="text-gray-600 leading-relaxed mt-6">None of these can deliver what they promise, because none of them define reality without chaos. They can only manage behaviors and redistribute consequences.</p>
-            </section>
-            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-amber-100 transition-all duration-500">
-              <h3 className="text-xl font-bold text-amber-500 uppercase tracking-widest mb-6">The Uncomfortable Part</h3>
-              <p className="text-gray-600 leading-relaxed">
-                It is the fault of Christians for accepting the pagan framing of issues in Christ's Kingdom. We argue about "values" as though values float in midair. We talk about "rights" as though rights exist without a Giver. We ask for "tolerance" as though tolerance is a moral law that binds everyone rather than emotional insecurity raging itself into the public discourse. The secular worldview borrows moral and rational furniture from God's world, then acts surprised when their house collapses in Ba'al's storm.
-              </p>
-            </section>
-          </div>
-
-          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
-            The Christian Response
-          </h2>
+          <p className="text-gray-600 leading-relaxed mb-8">
+            This is the undercurrent flowing beneath so many 2020s arguments about wealth, education, sexuality, and politics. The state promises salvation by legislation, the market promises salvation by consumption, the algorithm promises salvation by attention, and the self promises salvation by self-definition. None of these can deliver what they promise, because none of them define reality without chaos. They can only manage behaviors and redistribute consequences.
+          </p>
 
           <p className="text-gray-600 leading-relaxed mb-8">
-            If Christ is not Lord, then power is. There is no third option. "Neutrality" is a costume we wear when we do not want to confess who our god is.
+            And here is the uncomfortable part: it is the fault of Christians for accepting the pagan framing of issues in Christ&apos;s Kingdom. We argue about &ldquo;values&rdquo; as though values float in midair. We talk about &ldquo;rights&rdquo; as though rights exist without a Giver. We ask for &ldquo;tolerance&rdquo; as though tolerance is a moral law that binds everyone rather than emotional insecurity raging itself into the public discourse. The secular worldview borrows moral and rational furniture from God&apos;s world, then acts surprised when their house collapses in Ba&apos;al&apos;s storm.
+          </p>
+
+          {/* ── The Christian Response ── */}
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">The Christian Response</h2>
+
+          <p className="text-gray-600 leading-relaxed mb-8">
+            If Christ is not Lord, then power is. There is no third option. &ldquo;Neutrality&rdquo; is a costume we wear when we do not want to confess who our god is.
           </p>
 
           <p className="text-gray-600 leading-relaxed mb-8">
@@ -3112,117 +3184,294 @@ const Post: React.FC = () => {
           </p>
 
           <p className="text-gray-600 leading-relaxed mb-8">
-            This is why the Church has historically insisted that Jesus is not merely a spiritual guide but the living Lord through whom all things were made, and under whom all things hold together. The Nicene Creed does not give you a small Jesus. It gives you the One "through whom all things were made." That is not poetic filler — it is the metaphysics of your timeless, omnipotent King who claims dominion over every square inch of existence.
+            This is why the Church has historically insisted that Jesus is not merely a spiritual guide but the living Lord through whom all things were made, and under whom all things hold together. The Nicene Creed does not give you a small Jesus. It gives you the One &ldquo;through whom all things were made.&rdquo; That is not poetic filler like the modern humanist implies. It is metaphysics of your timeless, omnipotent King who claims dominion over every square inch of existence that He created.
           </p>
 
           <p className="text-gray-600 leading-relaxed mb-8">
-            So when the state claims total jurisdiction over education, wealth, speech, conscience, family, medicine, and even the meaning of male and female, it is not merely "overreach." It is pagan idolatry — a creature pretending to be the Creator. Yet we should not pretend the state is a demon with a clipboard, separate from us. The state is often the public shape of our private sins: laziness, fear, envy, lust for control, and the desire to offload responsibility so we can spend time loving our sins.
+            So when the state claims total jurisdiction over education, wealth, speech, conscience, family, medicine, and even the meaning of male and female, it is not merely &ldquo;overreach.&rdquo; It is pagan idolatry; a creature pretending to be the Creator. Yet we should not pretend the state is a demon with a clipboard, separate from us. The state is often the public shape of our private sins: laziness, fear, envy, lust for control, and the desire to offload responsibility so we can spend time loving our sins.
           </p>
 
           <p className="text-gray-600 leading-relaxed mb-8">
-            The Christian answer is not mere resistance for resistance's sake. It is a positive confession and a positive rebuilding. Christ's dominion means there is a true order to life: God first, then the household, then the civil magistrate in his limited lane. It means money, schooling, inheritance, and charity are not raw material for bureaucratic experiments. They are stewardship arenas under God. A magistrate is a minister, not a messiah. When he acts like a messiah, he becomes a rival priesthood.
+            The Christian answer is not mere resistance for resistance&apos;s sake. It is a positive confession and a positive rebuilding. Christ&apos;s dominion means there is a true order to life: God first, then the household, then the civil magistrate in his limited lane. It means money, schooling, inheritance, and charity are not raw material for bureaucratic experiments. They are stewardship arenas under God. It means the question is never &ldquo;what can we get away with?&rdquo; The question is &ldquo;what does faithfulness look like here?&rdquo;
           </p>
 
-          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
-            Scripture as the Foundation
-          </h2>
+          <p className="text-gray-600 leading-relaxed mb-8">
+            This is also why, when Christians speak about civil government, we speak with both seriousness and limitation. The Reformed tradition has historically affirmed civil government as ordained by God, while also denying that it is absolute or holy in itself. A magistrate is a minister, not a messiah. When he acts like a messiah, he becomes a rival priesthood.
+          </p>
+
+          {/* ── Scripture as the Foundation ── */}
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">Scripture as the Foundation</h2>
+
+          <p className="text-gray-600 leading-relaxed mb-8">
+            I will use <strong>ESV</strong> throughout.
+          </p>
 
           <div className="grid gap-8 my-12">
+
             <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
-              <h3 className="text-lg font-bold text-teal-600 uppercase tracking-widest mb-4">Matthew 28:18 (ESV)</h3>
-              <p className="text-gray-600 leading-relaxed italic mb-4">"And Jesus came and said to them, 'All authority in heaven and on earth has been given to me.'"</p>
-              <p className="text-gray-600 leading-relaxed">This is not "church authority." This is not "authority over hearts only." It is authority in heaven and on earth. The Great Commission is not a suggestion to make converts who then retreat into private spirituality. It is a claim of universal kingship that demands universal obedience across the public face of the world.</p>
+              <h3 className="text-lg font-bold text-teal-600 uppercase tracking-widest mb-4">1) Matthew 28:18 (ESV)</h3>
+              <p className="text-gray-600 leading-relaxed italic mb-4">
+                &ldquo;And Jesus came and said to them, &apos;All authority in heaven and on earth has been given to me.&apos;&rdquo;
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                This is not &ldquo;church authority.&rdquo; This is not &ldquo;authority over hearts only.&rdquo; It is authority in heaven and on earth. The Great Commission is not a suggestion to make converts who then retreat into private spirituality. It is a claim of universal kingship that demands universal obedience across the public face of the world starting in the local community, centered in the local church, and also in the privacy of the home.
+              </p>
             </section>
+
             <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
-              <h3 className="text-lg font-bold text-teal-600 uppercase tracking-widest mb-4">Colossians 1:16-17 (ESV)</h3>
-              <p className="text-gray-600 leading-relaxed italic mb-4">"For by him all things were created, in heaven and on earth, visible and invisible, whether thrones or dominions or rulers or authorities — all things were created through him and for him. And he is before all things, and in him all things hold together."</p>
-              <p className="text-gray-600 leading-relaxed">Paul explicitly names political realities: thrones, dominions, rulers, authorities. They are created through Christ and for Christ. Government is real, but it is not ultimate. It has meaning only when it stays in its creaturely place.</p>
+              <h3 className="text-lg font-bold text-teal-600 uppercase tracking-widest mb-4">2) Colossians 1:16&#8211;17 (ESV)</h3>
+              <p className="text-gray-600 leading-relaxed italic mb-4">
+                &ldquo;For by him all things were created, in heaven and on earth, visible and invisible, whether thrones or dominions or rulers or authorities, all things were created through him and for him. And he is before all things, and in him all things hold together.&rdquo;
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                Paul explicitly names political realities: thrones, dominions, rulers, authorities. They are created <em>through</em> Christ and <em>for</em> Christ. That means government is real, but it is not ultimate. It has meaning only when it stays in its creaturely place.
+              </p>
             </section>
+
             <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
-              <h3 className="text-lg font-bold text-teal-600 uppercase tracking-widest mb-4">Psalm 24:1 (ESV)</h3>
-              <p className="text-gray-600 leading-relaxed italic mb-4">"The earth is the LORD's and the fullness thereof, the world and those who dwell therein."</p>
-              <p className="text-gray-600 leading-relaxed">Ownership precedes policy. God's ownership is the reason the state cannot claim total ownership. It is also the reason you cannot claim total ownership of yourself. You are not self-made, and you are not self-ruled.</p>
+              <h3 className="text-lg font-bold text-teal-600 uppercase tracking-widest mb-4">3) Psalm 24:1 (ESV)</h3>
+              <p className="text-gray-600 leading-relaxed italic mb-4">
+                &ldquo;The earth is the LORD&apos;s and the fullness thereof, the world and those who dwell therein.&rdquo;
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                Ownership precedes policy. God&apos;s ownership is the reason the state cannot claim total ownership. It is also the reason you cannot claim total ownership of yourself. You are not self-made, and you are not self-ruled.
+              </p>
             </section>
+
             <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
-              <h3 className="text-lg font-bold text-teal-600 uppercase tracking-widest mb-4">1 Corinthians 10:31 (ESV)</h3>
-              <p className="text-gray-600 leading-relaxed italic mb-4">"So, whether you eat or drink, or whatever you do, do all to the glory of God."</p>
-              <p className="text-gray-600 leading-relaxed">This is the daily-life verse that destroys sacred-secular compartmentalization. "Whatever you do" includes work, schooling, budgeting, voting, parenting, and the way you talk about your enemies.</p>
+              <h3 className="text-lg font-bold text-teal-600 uppercase tracking-widest mb-4">4) 1 Corinthians 10:31 (ESV)</h3>
+              <p className="text-gray-600 leading-relaxed italic mb-4">
+                &ldquo;So, whether you eat or drink, or whatever you do, do all to the glory of God.&rdquo;
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                This is the daily-life verse that destroys sacred-secular compartmentalization. &ldquo;Whatever you do&rdquo; includes work, schooling, budgeting, voting, parenting, and the way you talk about your enemies.
+              </p>
             </section>
+
             <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
-              <h3 className="text-lg font-bold text-teal-600 uppercase tracking-widest mb-4">Revelation 11:15 (ESV)</h3>
-              <p className="text-gray-600 leading-relaxed italic mb-4">"The kingdom of the world has become the kingdom of our Lord and of his Christ, and he shall reign forever and ever."</p>
-              <p className="text-gray-600 leading-relaxed">History is going somewhere. Christ's dominion is not a fragile ideal waiting for permission. It is a certainty moving toward consummation.</p>
+              <h3 className="text-lg font-bold text-teal-600 uppercase tracking-widest mb-4">5) Revelation 11:15 (ESV)</h3>
+              <p className="text-gray-600 leading-relaxed italic mb-4">
+                &ldquo;The kingdom of the world has become the kingdom of our Lord and of his Christ, and he shall reign forever and ever.&rdquo;
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                History is going somewhere. Christ&apos;s dominion is not a fragile ideal waiting for permission. It is a certainty moving toward consummation.
+              </p>
             </section>
+
           </div>
 
-          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
-            Modern Challenges
-          </h2>
+          {/* ── Modern Challenges ── */}
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">Modern Challenges</h2>
 
           <p className="text-gray-600 leading-relaxed mb-8">
-            The 2020s have made it hard to breathe without bumping into propaganda built on the leverage of your data. Your phone is not just a tool — it is a portable discipleship machine. Institutions you were told to trust have publicly lied, then demanded more trust. Sexual identity has been detached from creation and covenant, and then enforced by policy. Education has become less about formation in wisdom and more about formation in compliance. Families are fragmented, churches are distracted, and men are trained to be either passive or performatively angry — neither of which are worth anything to the kingdom.
+            The 2020s have made it hard to breathe without bumping into propaganda built on the leverage of your data. Your phone is not just a tool; it is a portable discipleship machine. Institutions you were told to trust have publicly lied, then demanded more trust under the implication that you cannot be trusted with freedom while they can be trusted with power. Sexual identity has been detached from creation and covenant, and then enforced by policy. Education has become less about formation in wisdom and more about formation in compliance. Families are fragmented, churches are distracted, and men are trained to be either passive or performatively angry - neither of which are worth anything to the kingdom.
+          </p>
+
+          <p className="text-gray-600 leading-relaxed mb-8">
+            In that environment, &ldquo;Christ&apos;s dominion&rdquo; stops being a bumper-sticker doctrine and becomes survival reality.
           </p>
 
           <div className="grid md:grid-cols-2 gap-8 my-12">
-            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
-              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6">If Christ Is Lord, Then...</h3>
-              <ul className="space-y-4">
-                <li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600"><strong>Schooling is not neutral.</strong> Education always teaches what man is, what the world is, and what counts as "good." If the state is functionally god in the classroom, it will produce citizens for that god.</span></li>
-                <li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600"><strong>Wealth is not a dirty word, nor is it a savior.</strong> It is stewardship, and the moral question is not "do you have money?" but "who rules your heart, and what are you building?"</span></li>
-                <li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600"><strong>Politics is not religion.</strong> It is a limited arena where Christians pursue justice, restrain evil, and protect neighbor, but never as a substitute for gospel obedience.</span></li>
-                <li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600"><strong>Fear is exposed.</strong> The attention economy monetizes anxiety. Christ's kingship calls that bluff and demands faithfulness in a world begging for you to love your sinfulness.</span></li>
-              </ul>
+
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm">
+              <p className="text-gray-600 leading-relaxed">
+                If Christ is Lord, then schooling is not neutral. Education always teaches what man is, what the world is, and what counts as &ldquo;good.&rdquo; If the state is functionally god in the classroom, it will produce citizens for that god.
+              </p>
             </section>
-            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-amber-100 transition-all duration-500">
-              <h3 className="text-xl font-bold text-amber-500 uppercase tracking-widest mb-6">Pastoral Application</h3>
-              <ul className="space-y-4">
-                <li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 shrink-0" /><span className="text-gray-600"><strong>Believe:</strong> Christ's reign is present, not merely future. There is no neutral zone. God's order is good — a limited magistrate is a mercy, but only when it stays limited.</span></li>
-                <li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 shrink-0" /><span className="text-gray-600"><strong>Refuse:</strong> Refuse treating the state as the primary builder of the future. Refuse the cowardly Christianity that hides Christ's authority to avoid social cost. Refuse to let outrage become your personality.</span></li>
-                <li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 shrink-0" /><span className="text-gray-600"><strong>Do:</strong> Rebuild your household as a real institution with actual family worship, real authority, real discipline, real affection. Put your money where your confession is: fund Christian education, mercy, media, and community. Speak with clarity, not bile.</span></li>
-              </ul>
+
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm">
+              <p className="text-gray-600 leading-relaxed">
+                If Christ is Lord, then wealth is not a dirty word, nor is it a savior. It is stewardship, and the moral question is not &ldquo;do you have money?&rdquo; but &ldquo;who rules your heart, and what are you building?&rdquo;
+              </p>
             </section>
+
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm">
+              <p className="text-gray-600 leading-relaxed">
+                If Christ is Lord, then politics is not religion. It is a limited arena where Christians pursue justice, restrain evil, and protect neighbor, but never as a substitute for gospel obedience.
+              </p>
+            </section>
+
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm">
+              <p className="text-gray-600 leading-relaxed">
+                If Christ is Lord, then fear is exposed. The attention economy monetizes anxiety. Christ&apos;s kingship calls that bluff and demands faithfulness in a world begging for you to love your sinfulness.
+              </p>
+            </section>
+
           </div>
 
+          {/* ── Pastoral Application ── */}
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">Pastoral Application</h2>
+
+          <p className="text-gray-600 leading-relaxed mb-8">
+            Here is what I think Christians need to believe, refuse, and do.
+          </p>
+
+          {/* Believe */}
+          <div className="bg-slate-50 border-l-4 border-teal-600 p-6 rounded-r-3xl shadow-sm mb-6">
+            <span className="text-lg font-bold text-slate-900">Believe:</span>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 my-12">
+
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm">
+              <p className="text-gray-600 leading-relaxed">
+                Christ&apos;s reign is present, not merely future. Confessing &ldquo;Jesus is Lord&rdquo; is not a church slogan. It is a public claim about reality.
+              </p>
+            </section>
+
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm">
+              <p className="text-gray-600 leading-relaxed">
+                There is no neutral zone. Every &ldquo;just the facts&rdquo; posture still rests on a god, a moral law, and a story about what humans are for.
+              </p>
+            </section>
+
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm">
+              <p className="text-gray-600 leading-relaxed">
+                God&apos;s order is good. A limited magistrate is a mercy, not a curse, but it is only a mercy when it stays limited.
+              </p>
+            </section>
+
+          </div>
+
+          {/* Refuse */}
+          <div className="bg-slate-50 border-l-4 border-teal-600 p-6 rounded-r-3xl shadow-sm mb-6">
+            <span className="text-lg font-bold text-slate-900">Refuse:</span>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 my-12">
+
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm">
+              <p className="text-gray-600 leading-relaxed">
+                Refuse the habit of treating the state as the primary builder of the future. That is idolatry with paperwork.
+              </p>
+            </section>
+
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm">
+              <p className="text-gray-600 leading-relaxed">
+                Refuse the cowardly version of Christianity that hides Christ&apos;s authority to avoid social cost.
+              </p>
+            </section>
+
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm">
+              <p className="text-gray-600 leading-relaxed">
+                Refuse to let outrage become your personality. A man can be politically aware and spiritually hollow at the same time.
+              </p>
+            </section>
+
+          </div>
+
+          {/* Do */}
+          <div className="bg-slate-50 border-l-4 border-teal-600 p-6 rounded-r-3xl shadow-sm mb-6">
+            <span className="text-lg font-bold text-slate-900">Do:</span>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 my-12">
+
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm">
+              <p className="text-gray-600 leading-relaxed">
+                Rebuild your household as a real institution. This means actual family worship rhythms, real authority, real discipline, real affection, real planning.
+              </p>
+            </section>
+
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm">
+              <p className="text-gray-600 leading-relaxed">
+                Put your money where your confession is. Fund what you want to exist: Christian education, Christian mercy, Christian media, Christian community. Starve the idols by refusing to finance them as your first resort.
+              </p>
+            </section>
+
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm">
+              <p className="text-gray-600 leading-relaxed">
+                Speak with clarity, not bile. The culture is confused and scared. That does not excuse rebellion, but it explains the temperature of the room.
+              </p>
+            </section>
+
+          </div>
+
+          {/* Personal Note */}
           <div className="bg-slate-50 border-l-4 border-teal-600 p-8 md:p-12 rounded-r-3xl shadow-sm my-16">
-            <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-6 flex items-center gap-3">
-              <Compass size={24} className="text-teal-600" /> Personal Note
-            </h3>
-            <p className="text-gray-600 leading-relaxed">
-              I have to watch my own heart here, because I can turn politics into a stimulant. I really like to debate, and it feels productive to be angry at the machine. It feels manly to be "in the know," and stand against it. But there is a point where it is just anxiety dressed up as righteousness. When I am faithful, I get practical: I look at my calendar, my kids, my spending, my church life, my attention diet. I ask, "Is Christ actually ruling here, or am I outsourcing responsibility to the next meme of the week?" Most weeks, that question convicts me before it comforts me. That is usually how God works.
+            <div className="flex items-center gap-3 mb-6">
+              <Compass className="w-6 h-6 text-teal-600" />
+              <span className="text-sm font-bold text-teal-600 uppercase tracking-widest">Personal Note</span>
+            </div>
+            <p className="text-gray-800 text-lg leading-relaxed">
+              Now for the personal note. I have to watch my own heart here, because I can turn politics into a stimulant. I really like to debate, and it feels productive to be angry at the machine. It feels manly to be &ldquo;in the know,&rdquo; and stand against it. But there is a point where it is just anxiety dressed up as righteousness. When I am faithful, I get practical: I look at my calendar, my kids, my spending, my church life, my attention diet. I ask, &ldquo;Is Christ actually ruling here, or am I outsourcing responsibility to the next meme of the week?&rdquo; Most weeks, that question convicts me before it comforts me. That is usually how God works.
             </p>
           </div>
 
-          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
-            Objections &amp; Honest Replies
-          </h2>
+          {/* ── Objections and Honest Replies ── */}
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">Objections and Honest Replies</h2>
 
           <div className="grid gap-8 my-12">
-            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
-              <h3 className="text-lg font-bold text-teal-600 uppercase tracking-widest mb-4">"If Christ rules everything, aren't you turning Christianity into politics?"</h3>
-              <p className="text-gray-600 leading-relaxed">No. I am refusing to let politics become Christianity. Christ's dominion is bigger than politics, and that is precisely the point. The Christian claims that moral order, truth, and meaning are grounded in God, not in elections. Politics is downstream from worship and formation.</p>
+
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm">
+              <h3 className="text-lg font-bold text-slate-900 mb-4">Objection 1: &ldquo;If Christ rules everything, aren&apos;t you turning Christianity into politics?&rdquo;</h3>
+              <p className="text-gray-600 leading-relaxed">
+                No. I am refusing to let politics become Christianity. Christ&apos;s dominion is bigger than politics, and that is precisely the point. The Christian claims that moral order, truth, and meaning are grounded in God, not in elections. Politics is downstream from worship and formation.
+              </p>
             </section>
-            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
-              <h3 className="text-lg font-bold text-teal-600 uppercase tracking-widest mb-4">"Isn't this triumphalism? Shouldn't we just preach the gospel?"</h3>
-              <p className="text-gray-600 leading-relaxed">Preaching the gospel is exactly what produces obedience. The gospel is not merely pardon; it is the announcement that the King has come. If you preach a gospel that never collides with how people educate children, handle money, define marriage, or speak truth, you are not preaching the whole Christ.</p>
+
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm">
+              <h3 className="text-lg font-bold text-slate-900 mb-4">Objection 2: &ldquo;Isn&apos;t this triumphalism? Shouldn&apos;t we just preach the gospel?&rdquo;</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Preaching the gospel is exactly what produces obedience. The gospel is not merely pardon; it is the announcement that the King has come. If you preach a gospel that never collides with how people educate children, handle money, define marriage, or speak truth, you are not preaching the whole Christ.
+              </p>
             </section>
-            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
-              <h3 className="text-lg font-bold text-teal-600 uppercase tracking-widest mb-4">"What about Romans 13? Doesn't submission mean we stop resisting?"</h3>
-              <p className="text-gray-600 leading-relaxed">Romans 13 teaches that civil authority is real and ordained by God, and that Christians are not anarchic by default. But it does not teach that the magistrate becomes God. Scripture gives categories for lawful disobedience when rulers command sin. Submission is covenantal, not absolute. The magistrate is accountable to God, and Christians are accountable to God first.</p>
+
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm">
+              <h3 className="text-lg font-bold text-slate-900 mb-4">Objection 3: &ldquo;What about Romans 13? Doesn&apos;t submission mean we stop resisting?&rdquo;</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Romans 13 teaches that civil authority is real and ordained by God, and that Christians are not anarchic by default. But it does not teach that the magistrate becomes God. Scripture itself gives you categories for lawful disobedience when rulers command sin (think of the apostles in Acts). Submission is covenantal, not absolute. The magistrate is accountable to God, and Christians are accountable to God first.
+              </p>
             </section>
-            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
-              <h3 className="text-lg font-bold text-teal-600 uppercase tracking-widest mb-4">"Isn't this just a Reformed way of saying 'culture war'?"</h3>
-              <p className="text-gray-600 leading-relaxed">If "culture war" means Christians confess Christ publicly and live coherently, then yes — conflict is unavoidable. But if "culture war" means making enemies your mission, then no. The mission is faithful witness, gospel proclamation, and rebuilding institutions that embody obedience. Conflict comes because rival gods do not share sovereignty.</p>
+
+            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm">
+              <h3 className="text-lg font-bold text-slate-900 mb-4">Objection 4: &ldquo;Isn&apos;t this just a Reformed way of saying &apos;culture war&apos;?&rdquo;</h3>
+              <p className="text-gray-600 leading-relaxed">
+                If &ldquo;culture war&rdquo; means Christians confess Christ publicly and live coherently, then yes, in a sense, conflict is unavoidable. But if &ldquo;culture war&rdquo; means making enemies your mission, then no. The mission is faithful witness, gospel proclamation, and rebuilding institutions that embody obedience. Conflict comes because rival gods do not share sovereignty.
+              </p>
             </section>
+
           </div>
 
+          {/* ── Conclusion ── */}
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">Conclusion</h2>
+
           <div className="bg-slate-900 text-white rounded-[2.5rem] p-10 md:p-16 my-16">
-            <h3 className="text-2xl font-black uppercase tracking-tight mb-6 flex items-center gap-3">
-              <Info size={24} className="text-amber-400" /> The Bottom Line
-            </h3>
-            <p className="text-gray-300 leading-relaxed text-lg">
-              Every generation has to decide what "lordship" means in practice. The state wants to be the shepherd, the screen wants to be the priest, the self wants to be the god, and the church is tempted to be a chaplain for the whole arrangement. Christ will not be a mascot. He is Lord of everything. That means your life is not trapped in the news cycle, not owned by the algorithm, not finally defined by the regime. Take heart. The confession is not fragile. The King is not tired. Your calling is not to win the internet, but to be faithful in the lane God actually gave you: household, church, vocation, community. Christ's dominion is not an excuse to panic. It is a reason to build.
+            <div className="flex items-center gap-3 mb-8">
+              <Info className="w-6 h-6 text-teal-400" />
+              <span className="text-sm font-bold text-teal-400 uppercase tracking-widest">Final Word</span>
+            </div>
+
+            <p className="text-gray-300 leading-relaxed mb-8">
+              Every generation has to decide what &ldquo;lordship&rdquo; means in practice. The 2020s are simply making the choice louder. The state wants to be the shepherd, the screen wants to be the priest, the self wants to be the god, and the church is tempted to be a chaplain for the whole arrangement.
+            </p>
+
+            <p className="text-white text-xl font-bold leading-relaxed mb-8">
+              Christ will not be a mascot.
+            </p>
+
+            <p className="text-gray-300 leading-relaxed mb-8">
+              He is Lord of everything. That means your life is not trapped in the news cycle, not owned by the algorithm, not finally defined by the regime, and not saved by your own willpower. It also means you do not get to carve out a private corner of &ldquo;spirituality&rdquo; while the rest of your household runs on the assumptions of the age.
+            </p>
+
+            <p className="text-gray-300 leading-relaxed">
+              Take heart. The confession is not fragile. The King is not tired. Your calling is not to win the internet, but to be faithful in the lane God actually gave you: household, church, vocation, community. Christ&apos;s dominion is not an excuse to panic. It is a reason to build.
             </p>
           </div>
+
+          {/* ── References ── */}
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">References</h2>
+
+          <ul className="space-y-4 text-gray-600 leading-relaxed list-disc pl-6">
+            <li><strong>The Nicene Creed</strong> (Christ &ldquo;through whom all things were made&rdquo;).</li>
+            <li><strong>Westminster Confession of Faith</strong>, especially on Christ and civil magistracy.</li>
+            <li><strong>Augustine, <em>The City of God</em></strong> (the two cities as rival loves).</li>
+            <li><strong>John Calvin</strong>, <em>Institutes of the Christian Religion</em> (on God&apos;s providence and civil order).</li>
+            <li><strong>Cornelius Van Til</strong>, on the religious root of epistemology and the myth of neutrality.</li>
+            <li><strong>Greg Bahnsen</strong>, on the impossibility of neutrality and the necessity of Christian foundations for rational discourse.</li>
+            <li>Scripture (ESV): Matt. 28:18; Col. 1:16&#8211;17; Ps. 24:1; 1 Cor. 10:31; Rev. 11:15</li>
+          </ul>
+
         </div>
       );
     }
@@ -3230,220 +3479,420 @@ const Post: React.FC = () => {
     if (id === 'american-christian-political-discourse') {
       return (
         <div className="space-y-12">
-          <p>
-            A lot of American Christians talk about politics the way pagans talk about fate. Every headline is an omen, every election is Armageddon, every tweet is a sacrament. The result is predictable: anxiety, anger, and a weird spiritual exhaustion that looks nothing like "peace that surpasses understanding."
+
+          {/* ======================== THESIS ======================== */}
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">Thesis</h2>
+
+          <p className="text-gray-600 leading-relaxed mb-8">
+            A lot of American Christians talk about politics the way pagans talk about fate. Every headline is an omen, every election is Armageddon, every tweet is a sacrament. The result is predictable: anxiety, anger, and a weird spiritual exhaustion that looks nothing like &quot;peace that surpasses understanding.&quot;
           </p>
 
           <div className="bg-slate-50 border-l-4 border-teal-600 p-8 md:p-12 rounded-r-3xl shadow-sm my-16">
-            <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-6 flex items-center gap-3">
-              <BookOpen size={24} className="text-teal-600" /> Thesis
-            </h3>
-            <p className="text-gray-600 leading-relaxed">
-              The American Christian must speak in political discourse as a citizen of Christ's Kingdom first, and as a citizen of any nation second. That means refusing political idolatry, exposing the false "neutrality" behind secular moral claims, and insisting that only the Triune God provides the preconditions for justice, liberty, and coherent public reasoning. Christians should not be nation-state mystics. We should be covenant people with clean hands, clear categories, and courage.
+            <div className="flex items-center gap-3 mb-6">
+              <BookOpen className="w-6 h-6 text-teal-600" />
+              <span className="text-sm font-bold uppercase tracking-widest text-teal-600">Thesis</span>
+            </div>
+            <p className="text-gray-800 leading-relaxed text-lg">
+              My thesis is simple: the American Christian must speak in political discourse as a citizen of Christ&apos;s Kingdom first, and as a citizen of any nation second. That does not mean silence, and it does not mean withdrawal. It means refusing political idolatry, exposing the false &quot;neutrality&quot; behind secular moral claims, and insisting that only the Triune God provides the preconditions for justice, liberty, and coherent public reasoning. Christians should not be nation-state mystics. We should be covenant people with clean hands, clear categories, and courage.
             </p>
           </div>
 
-          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
-            The Hidden Assumptions
-          </h2>
+          {/* ======================== THE HIDDEN ASSUMPTIONS ======================== */}
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">The Hidden Assumptions</h2>
 
           <p className="text-gray-600 leading-relaxed mb-8">
-            Political discourse is never just about policy. It is always about authority, morality, and man's place in the world. That means it is always religious at root, even if your religion is agnostic or antagonistically atheist.
+            Political discourse is never just about policy. It is always about authority, morality, and man&apos;s place in the world. That means it is always religious at root, even if your religion is agnostic or antagonistically atheist.
           </p>
 
-          <div className="grid md:grid-cols-2 gap-8 my-12">
-            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
-              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6">The Secular Humanist</h3>
-              <p className="text-gray-600 leading-relaxed">Must assume moral norms (human rights, equality, dignity) while claiming the universe is ultimately impersonal and accidental. He wants "ought" without a transcendent Lawgiver. He wants binding moral claims while insisting nobody has the right to impose morality. He wants truth that obligates your conscience, while saying your conscience is a social construct.</p>
-            </section>
-            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-amber-100 transition-all duration-500">
-              <h3 className="text-xl font-bold text-amber-500 uppercase tracking-widest mb-6">The Statist</h3>
-              <p className="text-gray-600 leading-relaxed">Whether progressive or conservative, must assume salvation comes through centralized power. That is not merely a preference for efficiency. It is a rival doctrine of providence. The state becomes the messiah, the planner, the protector, the moral teacher, and the final court of appeal. It is functionally a god for the godless.</p>
-            </section>
-            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
-              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6">The Catholic or Eastern Orthodox Thinker</h3>
-              <p className="text-gray-600 leading-relaxed">If he leans on natural law in a way that tries to create a "common rational platform" independent of Scripture, risks granting too much to the myth of neutrality or authority of the institution of their church. If God is God, there is no safe corner of the mind where man can stand above Him and arbitrate reality.</p>
-            </section>
-            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-amber-100 transition-all duration-500">
-              <h3 className="text-xl font-bold text-amber-500 uppercase tracking-widest mb-6">The Muslim</h3>
-              <p className="text-gray-600 leading-relaxed">Assumes a unitary monotheism and a law-order that does not require the ontological Trinity. Yet the very categories needed for intelligibility — unity and diversity, universal norms applied to particular cases — have deep Trinitarian implications. Unitarianism historically struggles to avoid either sheer arbitrariness or frozen necessity.</p>
-            </section>
-            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
-              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6">The Libertarian</h3>
-              <p className="text-gray-600 leading-relaxed">I say this as a Rothbardian by instinct — talk about "rights," "self-ownership," and "non-aggression" often rides on borrowed Christian capital. The state is criticized as coercive, and that critique is frequently correct, but the moral force of the critique still requires a grounded moral order and a doctrine of man. "By what standard is coercion evil, and why does man have rightful claims at all?"</p>
-            </section>
-            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-amber-100 transition-all duration-500">
-              <h3 className="text-xl font-bold text-amber-500 uppercase tracking-widest mb-6">Underneath Every Argument</h3>
-              <p className="text-gray-600 leading-relaxed">Underneath every political argument is worship. Underneath every outrage cycle is a theology of man. The question is not whether you have a worldview in politics. The question is whether your worldview can account for itself.</p>
-            </section>
+          <div className="grid gap-8 my-12">
+            {/* Secular Humanist */}
+            <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="text-lg font-black uppercase tracking-tight text-slate-900 mb-4">The Secular Humanist</h3>
+              <p className="text-gray-600 leading-relaxed">
+                The secular humanist must assume moral norms (human rights, equality, dignity, justice) while also claiming the universe is ultimately impersonal and accidental. He wants &quot;ought&quot; without a transcendent Lawgiver. He wants binding moral claims while insisting nobody has the right to impose morality. He wants truth that obligates your conscience, while saying your conscience is a social construct.
+              </p>
+            </div>
+
+            {/* Statist */}
+            <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="text-lg font-black uppercase tracking-tight text-slate-900 mb-4">The Statist</h3>
+              <p className="text-gray-600 leading-relaxed">
+                The statist, whether progressive or conservative, must assume that salvation comes through centralized power. That is not merely a preference for efficiency. It is a rival doctrine of providence. The state becomes the messiah, the planner, the protector, the moral teacher, and the final court of appeal. It is functionally a god for the godless.
+              </p>
+            </div>
+
+            {/* Catholic or Eastern Orthodox */}
+            <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="text-lg font-black uppercase tracking-tight text-slate-900 mb-4">The Catholic or Eastern Orthodox</h3>
+              <p className="text-gray-600 leading-relaxed">
+                The Catholic or Eastern Orthodox political thinker, if he leans on natural law in a way that tries to create a &quot;common rational platform&quot; independent of Scripture, risks granting too much to the myth of neutrality or authority of the institution of the(ir) church. If God is God, there is no safe corner of the mind where man can stand above Him and arbitrate reality.
+              </p>
+            </div>
+
+            {/* Muslim */}
+            <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="text-lg font-black uppercase tracking-tight text-slate-900 mb-4">The Muslim</h3>
+              <p className="text-gray-600 leading-relaxed">
+                The Muslim assumes a unitary monotheism and a law-order that does not require the ontological Trinity. Yet the very categories needed for intelligibility, unity and diversity, universal norms applied to particular cases, have deep Trinitarian implications. Unitarianism historically struggles to avoid either sheer arbitrariness or frozen necessity.
+              </p>
+            </div>
+
+            {/* Libertarian */}
+            <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="text-lg font-black uppercase tracking-tight text-slate-900 mb-4">The Libertarian</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Even the libertarian, and I say this as a Rothbardian by instinct, has assumptions to examine. Libertarian talk about &quot;rights,&quot; &quot;self-ownership,&quot; and &quot;non-aggression&quot; often rides on borrowed Christian capital. The state is criticized as coercive, and that critique is frequently correct, but the moral force of the critique still requires a grounded moral order and a doctrine of man. Rothbard&apos;s classic definition of the state as a coercive monopoly is not wrong as an observation, but it still leaves the question, &quot;By what standard is coercion evil, and why does man have rightful claims at all?&quot;
+              </p>
+            </div>
           </div>
 
-          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
-            The Presuppositional Case
-          </h2>
+          <p className="text-gray-600 leading-relaxed mb-8">
+            Underneath every political argument is worship. Underneath every outrage cycle is a theology of man.
+          </p>
+
+          {/* ======================== THE PRESUPPOSITIONAL CASE ======================== */}
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">The Presuppositional Case</h2>
 
           <p className="text-gray-600 leading-relaxed mb-8">
-            Cornelius Van Til's core move is to drag the argument down to bedrock. You cannot debate ethics, law, or politics as if both sides share the same ultimate authority. There is no neutrality. There is only submission to or revolt against God. That is covenantal language, not classroom language.
+            Cornelius Van Til&apos;s core move is to drag the argument down to bedrock. You cannot debate ethics, law, or politics as if both sides share the same ultimate authority. There is no neutrality. There is only submission to or revolt against God.
           </p>
 
           <p className="text-gray-600 leading-relaxed mb-8">
-            Greg Bahnsen sharpened the apologetic edge with what people often call the transcendental argument. The basic point is not, "Christians are smarter," or "atheists cannot think." The point is that atheists, humanists, and secularists must borrow the very tools they use — logic, moral norms, scientific regularity — from the Christian worldview in order to argue against it. In the famous Bahnsen-Stein debate, Bahnsen summarized it as a proof "from the impossibility of the contrary," pressing that without the Christian God you cannot justify the preconditions of intelligibility.
+            That is covenantal language, not classroom language. Van Til frames human beings as covenant-keepers or covenant-breakers. You either live as God&apos;s creature, under His revelation, or you live as an attempted autonomous interpreter of reality. Westminster has preserved this emphasis in Van Til&apos;s own lectures on covenant consciousness, where the human situation is explicitly covenantal, not &quot;religiously neutral with a sprinkle of spirituality.&quot;
           </p>
 
-          <p className="text-gray-600 leading-relaxed mb-8">Apply that to political discourse and you get something clarifying:</p>
+          <p className="text-gray-600 leading-relaxed mb-8">
+            Greg Bahnsen sharpened the apologetic edge with what people often call the transcendental argument. The basic point is not, &quot;Christians are smarter,&quot; or &quot;atheists cannot think.&quot; The point is that atheists, humanists, and secularists must borrow the very tools they use (logic, moral norms, scientific regularity) from the Christian worldview in order to argue against it. In the famous Bahnsen-Stein debate transcript, Bahnsen summarizes the thrust as a proof &quot;from the impossibility of the contrary,&quot; pressing that without the Christian God you cannot justify the preconditions of intelligibility.
+          </p>
 
-          <div className="relative pl-12 space-y-16 before:absolute before:left-[1.15rem] before:top-2 before:bottom-2 before:w-px before:bg-gradient-to-b before:from-teal-600 before:to-teal-100">
+          <p className="text-gray-600 leading-relaxed mb-8">
+            Apply that to political discourse and you get something clarifying:
+          </p>
+
+          <div className="relative pl-12 space-y-16 before:absolute before:left-[1.15rem] before:top-2 before:bottom-2 before:w-px before:bg-gradient-to-b before:from-teal-600 before:to-teal-100 my-12">
             <div className="relative">
               <span className="absolute -left-12 top-0 w-10 h-10 rounded-full bg-teal-600 text-white font-black flex items-center justify-center text-sm shadow-lg shadow-teal-600/30">1</span>
-              <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-4">The Myth of Neutrality Dies</h3>
-              <p className="text-gray-600 leading-relaxed">"Let's just reason together without religion" smuggles in a religion. It assumes human reason is authoritative, autonomous, and properly functioning without reference to God. That is not neutral — it is a worldview.</p>
+              <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-4">The myth of neutrality dies immediately.</h3>
+              <p className="text-gray-600 leading-relaxed">
+                &quot;Let&apos;s just reason together without religion&quot; is a claim that smuggles in a religion. It assumes human reason is authoritative, autonomous, and properly functioning without reference to God. That is not neutral. That is a worldview.
+              </p>
             </div>
             <div className="relative">
               <span className="absolute -left-12 top-0 w-10 h-10 rounded-full bg-teal-600 text-white font-black flex items-center justify-center text-sm shadow-lg shadow-teal-600/30">2</span>
-              <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-4">Secular Morality Cannot Cash Its Own Checks</h3>
-              <p className="text-gray-600 leading-relaxed">When someone says "human rights are self-evident," the presuppositional question is: self-evident to whom, and on what authority? When someone says, "We must have justice," the question is: justice defined by what standard, enforced by what right, accountable to whom?</p>
+              <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-4">Secular political morality cannot cash its own checks.</h3>
+              <p className="text-gray-600 leading-relaxed">
+                When someone says, &quot;Human rights are self-evident,&quot; the presuppositional question is: self-evident to whom, and on what authority? When someone says, &quot;We must have justice,&quot; the question is: justice defined by what standard, enforced by what right, accountable to whom?
+              </p>
             </div>
             <div className="relative">
               <span className="absolute -left-12 top-0 w-10 h-10 rounded-full bg-teal-600 text-white font-black flex items-center justify-center text-sm shadow-lg shadow-teal-600/30">3</span>
-              <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-4">Christianity Makes Public Reasoning Possible</h3>
-              <p className="text-gray-600 leading-relaxed">Christianity gives you a Lawgiver, a stable moral order, human dignity rooted in the image of God, accountability above rulers, and a doctrine of sin that prevents utopian politics. That combination is political sanity.</p>
+              <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-4">The Christian worldview makes public reasoning possible without deifying the state.</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Christianity gives you a Lawgiver, a stable moral order, human dignity rooted in the image of God, and accountability above rulers. It also gives you a doctrine of sin that prevents utopian politics. That combination is political sanity.
+              </p>
             </div>
           </div>
 
-          <p className="text-gray-600 leading-relaxed my-8">
-            This is also where the libertarian note fits cleanly. I want the most minimal state possible because I do not believe the state is a savior, a parent, or a priest. Biblically, civil authority is real, but it is delegated, limited, and accountable. Gary North presses the point bluntly: human authority is bounded by God's law, not man's imagination. So the presuppositional posture in politics is not, "Christians should win the culture war." It is: <strong>Christians must refuse the idol of neutrality, refuse the idol of the nation-state, and speak as servants of King Jesus, using categories that actually explain reality.</strong>
-          </p>
-
-          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
-            Scripture as the Foundation
-          </h2>
-
-          <div className="grid gap-8 my-12">
-            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
-              <h3 className="text-lg font-bold text-teal-600 uppercase tracking-widest mb-4">Matthew 6:33 (ESV)</h3>
-              <p className="text-gray-600 leading-relaxed italic mb-4">"But seek first the kingdom of God and his righteousness, and all these things will be added to you."</p>
-              <p className="text-gray-600 leading-relaxed">This is an ordering principle. The Christian does not seek first a candidate, a party, or a policy outcome. He seeks first the Kingdom and righteousness, then walks outward into every sphere — including politics — without confusing means with ends.</p>
-            </section>
-            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
-              <h3 className="text-lg font-bold text-teal-600 uppercase tracking-widest mb-4">Psalm 146:3 (ESV)</h3>
-              <p className="text-gray-600 leading-relaxed italic mb-4">"Put not your trust in princes, in a son of man, in whom there is no salvation."</p>
-              <p className="text-gray-600 leading-relaxed">A direct rebuke to political messianism. The psalm does not say, "Princes are irrelevant." It says they are not saviors. When Christians talk like the next administration will resurrect the dead or fix the human heart, we are doing bad theology with patriotic vibes, and I don't like it.</p>
-            </section>
-            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
-              <h3 className="text-lg font-bold text-teal-600 uppercase tracking-widest mb-4">Proverbs 29:25 (ESV)</h3>
-              <p className="text-gray-600 leading-relaxed italic mb-4">"The fear of man lays a snare, but whoever trusts in the LORD is safe."</p>
-              <p className="text-gray-600 leading-relaxed">Political discourse is often fear management. Fear of the other side, fear of losing status, fear of being excluded, fear of speaking plainly. Scripture calls that a snare. The beginning of political courage is not the tingle you get from a great podcast. It is the fear of God.</p>
-            </section>
-            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
-              <h3 className="text-lg font-bold text-teal-600 uppercase tracking-widest mb-4">Romans 13:1-4 (ESV)</h3>
-              <p className="text-gray-600 leading-relaxed italic mb-4">"Let every person be subject to the governing authorities. For there is no authority except from God... for he is God's servant for your good."</p>
-              <p className="text-gray-600 leading-relaxed">This passage is frequently abused in two opposite directions. Some use it to baptize unlimited government. Others use it to pretend government is inherently illegitimate. Paul does neither. He describes civil rulers as God's servants with a defined moral purpose. The moment the state tries to become lord of conscience, it is attempting a blasphemous job change. It should be noted that Paul was executed by his state for refusing to compromise on God's Word.</p>
-            </section>
-          </div>
-
-          <div className="bg-slate-50 border-l-4 border-teal-600 p-8 md:p-12 rounded-r-3xl shadow-sm my-16">
-            <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-6 flex items-center gap-3">
-              <ShieldCheck size={24} className="text-teal-600" /> The American Context
-            </h3>
-            <p className="text-gray-600 leading-relaxed">
-              Scripture was written in the context of sovereign kings reigning down the hierarchy upon men. This requires careful prayer and discernment in an American context, because our civil order was born in a secession-oriented revolution and then intentionally structured to diffuse power from the bottom-up. The Constitution assumes layered authority, starting with the individual under God, then local and state jurisdictions, then a limited federal sphere — which means "the governing authorities" are not a single, absolute voice that can swallow conscience, church, or neighborhood. Even the right to bear arms signals that the state is not the final owner of force, and that citizens are not meant to be passive livestock. Still, Romans 13 does not bless vigilantism or rage politics. It calls for a posture of order, honor, and restraint, while recognizing that obedience to God is higher than obedience to men, and that any resistance, if it ever becomes morally unavoidable, must be sober, humble, accountable to God, and treated as a last resort rather than an egotistical venture in libertinism.
-            </p>
-          </div>
-
-          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
-            The 2020s Pressure Test
-          </h2>
-
           <p className="text-gray-600 leading-relaxed mb-8">
-            The 2020s are basically a discipleship crisis wearing a tech costume. We live in an attention economy where outrage pays the rent. Algorithms reward moral posturing, not moral clarity. People are lonely, anxious, and spiritually hungry, so politics becomes a substitute church. The rally becomes liturgy. The hashtag becomes confession. The candidate becomes messiah.
+            This is also where my libertarian note fits cleanly. I want the most minimal state possible because I do not believe the state is a savior, a parent, or a priest. Biblically, civil authority is real, but it is delegated, limited, and accountable. Gary North, writing as a theonomist, presses the point bluntly: human authority is bounded by God&apos;s law, not man&apos;s imagination.
           </p>
 
           <p className="text-gray-600 leading-relaxed mb-8">
-            That is why Christian political discourse is so often a mess. Christians are being catechized all day by their feeds, then trying to "add Jesus" on Sunday. When politics becomes religion, it will demand sacrifices. It will demand your joy, your family peace, your honesty, your courage to speak truth to your own side, and eventually your conscience.
+            So the presuppositional posture in politics is not, &quot;Christians should win the culture war.&quot; It is: <strong>Christians must refuse the idol of neutrality, refuse the idol of the nation-state, and speak as servants of King Jesus, using categories that actually explain reality.</strong>
           </p>
 
-          <div className="grid md:grid-cols-2 gap-8 my-12">
-            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
-              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6">Real-Life Symptoms</h3>
-              <ul className="space-y-4">
-                <li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600"><strong>Institutional distrust</strong> turns every authority claim into suspicion. That can be healthy, but cynicism is just pride wearing a fedora.</span></li>
-                <li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600"><strong>Sexual confusion and identity politics</strong> turn anthropology into legislation. If you get man wrong, law becomes a factory for lies.</span></li>
-                <li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600"><strong>Tech saturation</strong> makes everyone feel like they must have a take on everything. That produces constant judgment with almost no wisdom.</span></li>
-                <li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600"><strong>Fear-based coalition building</strong> tempts Christians to excuse sin because "we need votes," or to bless corrupt means because "the stakes are too high."</span></li>
-              </ul>
-            </section>
-            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-amber-100 transition-all duration-500">
-              <h3 className="text-xl font-bold text-amber-500 uppercase tracking-widest mb-6">What to Believe</h3>
-              <ul className="space-y-4">
-                <li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 shrink-0" /><span className="text-gray-600"><strong>Christ is King now.</strong> That means every ruler is accountable, every policy is morally evaluable, and every political hope must be subordinated to Christ's reign.</span></li>
-                <li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 shrink-0" /><span className="text-gray-600"><strong>The state is not neutral and neither are you.</strong> Your political speech is either covenant faithfulness or covenant rebellion in public form.</span></li>
-                <li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 shrink-0" /><span className="text-gray-600"><strong>Law comes from a god.</strong> Rushdoony was right: the source of law reveals the god of the society. God's law protects life and restrains evil, rather than existing as arbitrary oppression.</span></li>
-              </ul>
-            </section>
+          {/* ======================== SCRIPTURE AS THE FOUNDATION ======================== */}
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">Scripture as the Foundation</h2>
+
+          <p className="text-gray-600 leading-relaxed mb-8">
+            I am sticking with the ESV for this article.
+          </p>
+
+          <div className="grid gap-8 my-12">
+            {/* Matthew 6:33 */}
+            <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
+              <h3 className="text-lg font-black uppercase tracking-tight text-slate-900 mb-4">1) Matthew 6:33 (ESV)</h3>
+              <p className="text-gray-600 leading-relaxed italic mb-4">
+                &quot;But seek first the kingdom of God and his righteousness, and all these things will be added to you.&quot;
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                This is an ordering principle. The Christian does not seek first a candidate, a party, or a policy outcome. He seeks first the Kingdom and righteousness, then he walks outward into every sphere, including politics, without confusing means with ends.
+              </p>
+            </div>
+
+            {/* Psalm 146:3 */}
+            <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
+              <h3 className="text-lg font-black uppercase tracking-tight text-slate-900 mb-4">2) Psalm 146:3 (ESV)</h3>
+              <p className="text-gray-600 leading-relaxed italic mb-4">
+                &quot;Put not your trust in princes, in a son of man, in whom there is no salvation.&quot;
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                That is a direct rebuke to political messianism. The psalm does not say, &quot;Princes are irrelevant.&quot; It says they are not saviors. When Christians talk like the next administration will resurrect the dead or fix the human heart, we are doing bad theology with patriotic vibes, and I don&apos;t like it.
+              </p>
+            </div>
+
+            {/* Proverbs 29:25 */}
+            <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
+              <h3 className="text-lg font-black uppercase tracking-tight text-slate-900 mb-4">3) Proverbs 29:25 (ESV)</h3>
+              <p className="text-gray-600 leading-relaxed italic mb-4">
+                &quot;The fear of man lays a snare, but whoever trusts in the LORD is safe.&quot;
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                Political discourse is often fear management. Fear of the other side, fear of losing status, fear of being excluded, fear of speaking plainly. Scripture calls that a snare. The beginning of political courage is not the tingle you get from a great podcast. It is the fear of God.
+              </p>
+            </div>
+
+            {/* Romans 13:1-4 */}
+            <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
+              <h3 className="text-lg font-black uppercase tracking-tight text-slate-900 mb-4">4) Romans 13:1-4 (ESV)</h3>
+              <p className="text-gray-600 leading-relaxed italic mb-4">
+                &quot;Let every person be subject to the governing authorities. For there is no authority except from God, and those that exist have been instituted by God… for he is God&apos;s servant for your good.&quot;
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                This passage is frequently abused in two opposite directions. Some use it to baptize unlimited government. Others use it to pretend government is inherently illegitimate. Paul does neither. He describes civil rulers as God&apos;s servants with a defined moral purpose related to good and evil. The moment the state tries to become lord of conscience, it is attempting a blasphemous job change. It should be noted that Paul was executed by his state for refusing to compromise on God&apos;s Law/Word.
+              </p>
+            </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 my-12">
-            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
-              <h3 className="text-xl font-bold text-teal-600 uppercase tracking-widest mb-6">What to Refuse</h3>
-              <ul className="space-y-4">
-                <li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600">Refuse to speak as if "the right side" just means "my side."</span></li>
-                <li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600">Refuse to treat voting as a sacrament or abstaining as a virtue signal.</span></li>
-                <li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0" /><span className="text-gray-600">Refuse the soft lie that Christian faith is "private." If Christ is Lord, there is no private corner where His claims do not reach.</span></li>
-              </ul>
-            </section>
-            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-amber-100 transition-all duration-500">
-              <h3 className="text-xl font-bold text-amber-500 uppercase tracking-widest mb-6">What to Do</h3>
-              <ul className="space-y-4">
-                <li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 shrink-0" /><span className="text-gray-600"><strong>Speak with categories, not slogans.</strong> Ask "By what standard?" and "On what authority?" That is discipleship in public.</span></li>
-                <li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 shrink-0" /><span className="text-gray-600"><strong>Practice localism and responsibility.</strong> If you want a smaller state, build thicker communities. Family, church, mutual aid, private charity, local accountability.</span></li>
-                <li className="flex gap-4"><span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 shrink-0" /><span className="text-gray-600"><strong>Prioritize formation over information.</strong> Read less outrage, read more Scripture. Pray more than you post.</span></li>
-              </ul>
-            </section>
-          </div>
+          <p className="text-gray-600 leading-relaxed mb-8">
+            Those four texts give the frame: kingdom first, no salvation in princes, fear God not man, and recognize delegated civil authority without worshiping it.
+          </p>
 
           <div className="bg-slate-50 border-l-4 border-teal-600 p-8 md:p-12 rounded-r-3xl shadow-sm my-16">
-            <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-6 flex items-center gap-3">
-              <Compass size={24} className="text-teal-600" /> Personal Note
-            </h3>
-            <p className="text-gray-600 leading-relaxed">
-              I have to manage my own temptation to treat the timeline like it is my pastor. I can feel the pull to react, to dunk, to "win," to signal that I am not one of <em>those</em> Christians. The quickest way I know to become a political addict is to convince myself that my anger is righteousness. So I try to do a few simple things: I limit my inputs, I force myself to name the presuppositions under my own arguments, and I try to remember that my kids do not care who won the discourse today. They care whether dad is steady, joyful, and honest as a covenant representative of Jesus Christ at the head of our household. If my political engagement makes me harsher at home, it is already disordered, even if my positions are correct — and that is something I need to work on.
+            <p className="text-gray-800 leading-relaxed text-lg">
+              Scripture, however, was written in the context of sovereign kings reigning down the hierarchy upon men. This does require some careful prayer and discernment in an American context, because our civil order was born in a secession-oriented revolution and then intentionally structured to diffuse power from the bottom-up. The Constitution assumes layered authority, starting with the individual under God, then local and state jurisdictions, then a limited federal sphere, which means &quot;the governing authorities&quot; are not a single, absolute voice that can swallow conscience, church, or neighborhood. Even the right to bear arms, whatever one thinks of its modern use, signals that the state is not the final owner of force or the final judge of justice, and that citizens are not meant to be passive livestock. Still, Romans 13 does not bless vigilantism or rage politics. It calls for a posture of order, honor, and restraint, while recognizing that obedience to God is higher than obedience to men, and that any resistance, if it ever becomes morally unavoidable, must be sober, humble, accountable to God, and treated as a last resort rather than an egotistical venture in libertinism.
             </p>
           </div>
 
-          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">
-            Objections &amp; Honest Replies
-          </h2>
+          {/* ======================== THE 2020s PRESSURE TEST ======================== */}
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">The 2020s Pressure Test</h2>
+
+          <p className="text-gray-600 leading-relaxed mb-8">
+            The 2020s are basically a discipleship crisis wearing a tech costume.
+          </p>
+
+          <p className="text-gray-600 leading-relaxed mb-8">
+            We live in an attention economy where outrage pays the rent, and it isn&apos;t lost on me that I earn a living in media. Algorithms reward moral posturing, not moral clarity. People are lonely, anxious, and spiritually hungry, so politics becomes a substitute church. The rally becomes liturgy. The hashtag becomes confession. The existential enemy becomes the devil. The candidate becomes messiah...
+          </p>
+
+          <p className="text-gray-600 leading-relaxed mb-8">
+            That is why Christian political discourse is so often a mess. Christians are being catechized all day by their feeds, then trying to &quot;add Jesus&quot; on Sunday.
+          </p>
+
+          <p className="text-gray-600 leading-relaxed mb-8">
+            You see it in real life:
+          </p>
 
           <div className="grid gap-8 my-12">
-            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
-              <h3 className="text-lg font-bold text-teal-600 uppercase tracking-widest mb-4">"Shouldn't Christians just avoid politics since it is dirty?"</h3>
-              <p className="text-gray-600 leading-relaxed">Politics is downstream of worship, which means you cannot avoid it entirely. The question is not whether you engage, but how you engage. Civil government is part of God's order and therefore morally accountable. The answer is not retreat — it is faithful presence without idolatry.</p>
-            </section>
-            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
-              <h3 className="text-lg font-bold text-teal-600 uppercase tracking-widest mb-4">"Presuppositionalism sounds arrogant."</h3>
-              <p className="text-gray-600 leading-relaxed">Presuppositionalism is actually the opposite of arrogance if done correctly. It says the unbeliever knows God but suppresses the truth, and the believer also depends entirely on God's revelation for any clarity at all. The claim is not "I am smarter." The claim is "there is no neutrality, and your own reasoning depends on the God you deny." That is an act of honesty, not ego.</p>
-            </section>
-            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
-              <h3 className="text-lg font-bold text-teal-600 uppercase tracking-widest mb-4">"If you minimize the state, won't evil just run wild?"</h3>
-              <p className="text-gray-600 leading-relaxed">Evil runs wild when men are ungoverned inwardly and unrestrained outwardly. Scripture does not call for an absent magistrate — Romans 13 calls the magistrate a servant for restraining evil. But the modern state often expands far beyond justice into management, moral redefinition, and pseudo-salvation. The Christian case is not "no authority" — it is "bounded authority under God." Also, the state will grow as the individual's obedience to God shrinks, so if you think the government is too big, the first person to blame is yourself.</p>
-            </section>
-            <section className="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:border-teal-100 transition-all duration-500">
-              <h3 className="text-lg font-bold text-teal-600 uppercase tracking-widest mb-4">"If we don't win politically, won't we lose everything?"</h3>
-              <p className="text-gray-600 leading-relaxed">That is Psalm 146:3 territory. You are not promised cultural control. You are promised Christ's reign, the church's endurance, and God's judgment in history and eternity. Political outcomes matter, but they are not ultimate. When Christians act like they are ultimate, we reveal that our hope has slid.</p>
-            </section>
+            <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="text-lg font-black uppercase tracking-tight text-slate-900 mb-4">Institutional distrust</h3>
+              <p className="text-gray-600 leading-relaxed">
+                <strong>Institutional distrust</strong> turns every authority claim into suspicion. That can be healthy, but it can also become cynicism, which is just pride wearing a fedora.
+              </p>
+            </div>
+
+            <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="text-lg font-black uppercase tracking-tight text-slate-900 mb-4">Sexual confusion and identity politics</h3>
+              <p className="text-gray-600 leading-relaxed">
+                <strong>Sexual confusion and identity politics</strong> turn anthropology into legislation. If you get man wrong, law becomes a factory for lies.
+              </p>
+            </div>
+
+            <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="text-lg font-black uppercase tracking-tight text-slate-900 mb-4">Tech saturation</h3>
+              <p className="text-gray-600 leading-relaxed">
+                <strong>Tech saturation</strong> makes everyone feel like they must have a take on everything. That produces constant judgment with almost no wisdom.
+              </p>
+            </div>
+
+            <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="text-lg font-black uppercase tracking-tight text-slate-900 mb-4">Fear-based coalition building</h3>
+              <p className="text-gray-600 leading-relaxed">
+                <strong>Fear-based coalition building</strong> tempts Christians to excuse sin because &quot;we need votes,&quot; or to bless corrupt means because &quot;the stakes are too high.&quot;
+              </p>
+            </div>
           </div>
+
+          <p className="text-gray-600 leading-relaxed mb-8">
+            When politics becomes religion, it will demand sacrifices. It will demand your joy, your family peace, your honesty, your courage to speak truth to your own side, and eventually your conscience.
+          </p>
+
+          <p className="text-gray-600 leading-relaxed mb-8">
+            The Kingdom of Christ does not need that kind of worship, and it refuses that kind of fear.
+          </p>
+
+          {/* ======================== PASTORAL APPLICATION WITHOUT SOFTNESS ======================== */}
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">Pastoral Application Without Softness</h2>
+
+          <p className="text-gray-600 leading-relaxed mb-8">
+            Here is what I think American Christians need to believe, refuse, and do.
+          </p>
+
+          <h3 className="text-2xl font-black uppercase tracking-tight text-slate-900 mb-8">What to believe</h3>
+
+          <div className="grid gap-8 my-12">
+            <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
+              <p className="text-gray-600 leading-relaxed">
+                <strong>Christ is King now.</strong> That is not a bumper sticker. It means every ruler is accountable, every policy is morally evaluable, and every political hope must be subordinated to Christ&apos;s reign.
+              </p>
+            </div>
+
+            <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
+              <p className="text-gray-600 leading-relaxed">
+                <strong>The state is not neutral and neither are you.</strong> Your political speech is either covenant faithfulness or covenant rebellion in public form.
+              </p>
+            </div>
+
+            <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
+              <p className="text-gray-600 leading-relaxed">
+                <strong>Law comes from a god.</strong> Rushdoony was right to press that point: the source of law reveals the god of the society. Chalcedon&apos;s own framing of &quot;law as liberty&quot; captures the basic idea that God&apos;s law protects life and restrains evil, rather than existing as arbitrary oppression.
+              </p>
+            </div>
+          </div>
+
+          <h3 className="text-2xl font-black uppercase tracking-tight text-slate-900 mb-8">What to refuse</h3>
+
+          <div className="grid gap-8 my-12">
+            <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
+              <p className="text-gray-600 leading-relaxed">
+                Refuse to speak as if &quot;the right side&quot; just means &quot;my side.&quot;
+              </p>
+            </div>
+
+            <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
+              <p className="text-gray-600 leading-relaxed">
+                Refuse to treat voting as a sacrament or abstaining as a virtue signal. I have been guilty of the latter, in the past, and I&apos;m not yet sure how to rectify it in the future. Selbrede&apos;s Chalcedon paper is helpful here because it attacks the fear-driven &quot;lesser of two evils&quot; posture as a form of man-fearing politics, and it re-centers the issue as obedience before God, not managing outcomes.
+              </p>
+            </div>
+
+            <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
+              <p className="text-gray-600 leading-relaxed">
+                Refuse the soft lie that Christian faith is &quot;private.&quot; If Christ is Lord, there is no private corner where His claims do not reach.
+              </p>
+            </div>
+          </div>
+
+          <h3 className="text-2xl font-black uppercase tracking-tight text-slate-900 mb-8">What to do in your real life</h3>
+
+          <div className="grid gap-8 my-12">
+            <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
+              <p className="text-gray-600 leading-relaxed">
+                <strong>Speak with categories, not slogans.</strong> Ask &quot;By what standard?&quot; and &quot;On what authority?&quot; That is not debate-club behavior, although it is very effective rhetoric. More importantly, it is discipleship in public.
+              </p>
+            </div>
+
+            <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
+              <p className="text-gray-600 leading-relaxed">
+                <strong>Practice localism and responsibility.</strong> If you want a smaller state, build thicker communities. Family, church, mutual aid, private charity, local accountability. The big state grows where personal responsibility collapses.
+              </p>
+            </div>
+
+            <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
+              <p className="text-gray-600 leading-relaxed">
+                <strong>Prioritize formation over information.</strong> Read less outrage, read more Scripture. Pray more than you post. It sounds basic because it is basic, and because it works.
+              </p>
+            </div>
+          </div>
+
+          <h3 className="text-2xl font-black uppercase tracking-tight text-slate-900 mb-8">What I do in my real life</h3>
+
+          <p className="text-gray-600 leading-relaxed mb-8">
+            I have to manage my own temptation to treat the timeline like it is my pastor. I can feel the pull to react, to dunk, to &quot;win,&quot; to signal that I am not one of those Christians. The quickest way I know to become a political addict is to convince myself that my anger is righteousness.
+          </p>
+
+          <p className="text-gray-600 leading-relaxed mb-8">
+            So I try to do a few simple things: I limit my inputs, I force myself to name the presuppositions under my own arguments, and I try to remember that my kids do not care who won the discourse today. They care whether dad is steady, joyful, and honest as a covenant representative of Jesus Christ at the head of our household. If my political engagement makes me harsher at home, it is already disordered, even if my positions are correct, and that is something I need to work on.
+          </p>
+
+          {/* ======================== OBJECTIONS AND HONEST REPLIES ======================== */}
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">Objections and Honest Replies</h2>
+
+          <div className="grid gap-8 my-12">
+            <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
+              <h3 className="text-lg font-black tracking-tight text-slate-900 mb-4">Objection 1: &quot;Shouldn&apos;t Christians just avoid politics since it is dirty?&quot;</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Politics is downstream of worship, which means you cannot avoid it entirely. The question is not whether you engage, but how you engage. Gary DeMar is right to reject the idea that politics is outside the Christian worldview, because civil government is part of God&apos;s order and therefore morally accountable. The answer is not retreat; it is faithful presence without idolatry.
+              </p>
+            </div>
+
+            <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
+              <h3 className="text-lg font-black tracking-tight text-slate-900 mb-4">Objection 2: &quot;Presuppositionalism sounds arrogant. Why not just use &apos;common ground&apos;?&quot;</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Presuppositionalism is actually the opposite of arrogance if it is done correctly. It says the unbeliever knows God but suppresses the truth, and the believer also depends entirely on God&apos;s revelation for any clarity at all. The claim is not &quot;I am smarter.&quot; The claim is &quot;There is no neutrality, and your own reasoning depends on the God you deny.&quot; That is an act of honesty, not ego.
+              </p>
+            </div>
+
+            <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
+              <h3 className="text-lg font-black tracking-tight text-slate-900 mb-4">Objection 3: &quot;If you minimize the state, won&apos;t evil just run wild?&quot;</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Evil runs wild when men are ungoverned inwardly and unrestrained outwardly. Scripture does not call for an absent magistrate; Romans 13 calls the magistrate a servant for restraining evil. But the modern state often expands far beyond justice into management, moral redefinition, and pseudo-salvation. The Christian case is not &quot;no authority,&quot; it is &quot;bounded authority under God.&quot; Also, the state will grow as the individual&apos;s obedience to God shrinks, so if you think the government is too big, the first person to blame is yourself and your lack of focus on building the kingdom.
+              </p>
+            </div>
+
+            <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
+              <h3 className="text-lg font-black tracking-tight text-slate-900 mb-4">Objection 4: &quot;If we don&apos;t win politically, won&apos;t we lose everything?&quot;</h3>
+              <p className="text-gray-600 leading-relaxed">
+                That is Psalm 146:3 territory. You are not promised cultural control. You are promised Christ&apos;s reign, the church&apos;s endurance, and God&apos;s judgment in history and eternity. Political outcomes matter, but they are not ultimate. When Christians act like they are ultimate, we reveal that our hope has slid.
+              </p>
+            </div>
+          </div>
+
+          {/* ======================== CONCLUSION ======================== */}
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">Conclusion</h2>
 
           <div className="bg-slate-900 text-white rounded-[2.5rem] p-10 md:p-16 my-16">
-            <h3 className="text-2xl font-black uppercase tracking-tight mb-6 flex items-center gap-3">
-              <Info size={24} className="text-amber-400" /> The Bottom Line
-            </h3>
-            <p className="text-gray-300 leading-relaxed text-lg">
-              The American Christian has a role in political discourse, but it is not to be the chaplain of a party or the hype man of the nation-state. It is to be a witness. A witness has two jobs: tell the truth, and refuse to lie. In the 2020s, the pressure to lie is intense. Lie about neutrality. Lie about salvation through politics. Lie about man, law, and liberty. So speak, but speak like a Christian. Seek first the Kingdom. Put no trust in princes. Fear God more than man. Recognize legitimate authority without worshiping it. Then build the kind of household, church life, and local community that makes statism less plausible and Christ's lordship more visible. Political discourse is not your heaven or your hell. It is one more arena where covenant-keepers must live honestly among covenant-breakers, with hope, with backbone, and with clean hands.
+            <p className="leading-relaxed mb-8 text-lg text-slate-200">
+              The American Christian has a role in political discourse, but it is not to be the chaplain of a party or the hype man of the nation-state. It is to be a witness. A witness has two jobs: tell the truth, and refuse to lie.
+            </p>
+            <p className="leading-relaxed mb-8 text-lg text-slate-200">
+              In the 2020s, the pressure to lie is intense. Lie about neutrality. Lie about salvation through politics. Lie about man, law, and liberty. Lie with your silence when God&apos;s claims are treated as optional.
+            </p>
+            <p className="leading-relaxed text-lg text-slate-200">
+              So speak, but speak like a Christian. Seek first the Kingdom. Put no trust in princes. Fear God more than man. Recognize legitimate authority without worshiping it. Then build the kind of household, church life, and local community that makes statism less plausible and Christ&apos;s lordship more visible.
             </p>
           </div>
+
+          <p className="text-gray-600 leading-relaxed mb-8">
+            Political discourse is not your heaven or your hell. It is one more arena where covenant-keepers must live honestly among covenant-breakers, with hope, with backbone, and with clean hands.
+          </p>
+
+          {/* ======================== REFERENCES ======================== */}
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic border-b-2 border-slate-100 pb-6 mb-12">References</h2>
+
+          <div className="space-y-4">
+            <p className="text-gray-600 leading-relaxed">
+              Cornelius Van Til, &quot;Covenant Consciousness&quot; (Westminster Media).
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              Cornelius Van Til, &quot;The Certainty of Our Faith&quot; (Westminster Media).
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              Greg L. Bahnsen vs. Gordon Stein debate transcript (PDF).
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              Murray N. Rothbard, <em>Anatomy of the State</em> (Mises Institute library).
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              Gary North, <em>Authority and Dominion</em> (PDF).
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              Chalcedon Foundation, &quot;Law as Liberty.&quot;
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              Martin G. Selbrede, &quot;Judgment, Politics, and the Bible&quot; (Scribd upload attributed to Chalcedon Foundation).
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              Gary DeMar, &quot;Is Politics Outside the Scope of the Christian Worldview?&quot;
+            </p>
+            <p className="text-gray-600 leading-relaxed mt-8">
+              <strong>Scripture (ESV):</strong> Matthew 6:33; Psalm 146:3; Proverbs 29:25; Romans 13:1-4
+            </p>
+          </div>
+
         </div>
       );
     }
+
 
         return (
       <div className="py-32 text-center border-2 border-dashed border-gray-100 rounded-[3rem] bg-slate-50/50">
