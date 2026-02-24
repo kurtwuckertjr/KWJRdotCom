@@ -9,6 +9,9 @@ const WEBSITE_ID = `${SITE_URL}/#website`;
 
 export const WORD_COUNTS: Record<string, number> = {
   "adjustable-dumbbells-full-body-plan": 592,
+  "american-christian-political-discourse": 2858,
+  "christian-response-involuntary-taxation": 1964,
+  "christs-dominion-over-everything": 2282,
   "bitcoin-glossary": 6433,
   "bitcoin-privacy-vs-anonymity": 240,
   "bitcoin-vs-ethereum": 297,
