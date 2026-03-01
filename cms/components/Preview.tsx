@@ -36,7 +36,7 @@ interface PreviewProps {
 const PREVIEW_ORIGIN =
   typeof window !== 'undefined' && window.location.hostname === 'localhost'
     ? 'http://localhost:5173'
-    : 'https://kurtwuckertjr.com';
+    : 'https://www.kurtwuckertjr.com';
 
 export function Preview({
   markdown,
