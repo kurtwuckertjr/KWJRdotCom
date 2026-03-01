@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import Home from './views/Home';
 import Archive from './views/Archive';
 import Post from './views/Post';
+import CmsPreview from './views/CmsPreview';
 import ArchiveAssistant from './components/ArchiveAssistant';
 
 const ScrollToTop = () => {
@@ -20,19 +21,27 @@ const App: React.FC = () => {
   return (
     <Router>
       <ScrollToTop />
-      <div className="flex flex-col min-h-screen">
-        <Navbar />
-        <main className="flex-grow pt-20">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/archive/:cat" element={<Archive />} />
-            <Route path="/post/:id" element={<Post />} />
-            <Route path="*" element={<Home />} />
-          </Routes>
-        </main>
-        <Footer />
-        <ArchiveAssistant />
-      </div>
+      <Routes>
+        {/* CMS preview: standalone route without navbar/footer */}
+        <Route path="/cms-preview" element={<CmsPreview />} />
+
+        {/* Main site routes */}
+        <Route path="*" element={
+          <div className="flex flex-col min-h-screen">
+            <Navbar />
+            <main className="flex-grow pt-20">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/archive/:cat" element={<Archive />} />
+                <Route path="/post/:id" element={<Post />} />
+                <Route path="*" element={<Home />} />
+              </Routes>
+            </main>
+            <Footer />
+            <ArchiveAssistant />
+          </div>
+        } />
+      </Routes>
     </Router>
   );
 };
