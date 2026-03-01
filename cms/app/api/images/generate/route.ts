@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
-import { requireAuth, safeError } from '@/lib/api-auth';
+import { requireAuth, requireRole, safeError } from '@/lib/api-auth';
 import { randomUUID } from 'crypto';
 
 interface GenerateRequest {
@@ -19,8 +19,11 @@ const CATEGORY_ATMOSPHERE: Record<string, string> = {
 };
 
 export async function POST(request: Request) {
-  const { error: authError } = await requireAuth();
+  const { user, supabase: authSupabase, error: authError } = await requireAuth();
   if (authError) return authError;
+
+  const roleError = await requireRole(authSupabase!, user!.id);
+  if (roleError) return roleError;
 
   const geminiKey = process.env.GEMINI_API_KEY;
   if (!geminiKey) {

@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
-import { requireAuth, safeError } from '@/lib/api-auth';
+import { requireAuth, requireRole, safeError } from '@/lib/api-auth';
 import { randomUUID } from 'crypto';
 
 /**
@@ -8,8 +8,11 @@ import { randomUUID } from 'crypto';
  * Accepts multipart form data with a "file" field.
  */
 export async function POST(request: Request) {
-  const { error: authError } = await requireAuth();
+  const { user, supabase: authSupabase, error: authError } = await requireAuth();
   if (authError) return authError;
+
+  const roleError = await requireRole(authSupabase!, user!.id);
+  if (roleError) return roleError;
 
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;

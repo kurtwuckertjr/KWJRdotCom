@@ -22,14 +22,16 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     },
   });
 
+  const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+
   const htmlBody = `
 <h2>New Contact Form Submission</h2>
-<p><strong>Name:</strong> ${name}</p>
-<p><strong>Email:</strong> ${email}</p>
-<p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
-<p><strong>Subject:</strong> ${subject}</p>
+<p><strong>Name:</strong> ${esc(name)}</p>
+<p><strong>Email:</strong> ${esc(email)}</p>
+<p><strong>Phone:</strong> ${esc(phone || 'Not provided')}</p>
+<p><strong>Subject:</strong> ${esc(subject)}</p>
 <hr />
-<p>${message.replace(/\n/g, '<br />')}</p>
+<p>${esc(message).replace(/\n/g, '<br />')}</p>
   `.trim();
 
   try {

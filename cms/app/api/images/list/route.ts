@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
-import { requireAuth } from '@/lib/api-auth';
+import { requireAuth, requireRole } from '@/lib/api-auth';
 
 interface ImageEntry {
   name: string;
@@ -12,8 +12,12 @@ interface ImageEntry {
  * List available images from both Supabase Storage and GitHub.
  */
 export async function GET() {
-  const { error: authError } = await requireAuth();
+  const { user, supabase: authSupabase, error: authError } = await requireAuth();
   if (authError) return authError;
+
+  const roleError = await requireRole(authSupabase!, user!.id);
+  if (roleError) return roleError;
+
   const images: ImageEntry[] = [];
 
   // 1. Fetch from Supabase Storage

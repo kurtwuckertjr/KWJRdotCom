@@ -34,6 +34,29 @@ export async function requireAuth(): Promise<AuthSuccess | AuthFailure> {
   }
 }
 
+type AllowedRole = 'owner' | 'editor';
+
+/**
+ * Verify the authenticated user has a required role.
+ * Must be called after requireAuth() succeeds.
+ */
+export async function requireRole(
+  supabase: SupabaseClient,
+  userId: string,
+  roles: AllowedRole[] = ['owner', 'editor'],
+): Promise<NextResponse | null> {
+  const { data: profile } = await supabase
+    .from('profiles')
+    .select('role')
+    .eq('id', userId)
+    .single();
+
+  if (!profile || !roles.includes(profile.role as AllowedRole)) {
+    return NextResponse.json({ error: 'Insufficient permissions' }, { status: 403 });
+  }
+  return null;
+}
+
 /**
  * Return a safe error response that doesn't leak internals in production.
  */

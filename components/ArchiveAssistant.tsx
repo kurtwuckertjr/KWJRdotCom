@@ -2,7 +2,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageSquare, X, Send, Loader2, Sparkles } from 'lucide-react';
-import { GoogleGenAI } from "@google/genai";
 
 const ArchiveAssistant: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,19 +19,17 @@ const ArchiveAssistant: React.FC = () => {
     setIsLoading(true);
 
     try {
-      const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-      const response = await ai.models.generateContent({
-        model: 'gemini-3-flash-preview',
-        contents: [...messages.map(m => ({ role: m.role, parts: [{ text: m.text }] })), { role: 'user', parts: [{ text: userMessage }] }],
-        config: {
-          systemInstruction: "You are an AI assistant for Kurt Wuckert Jr.'s portfolio. Kurt is the Chief Bitcoin Historian. You answer questions about Bitcoin history, blockchain strategy, and cybersecurity using Kurt's philosophical lens (Satoshi's original vision, scaling on-chain, and technical deconstruction). Be professional, insightful, and slightly provocative regarding mainstream crypto narratives. Keep answers concise.",
-        }
+      const res = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ messages, userMessage }),
       });
 
-      const text = response.text || "I'm having trouble accessing the archive right now.";
+      const data = await res.json();
+      const text = data.text || "I'm having trouble accessing the archive right now.";
       setMessages(prev => [...prev, { role: 'model', text }]);
     } catch (error) {
-      console.error("Gemini Error:", error);
+      console.error("Chat Error:", error);
       setMessages(prev => [...prev, { role: 'model', text: "Error connecting to the archive. Please try again later." }]);
     } finally {
       setIsLoading(false);

@@ -5,7 +5,6 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './views/Home';
 import Archive from './views/Archive';
-import Admin from './views/Admin';
 import Post from './views/Post';
 import ArchiveAssistant from './components/ArchiveAssistant';
 
@@ -28,7 +27,6 @@ const App: React.FC = () => {
             <Route path="/" element={<Home />} />
             <Route path="/archive/:cat" element={<Archive />} />
             <Route path="/post/:id" element={<Post />} />
-            <Route path="/admin" element={<Admin />} />
             <Route path="*" element={<Home />} />
           </Routes>
         </main>
