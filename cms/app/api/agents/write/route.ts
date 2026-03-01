@@ -1,12 +1,15 @@
 import { runWriterAgent, type WriterAgentRequest } from '@/lib/agents/writer-agent';
 import type { ExpertType } from '@/lib/agents/expert-agents';
-import { requireAuth } from '@/lib/api-auth';
+import { requireAuth, requireRole } from '@/lib/api-auth';
 
 export const runtime = 'nodejs';
 
 export async function POST(request: Request) {
-  const { error: authError } = await requireAuth();
+  const { user, supabase, error: authError } = await requireAuth();
   if (authError) return authError;
+
+  const roleError = await requireRole(supabase!, user!.id);
+  if (roleError) return roleError;
 
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) {

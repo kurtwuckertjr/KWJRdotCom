@@ -3,11 +3,14 @@ import {
   invalidateStandardsCache,
   getSchemaStandards,
 } from '@/lib/agents/schema-standards';
-import { requireAuth, safeError } from '@/lib/api-auth';
+import { requireAuth, requireRole, safeError } from '@/lib/api-auth';
 
 export async function POST() {
-  const { error: authError } = await requireAuth();
+  const { user, supabase, error: authError } = await requireAuth();
   if (authError) return authError;
+
+  const roleError = await requireRole(supabase!, user!.id);
+  if (roleError) return roleError;
 
   try {
     invalidateStandardsCache();

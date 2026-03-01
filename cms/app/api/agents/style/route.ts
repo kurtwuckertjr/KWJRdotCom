@@ -1,10 +1,13 @@
 import { NextResponse } from 'next/server';
 import { runStyleAgent, type StyleAgentRequest } from '@/lib/agents/style-agent';
-import { requireAuth, safeError } from '@/lib/api-auth';
+import { requireAuth, requireRole, safeError } from '@/lib/api-auth';
 
 export async function POST(request: Request) {
-  const { error: authError } = await requireAuth();
+  const { user, supabase, error: authError } = await requireAuth();
   if (authError) return authError;
+
+  const roleError = await requireRole(supabase!, user!.id);
+  if (roleError) return roleError;
 
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) {

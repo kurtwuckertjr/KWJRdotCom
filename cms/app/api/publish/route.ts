@@ -103,9 +103,10 @@ export async function POST(req: NextRequest) {
     });
   } catch (err) {
     console.error('Publish error:', err);
-    return NextResponse.json(
-      { error: err instanceof Error ? err.message : 'Unknown error' },
-      { status: 500 },
-    );
+    const message =
+      process.env.NODE_ENV === 'development'
+        ? (err instanceof Error ? err.message : 'Unknown error')
+        : 'An internal error occurred';
+    return NextResponse.json({ error: message }, { status: 500 });
   }
 }
